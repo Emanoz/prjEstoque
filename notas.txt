@@ -1,0 +1,11 @@
+Gerenciador de estoque 3000
+
+-------------- CRUD ------------------
+- Tela de cadastro, atualização e listagem de produto
+- .................... fornecedor
+- .................... categoria (exceto listagem)
+- ....................variação do produto
+
+-------------- Relatório ---------------
+- Produto e/ou sua variação
+- Fornecedor

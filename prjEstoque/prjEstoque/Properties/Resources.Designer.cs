@@ -83,6 +83,16 @@ namespace prjEstoque.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_categorizar_36 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-categorizar-36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_excluir_38 {
             get {
                 object obj = ResourceManager.GetObject("icons8-excluir-38", resourceCulture);
@@ -106,6 +116,16 @@ namespace prjEstoque.Properties {
         internal static System.Drawing.Bitmap icons8_minimizar_janela_38 {
             get {
                 object obj = ResourceManager.GetObject("icons8-minimizar-janela-38", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_produto_38 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-produto-38", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

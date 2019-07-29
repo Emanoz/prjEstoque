@@ -96,5 +96,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-caixa-39.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-produto-38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-categorizar-36.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
