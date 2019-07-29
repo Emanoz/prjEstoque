@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.pnTop = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pnLeft = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnHome = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnLeft = new System.Windows.Forms.Panel();
+            this.pnHome = new System.Windows.Forms.Panel();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,25 +53,6 @@
             this.pnTop.Size = new System.Drawing.Size(974, 38);
             this.pnTop.TabIndex = 0;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(50, 11);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(301, 19);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Gerenciamento de Estoque 4000";
-            // 
-            // pnLeft
-            // 
-            this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnLeft.Location = new System.Drawing.Point(0, 38);
-            this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(251, 500);
-            this.pnLeft.TabIndex = 1;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnClose);
@@ -81,15 +62,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(79, 38);
             this.panel1.TabIndex = 2;
-            // 
-            // pnHome
-            // 
-            this.pnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.pnHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnHome.Location = new System.Drawing.Point(251, 38);
-            this.pnHome.Name = "pnHome";
-            this.pnHome.Size = new System.Drawing.Size(723, 500);
-            this.pnHome.TabIndex = 2;
             // 
             // btnClose
             // 
@@ -115,6 +87,16 @@
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.UseVisualStyleBackColor = true;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(50, 11);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(299, 19);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Gerenciamento de Estoque 3000";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::prjEstoque.Properties.Resources.icons8_caixa_39;
@@ -123,6 +105,24 @@
             this.pictureBox1.Size = new System.Drawing.Size(39, 39);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // pnLeft
+            // 
+            this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnLeft.Location = new System.Drawing.Point(0, 38);
+            this.pnLeft.Name = "pnLeft";
+            this.pnLeft.Size = new System.Drawing.Size(251, 500);
+            this.pnLeft.TabIndex = 1;
+            // 
+            // pnHome
+            // 
+            this.pnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.pnHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnHome.Location = new System.Drawing.Point(251, 38);
+            this.pnHome.Name = "pnHome";
+            this.pnHome.Size = new System.Drawing.Size(723, 500);
+            this.pnHome.TabIndex = 2;
             // 
             // frmDashboard
             // 
