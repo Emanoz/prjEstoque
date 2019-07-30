@@ -24,6 +24,5 @@ namespace prjEstoque
         private void BtnList_Prod_Click(object sender, EventArgs e) => pnList_Prod.BringToFront();
 
         private void BtnList_Forn_Click(object sender, EventArgs e) => pnList_Forn.BringToFront();
-      
     }
 }
