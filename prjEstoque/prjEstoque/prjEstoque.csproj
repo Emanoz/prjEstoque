@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\Form1.cs">
+    <Compile Include="View\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,8 +64,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,6 +83,7 @@
   <ItemGroup>
     <Folder Include="Controller\" />
     <Folder Include="Model\" />
+    <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-minimizar-janela-38.png" />
@@ -101,6 +102,47 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-categorizar-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movimento-de-estoque-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movimento-de-estoque-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-produto-novo-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fornecedor-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-no-inventário-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-no-inventário-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fornecedor-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-produto-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-produto-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
