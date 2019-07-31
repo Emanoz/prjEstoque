@@ -28,25 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.pnList = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnList_Prod = new System.Windows.Forms.Button();
-            this.btnList_Forn = new System.Windows.Forms.Button();
             this.pnReport = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnRep_prod = new System.Windows.Forms.Button();
-            this.btnRep_Forn = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.btnSlide = new System.Windows.Forms.Button();
             this.pnHome = new System.Windows.Forms.Panel();
             this.pnCadastro = new System.Windows.Forms.Panel();
             this.pnGroup_Op = new System.Windows.Forms.Panel();
@@ -65,9 +56,20 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnList_Forn = new System.Windows.Forms.Panel();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnList_Prod = new System.Windows.Forms.Button();
+            this.btnList_Forn = new System.Windows.Forms.Button();
+            this.btnRep_prod = new System.Windows.Forms.Button();
+            this.btnRep_Forn = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnSlide = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnLeft.SuspendLayout();
             this.pnList.SuspendLayout();
             this.pnReport.SuspendLayout();
@@ -80,6 +82,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.pnList_Forn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTop
@@ -104,31 +108,6 @@
             this.panel1.Size = new System.Drawing.Size(79, 38);
             this.panel1.TabIndex = 2;
             // 
-            // btnClose
-            // 
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClose.Image = global::prjEstoque.Properties.Resources.icons8_excluir_42;
-            this.btnClose.Location = new System.Drawing.Point(41, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 38);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = global::prjEstoque.Properties.Resources.icons8_minimizar_janela_38;
-            this.btnMinimize.Location = new System.Drawing.Point(0, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(38, 38);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -139,20 +118,10 @@
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Gerenciador de Estoque 3000";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::prjEstoque.Properties.Resources.icons8_caixa_39;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.pnLeft.Controls.Add(this.pnList);
-            this.pnLeft.Controls.Add(this.pnReport);
+            this.pnLeft.Controls.Add(this.panel2);
             this.pnLeft.Controls.Add(this.btnCreate);
             this.pnLeft.Controls.Add(this.btnSlide);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
@@ -163,12 +132,14 @@
             // 
             // pnList
             // 
+            this.pnList.Controls.Add(this.button1);
             this.pnList.Controls.Add(this.label1);
             this.pnList.Controls.Add(this.btnList_Prod);
             this.pnList.Controls.Add(this.btnList_Forn);
-            this.pnList.Location = new System.Drawing.Point(0, 190);
+            this.pnList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnList.Location = new System.Drawing.Point(0, 54);
             this.pnList.Name = "pnList";
-            this.pnList.Size = new System.Drawing.Size(251, 126);
+            this.pnList.Size = new System.Drawing.Size(251, 54);
             this.pnList.TabIndex = 0;
             // 
             // label1
@@ -176,58 +147,22 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(83, 3);
+            this.label1.Location = new System.Drawing.Point(83, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Listagem";
             // 
-            // btnList_Prod
-            // 
-            this.btnList_Prod.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnList_Prod.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnList_Prod.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnList_Prod.FlatAppearance.BorderSize = 0;
-            this.btnList_Prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnList_Prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList_Prod.ForeColor = System.Drawing.Color.White;
-            this.btnList_Prod.Image = global::prjEstoque.Properties.Resources.icons8_produto_28;
-            this.btnList_Prod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Prod.Location = new System.Drawing.Point(0, 54);
-            this.btnList_Prod.Name = "btnList_Prod";
-            this.btnList_Prod.Size = new System.Drawing.Size(251, 36);
-            this.btnList_Prod.TabIndex = 4;
-            this.btnList_Prod.Text = "Produtos";
-            this.btnList_Prod.UseVisualStyleBackColor = true;
-            this.btnList_Prod.Click += new System.EventHandler(this.BtnList_Prod_Click);
-            // 
-            // btnList_Forn
-            // 
-            this.btnList_Forn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnList_Forn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnList_Forn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnList_Forn.FlatAppearance.BorderSize = 0;
-            this.btnList_Forn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnList_Forn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList_Forn.ForeColor = System.Drawing.Color.White;
-            this.btnList_Forn.Image = global::prjEstoque.Properties.Resources.icons8_fornecedor_24;
-            this.btnList_Forn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Forn.Location = new System.Drawing.Point(0, 90);
-            this.btnList_Forn.Name = "btnList_Forn";
-            this.btnList_Forn.Size = new System.Drawing.Size(251, 36);
-            this.btnList_Forn.TabIndex = 3;
-            this.btnList_Forn.Text = "Fornecedor";
-            this.btnList_Forn.UseVisualStyleBackColor = true;
-            this.btnList_Forn.Click += new System.EventHandler(this.BtnList_Forn_Click);
-            // 
             // pnReport
             // 
+            this.pnReport.Controls.Add(this.button3);
             this.pnReport.Controls.Add(this.label2);
             this.pnReport.Controls.Add(this.btnRep_prod);
             this.pnReport.Controls.Add(this.btnRep_Forn);
-            this.pnReport.Location = new System.Drawing.Point(0, 322);
+            this.pnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnReport.Location = new System.Drawing.Point(0, 0);
             this.pnReport.Name = "pnReport";
-            this.pnReport.Size = new System.Drawing.Size(251, 126);
+            this.pnReport.Size = new System.Drawing.Size(251, 54);
             this.pnReport.TabIndex = 2;
             // 
             // label2
@@ -235,78 +170,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(83, 4);
+            this.label2.Location = new System.Drawing.Point(83, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Relatório";
-            // 
-            // btnRep_prod
-            // 
-            this.btnRep_prod.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRep_prod.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRep_prod.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnRep_prod.FlatAppearance.BorderSize = 0;
-            this.btnRep_prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRep_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRep_prod.ForeColor = System.Drawing.Color.White;
-            this.btnRep_prod.Image = global::prjEstoque.Properties.Resources.icons8_produto_28;
-            this.btnRep_prod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRep_prod.Location = new System.Drawing.Point(0, 54);
-            this.btnRep_prod.Name = "btnRep_prod";
-            this.btnRep_prod.Size = new System.Drawing.Size(251, 36);
-            this.btnRep_prod.TabIndex = 4;
-            this.btnRep_prod.Text = "Produtos";
-            this.btnRep_prod.UseVisualStyleBackColor = true;
-            // 
-            // btnRep_Forn
-            // 
-            this.btnRep_Forn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRep_Forn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRep_Forn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnRep_Forn.FlatAppearance.BorderSize = 0;
-            this.btnRep_Forn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRep_Forn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRep_Forn.ForeColor = System.Drawing.Color.White;
-            this.btnRep_Forn.Image = global::prjEstoque.Properties.Resources.icons8_fornecedor_24;
-            this.btnRep_Forn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRep_Forn.Location = new System.Drawing.Point(0, 90);
-            this.btnRep_Forn.Name = "btnRep_Forn";
-            this.btnRep_Forn.Size = new System.Drawing.Size(251, 36);
-            this.btnRep_Forn.TabIndex = 3;
-            this.btnRep_Forn.Text = "Fornecedor";
-            this.btnRep_Forn.UseVisualStyleBackColor = true;
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreate.FlatAppearance.BorderSize = 0;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Image = global::prjEstoque.Properties.Resources.icons8_movimento_de_estoque_50;
-            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreate.Location = new System.Drawing.Point(0, 119);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(251, 65);
-            this.btnCreate.TabIndex = 1;
-            this.btnCreate.Text = "Cadastro";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
-            // 
-            // btnSlide
-            // 
-            this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSlide.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSlide.FlatAppearance.BorderSize = 0;
-            this.btnSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSlide.Image = global::prjEstoque.Properties.Resources.icons8_no_inventário_40;
-            this.btnSlide.Location = new System.Drawing.Point(0, 0);
-            this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(251, 81);
-            this.btnSlide.TabIndex = 0;
-            this.btnSlide.UseVisualStyleBackColor = true;
             // 
             // pnHome
             // 
@@ -420,14 +288,14 @@
             this.dgvFornecedores.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvFornecedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFornecedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvFornecedores.ColumnHeadersHeight = 35;
             this.dgvFornecedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -492,14 +360,14 @@
             this.dgvProdutos.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProdutos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvProdutos.ColumnHeadersHeight = 35;
             this.dgvProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProdutos.Location = new System.Drawing.Point(0, 0);
@@ -507,6 +375,173 @@
             this.dgvProdutos.ReadOnly = true;
             this.dgvProdutos.Size = new System.Drawing.Size(849, 662);
             this.dgvProdutos.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
+            this.button1.Location = new System.Drawing.Point(9, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(15, 15);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnList_Prod
+            // 
+            this.btnList_Prod.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnList_Prod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnList_Prod.FlatAppearance.BorderSize = 0;
+            this.btnList_Prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList_Prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList_Prod.ForeColor = System.Drawing.Color.White;
+            this.btnList_Prod.Image = global::prjEstoque.Properties.Resources.icons8_produto_28;
+            this.btnList_Prod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList_Prod.Location = new System.Drawing.Point(0, 54);
+            this.btnList_Prod.Name = "btnList_Prod";
+            this.btnList_Prod.Size = new System.Drawing.Size(251, 36);
+            this.btnList_Prod.TabIndex = 4;
+            this.btnList_Prod.Text = "Produtos";
+            this.btnList_Prod.UseVisualStyleBackColor = true;
+            this.btnList_Prod.Click += new System.EventHandler(this.BtnList_Prod_Click);
+            // 
+            // btnList_Forn
+            // 
+            this.btnList_Forn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnList_Forn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnList_Forn.FlatAppearance.BorderSize = 0;
+            this.btnList_Forn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList_Forn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList_Forn.ForeColor = System.Drawing.Color.White;
+            this.btnList_Forn.Image = global::prjEstoque.Properties.Resources.icons8_fornecedor_24;
+            this.btnList_Forn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList_Forn.Location = new System.Drawing.Point(0, 90);
+            this.btnList_Forn.Name = "btnList_Forn";
+            this.btnList_Forn.Size = new System.Drawing.Size(251, 36);
+            this.btnList_Forn.TabIndex = 3;
+            this.btnList_Forn.Text = "Fornecedor";
+            this.btnList_Forn.UseVisualStyleBackColor = true;
+            this.btnList_Forn.Click += new System.EventHandler(this.BtnList_Forn_Click);
+            // 
+            // btnRep_prod
+            // 
+            this.btnRep_prod.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRep_prod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRep_prod.FlatAppearance.BorderSize = 0;
+            this.btnRep_prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRep_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRep_prod.ForeColor = System.Drawing.Color.White;
+            this.btnRep_prod.Image = global::prjEstoque.Properties.Resources.icons8_produto_28;
+            this.btnRep_prod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRep_prod.Location = new System.Drawing.Point(0, 54);
+            this.btnRep_prod.Name = "btnRep_prod";
+            this.btnRep_prod.Size = new System.Drawing.Size(251, 36);
+            this.btnRep_prod.TabIndex = 4;
+            this.btnRep_prod.Text = "Produtos";
+            this.btnRep_prod.UseVisualStyleBackColor = true;
+            // 
+            // btnRep_Forn
+            // 
+            this.btnRep_Forn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRep_Forn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRep_Forn.FlatAppearance.BorderSize = 0;
+            this.btnRep_Forn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRep_Forn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRep_Forn.ForeColor = System.Drawing.Color.White;
+            this.btnRep_Forn.Image = global::prjEstoque.Properties.Resources.icons8_fornecedor_24;
+            this.btnRep_Forn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRep_Forn.Location = new System.Drawing.Point(0, 90);
+            this.btnRep_Forn.Name = "btnRep_Forn";
+            this.btnRep_Forn.Size = new System.Drawing.Size(251, 36);
+            this.btnRep_Forn.TabIndex = 3;
+            this.btnRep_Forn.Text = "Fornecedor";
+            this.btnRep_Forn.UseVisualStyleBackColor = true;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreate.FlatAppearance.BorderSize = 0;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Image = global::prjEstoque.Properties.Resources.icons8_movimento_de_estoque_50;
+            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreate.Location = new System.Drawing.Point(0, 119);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(251, 65);
+            this.btnCreate.TabIndex = 1;
+            this.btnCreate.Text = "Cadastro";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
+            // 
+            // btnSlide
+            // 
+            this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSlide.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSlide.FlatAppearance.BorderSize = 0;
+            this.btnSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSlide.Image = global::prjEstoque.Properties.Resources.icons8_no_inventário_40;
+            this.btnSlide.Location = new System.Drawing.Point(0, 0);
+            this.btnSlide.Name = "btnSlide";
+            this.btnSlide.Size = new System.Drawing.Size(251, 81);
+            this.btnSlide.TabIndex = 0;
+            this.btnSlide.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = global::prjEstoque.Properties.Resources.icons8_excluir_42;
+            this.btnClose.Location = new System.Drawing.Point(41, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 38);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Image = global::prjEstoque.Properties.Resources.icons8_minimizar_janela_38;
+            this.btnMinimize.Location = new System.Drawing.Point(0, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(38, 38);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::prjEstoque.Properties.Resources.icons8_caixa_39;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
+            this.button3.Location = new System.Drawing.Point(7, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(15, 15);
+            this.button3.TabIndex = 7;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pnList);
+            this.panel2.Controls.Add(this.pnReport);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 184);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(251, 478);
+            this.panel2.TabIndex = 2;
             // 
             // frmDashboard
             // 
@@ -528,7 +563,6 @@
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnLeft.ResumeLayout(false);
             this.pnList.ResumeLayout(false);
             this.pnList.PerformLayout();
@@ -543,6 +577,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.pnList_Forn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -584,6 +620,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
