@@ -239,5 +239,35 @@ namespace prjEstoque.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_triangle_arrow_14 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-triangle-arrow-14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_triangle_arrow_15 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-triangle-arrow-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_triangle_arrow_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-triangle-arrow-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

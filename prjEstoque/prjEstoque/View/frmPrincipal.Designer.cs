@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnLeft = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnList = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnReport = new System.Windows.Forms.Panel();
@@ -56,9 +57,10 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnList_Forn = new System.Windows.Forms.Panel();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnList_Arrow = new System.Windows.Forms.Button();
             this.btnList_Prod = new System.Windows.Forms.Button();
             this.btnList_Forn = new System.Windows.Forms.Button();
+            this.btnRep_Arrow = new System.Windows.Forms.Button();
             this.btnRep_prod = new System.Windows.Forms.Button();
             this.btnRep_Forn = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -66,11 +68,10 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnLeft.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnList.SuspendLayout();
             this.pnReport.SuspendLayout();
             this.pnCadastro.SuspendLayout();
@@ -83,7 +84,6 @@
             this.pnList_Forn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTop
@@ -130,9 +130,19 @@
             this.pnLeft.Size = new System.Drawing.Size(251, 662);
             this.pnLeft.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pnList);
+            this.panel2.Controls.Add(this.pnReport);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 184);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(251, 478);
+            this.panel2.TabIndex = 2;
+            // 
             // pnList
             // 
-            this.pnList.Controls.Add(this.button1);
+            this.pnList.Controls.Add(this.btnList_Arrow);
             this.pnList.Controls.Add(this.label1);
             this.pnList.Controls.Add(this.btnList_Prod);
             this.pnList.Controls.Add(this.btnList_Forn);
@@ -155,7 +165,7 @@
             // 
             // pnReport
             // 
-            this.pnReport.Controls.Add(this.button3);
+            this.pnReport.Controls.Add(this.btnRep_Arrow);
             this.pnReport.Controls.Add(this.label2);
             this.pnReport.Controls.Add(this.btnRep_prod);
             this.pnReport.Controls.Add(this.btnRep_Forn);
@@ -288,14 +298,14 @@
             this.dgvFornecedores.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvFornecedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFornecedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFornecedores.ColumnHeadersHeight = 35;
             this.dgvFornecedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -360,14 +370,14 @@
             this.dgvProdutos.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProdutos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProdutos.ColumnHeadersHeight = 35;
             this.dgvProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProdutos.Location = new System.Drawing.Point(0, 0);
@@ -376,16 +386,17 @@
             this.dgvProdutos.Size = new System.Drawing.Size(849, 662);
             this.dgvProdutos.TabIndex = 0;
             // 
-            // button1
+            // btnList_Arrow
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
-            this.button1.Location = new System.Drawing.Point(9, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(15, 15);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnList_Arrow.FlatAppearance.BorderSize = 0;
+            this.btnList_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
+            this.btnList_Arrow.Location = new System.Drawing.Point(3, 2);
+            this.btnList_Arrow.Name = "btnList_Arrow";
+            this.btnList_Arrow.Size = new System.Drawing.Size(30, 51);
+            this.btnList_Arrow.TabIndex = 5;
+            this.btnList_Arrow.UseVisualStyleBackColor = true;
+            this.btnList_Arrow.Click += new System.EventHandler(this.btnList_Arrow_Click);
             // 
             // btnList_Prod
             // 
@@ -422,6 +433,18 @@
             this.btnList_Forn.Text = "Fornecedor";
             this.btnList_Forn.UseVisualStyleBackColor = true;
             this.btnList_Forn.Click += new System.EventHandler(this.BtnList_Forn_Click);
+            // 
+            // btnRep_Arrow
+            // 
+            this.btnRep_Arrow.FlatAppearance.BorderSize = 0;
+            this.btnRep_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRep_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
+            this.btnRep_Arrow.Location = new System.Drawing.Point(3, 1);
+            this.btnRep_Arrow.Name = "btnRep_Arrow";
+            this.btnRep_Arrow.Size = new System.Drawing.Size(30, 51);
+            this.btnRep_Arrow.TabIndex = 7;
+            this.btnRep_Arrow.UseVisualStyleBackColor = true;
+            this.btnRep_Arrow.Click += new System.EventHandler(this.btnRep_Arrow_Click);
             // 
             // btnRep_prod
             // 
@@ -522,27 +545,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
-            this.button3.Location = new System.Drawing.Point(7, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(15, 15);
-            this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pnList);
-            this.panel2.Controls.Add(this.pnReport);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 184);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 478);
-            this.panel2.TabIndex = 2;
-            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -559,11 +561,11 @@
             this.RightToLeftLayout = true;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.pnList.ResumeLayout(false);
             this.pnList.PerformLayout();
             this.pnReport.ResumeLayout(false);
@@ -578,7 +580,6 @@
             this.pnList_Forn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -620,9 +621,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnList_Arrow;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRep_Arrow;
     }
 }
 
