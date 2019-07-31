@@ -55,5 +55,7 @@ namespace prjEstoque
                 btnList_Arrow.Image = prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
             }
         }
+
+        private void btnMinimize_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
     }
 }
