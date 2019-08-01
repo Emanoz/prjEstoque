@@ -13,7 +13,7 @@ namespace prjEstoque
 
         }
 
-        public void Slider(System.Windows.Forms.Panel pn, int height, int width)
+        public void Slider(System.Windows.Forms.Control pn, int height, int width)
         {
             pn.Height = height;
             pn.Width = width;

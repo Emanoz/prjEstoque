@@ -93,6 +93,26 @@ namespace prjEstoque.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_chevron_esquerda_14 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-chevron-esquerda-14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_chevron_esquerda_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-chevron-esquerda-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_chevron_right_16 {
             get {
                 object obj = ResourceManager.GetObject("icons8-chevron-right-16", resourceCulture);

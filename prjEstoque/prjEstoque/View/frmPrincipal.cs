@@ -57,5 +57,53 @@ namespace prjEstoque
         }
 
         private void btnMinimize_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
+
+        private void btnProd_Slider_Click(object sender, EventArgs e)
+        {
+            if (gbProduto.Height == 28)
+            {
+                util.Slider(gbProduto, 250, 849);
+                util.Slider(pnGb_Prod, 315, 849);
+                btnProd_Slider.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
+            }
+            else
+            {
+                util.Slider(gbProduto, 28, 849);
+                util.Slider(pnGb_Prod, 65, 849);
+                btnProd_Slider.Image = prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            }
+        }
+
+        private void btnForn_Slider_Click(object sender, EventArgs e)
+        {
+            if (gbFornecedor.Height == 28)
+            {
+                util.Slider(gbFornecedor, 280, 849);
+                util.Slider(pnGb_Forn, 345, 849);
+                btnForn_Slider.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
+            }
+            else
+            {
+                util.Slider(gbFornecedor, 28, 849);
+                util.Slider(pnGb_Forn, 65, 849);
+                btnForn_Slider.Image = prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            }
+        }
+
+        private void btnCat_Slider_Click(object sender, EventArgs e)
+        {
+            if (gbCategoria.Height == 28)
+            {
+                util.Slider(gbCategoria, 280, 849);
+                util.Slider(pnGb_Cat, 345, 849);
+                btnCat_Slider.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
+            }
+            else
+            {
+                util.Slider(gbCategoria, 28, 849);
+                util.Slider(pnGb_Cat, 65, 849);
+                btnCat_Slider.Image = prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            }
+        }
     }
 }

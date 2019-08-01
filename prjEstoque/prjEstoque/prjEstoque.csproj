@@ -157,6 +157,8 @@
     <None Include="Resources\icons8-triangle-arrow-16.png" />
     <None Include="Resources\icons8-triangle-arrow-15.png" />
     <None Include="Resources\icons8-triangle-arrow-14.png" />
+    <None Include="Resources\icons8-chevron-esquerda-14.png" />
+    <None Include="Resources\icons8-chevron-esquerda-16.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
