@@ -60,15 +60,15 @@ namespace prjEstoque
 
         private void btnProd_Slider_Click(object sender, EventArgs e)
         {
-            if (gbProduto.Height == 28)
+            if (txtProd_Nome.Height == 28)
             {
-                util.Slider(gbProduto, 250, 849);
+                util.Slider(txtProd_Nome, 250, 849);
                 util.Slider(pnGb_Prod, 315, 849);
                 btnProd_Slider.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
             }
             else
             {
-                util.Slider(gbProduto, 28, 849);
+                util.Slider(txtProd_Nome, 28, 849);
                 util.Slider(pnGb_Prod, 65, 849);
                 btnProd_Slider.Image = prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
             }

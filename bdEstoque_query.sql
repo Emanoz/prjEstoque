@@ -1,6 +1,8 @@
 create database bdEstoque
 go
 
+use bdEstoque
+
 create table tbFornecedor (
 	id int identity(1,1) not null primary key,
 	nome nvarchar(80) not null,
@@ -13,21 +15,28 @@ create table tbFornecedor (
 )
 go
 
+use bdEstoque
+
 create table tbCategoria (
 	id int identity(1,1) not null primary key,
 	descricao nvarchar(20) not null
 )
 go
 
+use bdEstoque
+
 create table tbProduto (
 	id int identity(1,1) not null primary key,
 	id_fornecedor int not null foreign key references tbFornecedor(id),
 	id_categoria int not null foreign key references tbCategoria(id),
+	descricao varchar(40) not null,
 	quantidade int null,
 	cadastrado_em datetime not null,
 	valor_varejo float null
 )
 go
+
+use bdEstoque
 
 create table tbComposicao (
 	id int identity(1,1) not null primary key,
