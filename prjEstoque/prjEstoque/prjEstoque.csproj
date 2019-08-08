@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBUtils.cs" />
     <Compile Include="Model\MODEL_Categoria.cs" />
     <Compile Include="Model\MODEL_Composicao.cs" />
     <Compile Include="Model\MODEL_Fornecedor.cs" />
