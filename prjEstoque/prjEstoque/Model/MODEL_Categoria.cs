@@ -3,24 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using prjEstoque.Entity;
+using System.Data.SqlClient;
 
 namespace prjEstoque.Model
 {
     class MODEL_Categoria
     {
+        private DBUtils db = null;
 
         public MODEL_Categoria()
         {
-
+            db = new DBUtils();
         }
-
-        public MODEL_Categoria(int codCat, string descricao)
+        
+        public List<Categoria> GetAll()
         {
-            CodCat = codCat;
-            Descricao = descricao;
-        }
+            string query = "SELECT * FROM tbCategoria";
+            using (SqlDataReader reader = db.CallExecuteReader(query))
+            {
+                List<Categoria> list = new List<Categoria>();
 
-        public int CodCat { get; set; }
-        public string Descricao { get; set; }
+                while (reader.Read())
+                {
+                    Categoria cat = new Categoria();
+
+                    cat.CodCat = int.Parse(reader["id"].ToString());
+                    cat.Descricao = reader["descricao"].ToString();
+
+                    list.Add(cat);
+                }
+                return list;
+            }
+        }
+        
     }
 }

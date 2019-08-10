@@ -2,12 +2,12 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="prjEstoque.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="connString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Server=PC-NANA\SQLEXPRESS;Database=bdEstoque;Trusted_Connection=True;&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;</Value>
+      <Value Profile="(Default)">Server=PC-NANA\SQLEXPRESS;Database=bdEstoque;Trusted_Connection=True;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

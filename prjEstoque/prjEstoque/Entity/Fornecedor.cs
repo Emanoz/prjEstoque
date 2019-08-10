@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prjEstoque.Model
+namespace prjEstoque.Entity
 {
-    class MODEL_Fornecedor
+    class Fornecedor
     {
-        public MODEL_Fornecedor()
+        public Fornecedor()
         {
 
         }
 
-        public MODEL_Fornecedor(int codForn, string nome, string telefone, string email, string tipo_prod, string cpf, string cnpj,
+        public Fornecedor(int codForn, string nome, string telefone, string email, string tipo_prod, string cpf, string cnpj,
                                 string cep)
         {
             CodForn = codForn;

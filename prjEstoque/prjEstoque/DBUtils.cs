@@ -11,31 +11,36 @@ namespace prjEstoque
 {
     class DBUtils
     {
-        private SqlConnection conn = null;
         public DBUtils()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            
         }
-        public void OpenConnection()
+
+        public void OpenConnection(SqlConnection conn)
         {
-            if(conn.State == ConnectionState.Closed)
+            if (conn.State == ConnectionState.Closed)
                 conn.Open();
         }
-        public void CloseConnection()
+
+        public void CloseConnection(SqlConnection conn)
         {
             if (conn.State == ConnectionState.Open)
                 conn.Close();
         }
+
         public void CallExecuteNonQuery(string query)
         {
             try
             {
-                using(SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlConnection conn = new SqlConnection("Server=PC-NANA\\SQLEXPRESS;Database=bdEstoque;Trusted_Connection=True;"))
                 {
-                    cmd.CommandType = CommandType.Text;
-                    OpenConnection();
-                    cmd.ExecuteNonQuery();
-                    CloseConnection();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        OpenConnection(conn);
+                        cmd.ExecuteNonQuery();
+                        CloseConnection(conn);
+                    }
                 }
             }
             catch(SqlException sqlex)
@@ -49,16 +54,20 @@ namespace prjEstoque
                 throw new Exception(ex.Message);
             }
         }
+
         public SqlDataReader CallExecuteReader(string query)
         {
             try
             {
-                using(SqlCommand cmd = new SqlCommand(query, conn))
+                SqlConnection conn = new SqlConnection("Server=PC-NANA\\SQLEXPRESS;Database=bdEstoque;Trusted_Connection=True;");
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.CommandType = CommandType.Text;
-                    OpenConnection();
+                    OpenConnection(conn);
                     return cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 }
+       
             }
             catch (SqlException sqlex)
             {
@@ -70,10 +79,6 @@ namespace prjEstoque
 
                 throw new Exception(ex.Message);
             }
-        }
-        ~DBUtils()
-        {
-            conn.Dispose();
         }
     }
 }

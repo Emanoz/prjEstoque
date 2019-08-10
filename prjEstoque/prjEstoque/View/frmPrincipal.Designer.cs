@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -59,9 +59,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.CEP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvCategoria = new System.Windows.Forms.ListView();
             this.btnCat_Slider = new System.Windows.Forms.Button();
             this.pnGb_Forn = new System.Windows.Forms.Panel();
             this.gbFornecedor = new System.Windows.Forms.GroupBox();
@@ -90,23 +88,28 @@
             this.btnForn_Slider = new System.Windows.Forms.Button();
             this.pnGb_Prod = new System.Windows.Forms.Panel();
             this.txtProd_Nome = new System.Windows.Forms.GroupBox();
+            this.linkProd_Var = new System.Windows.Forms.LinkLabel();
+            this.linkProd_Comp = new System.Windows.Forms.LinkLabel();
+            this.cbProd_Forn = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.cbProd_Cat = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtProd_Valor = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.nudProd_Qtd = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.btnProd_Slider = new System.Windows.Forms.Button();
             this.pnList_Prod = new System.Windows.Forms.Panel();
             this.dgvFornecedores = new System.Windows.Forms.DataGridView();
+            this.prod_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod_Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod_Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod_Cadastrado_em = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnList_Forn = new System.Windows.Forms.Panel();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.nudProd_Qtd = new System.Windows.Forms.NumericUpDown();
-            this.txtProd_Valor = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.cbProd_Cat = new System.Windows.Forms.ComboBox();
-            this.cbProd_Forn = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.linkProd_Comp = new System.Windows.Forms.LinkLabel();
-            this.linkProd_Var = new System.Windows.Forms.LinkLabel();
             this.forn_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,11 +118,7 @@
             this.forn_Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prod_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prod_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prod_Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prod_Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prod_Cadastrado_em = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -135,11 +134,11 @@
             this.gbFornecedor.SuspendLayout();
             this.pnGb_Prod.SuspendLayout();
             this.txtProd_Nome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProd_Qtd)).BeginInit();
             this.pnList_Prod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.pnList_Forn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudProd_Qtd)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
@@ -439,7 +438,7 @@
             this.pnGb_Cat.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnGb_Cat.Location = new System.Drawing.Point(0, 130);
             this.pnGb_Cat.Name = "pnGb_Cat";
-            this.pnGb_Cat.Size = new System.Drawing.Size(849, 65);
+            this.pnGb_Cat.Size = new System.Drawing.Size(849, 324);
             this.pnGb_Cat.TabIndex = 3;
             // 
             // gbCategoria
@@ -448,14 +447,14 @@
             this.gbCategoria.Controls.Add(this.button1);
             this.gbCategoria.Controls.Add(this.textBox9);
             this.gbCategoria.Controls.Add(this.label14);
-            this.gbCategoria.Controls.Add(this.listView1);
+            this.gbCategoria.Controls.Add(this.lvCategoria);
             this.gbCategoria.Controls.Add(this.btnCat_Slider);
             this.gbCategoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCategoria.ForeColor = System.Drawing.Color.White;
             this.gbCategoria.Location = new System.Drawing.Point(0, 0);
             this.gbCategoria.Name = "gbCategoria";
-            this.gbCategoria.Size = new System.Drawing.Size(849, 28);
+            this.gbCategoria.Size = new System.Drawing.Size(849, 287);
             this.gbCategoria.TabIndex = 0;
             this.gbCategoria.TabStop = false;
             this.gbCategoria.Text = "Categoria:";
@@ -500,21 +499,16 @@
             this.label14.TabIndex = 11;
             this.label14.Text = "Adicionar categoria:";
             // 
-            // listView1
+            // lvCategoria
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.CEP,
-            this.columnHeader1});
-            this.listView1.Location = new System.Drawing.Point(28, 60);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(228, 192);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // CEP
-            // 
-            this.CEP.Width = 120;
+            this.lvCategoria.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.lvCategoria.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.descricao});
+            this.lvCategoria.Location = new System.Drawing.Point(28, 60);
+            this.lvCategoria.Name = "lvCategoria";
+            this.lvCategoria.Size = new System.Drawing.Size(228, 192);
+            this.lvCategoria.TabIndex = 10;
+            this.lvCategoria.UseCompatibleStateImageBehavior = false;
             // 
             // btnCat_Slider
             // 
@@ -801,6 +795,125 @@
             this.txtProd_Nome.TabStop = false;
             this.txtProd_Nome.Text = "Produto:";
             // 
+            // linkProd_Var
+            // 
+            this.linkProd_Var.AutoSize = true;
+            this.linkProd_Var.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.linkProd_Var.Location = new System.Drawing.Point(447, 44);
+            this.linkProd_Var.Name = "linkProd_Var";
+            this.linkProd_Var.Size = new System.Drawing.Size(177, 20);
+            this.linkProd_Var.TabIndex = 20;
+            this.linkProd_Var.TabStop = true;
+            this.linkProd_Var.Text = "É um produto variação?";
+            // 
+            // linkProd_Comp
+            // 
+            this.linkProd_Comp.AutoSize = true;
+            this.linkProd_Comp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.linkProd_Comp.Location = new System.Drawing.Point(200, 44);
+            this.linkProd_Comp.Name = "linkProd_Comp";
+            this.linkProd_Comp.Size = new System.Drawing.Size(203, 20);
+            this.linkProd_Comp.TabIndex = 19;
+            this.linkProd_Comp.TabStop = true;
+            this.linkProd_Comp.Text = "É um produto composição?";
+            // 
+            // cbProd_Forn
+            // 
+            this.cbProd_Forn.FormattingEnabled = true;
+            this.cbProd_Forn.Location = new System.Drawing.Point(523, 200);
+            this.cbProd_Forn.Name = "cbProd_Forn";
+            this.cbProd_Forn.Size = new System.Drawing.Size(172, 28);
+            this.cbProd_Forn.TabIndex = 18;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(422, 203);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(95, 20);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "Fornecedor:";
+            // 
+            // cbProd_Cat
+            // 
+            this.cbProd_Cat.FormattingEnabled = true;
+            this.cbProd_Cat.Location = new System.Drawing.Point(179, 201);
+            this.cbProd_Cat.Name = "cbProd_Cat";
+            this.cbProd_Cat.Size = new System.Drawing.Size(182, 28);
+            this.cbProd_Cat.TabIndex = 16;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(91, 204);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(82, 20);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "Categoria:";
+            // 
+            // txtProd_Valor
+            // 
+            this.txtProd_Valor.Location = new System.Drawing.Point(676, 126);
+            this.txtProd_Valor.Name = "txtProd_Valor";
+            this.txtProd_Valor.Size = new System.Drawing.Size(100, 26);
+            this.txtProd_Valor.TabIndex = 14;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(552, 130);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(118, 20);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Valor de varejo:";
+            // 
+            // nudProd_Qtd
+            // 
+            this.nudProd_Qtd.Location = new System.Drawing.Point(445, 127);
+            this.nudProd_Qtd.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudProd_Qtd.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudProd_Qtd.Name = "nudProd_Qtd";
+            this.nudProd_Qtd.Size = new System.Drawing.Size(59, 26);
+            this.nudProd_Qtd.TabIndex = 12;
+            this.nudProd_Qtd.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(343, 130);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 20);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Quantidade:";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(85, 127);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(211, 26);
+            this.textBox10.TabIndex = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(24, 130);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 20);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Nome:";
+            // 
             // btnProd_Slider
             // 
             this.btnProd_Slider.FlatAppearance.BorderSize = 0;
@@ -831,14 +944,14 @@
             this.dgvFornecedores.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvFornecedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFornecedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFornecedores.ColumnHeadersHeight = 35;
             this.dgvFornecedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.prod_Id,
@@ -852,6 +965,38 @@
             this.dgvFornecedores.ReadOnly = true;
             this.dgvFornecedores.Size = new System.Drawing.Size(849, 662);
             this.dgvFornecedores.TabIndex = 1;
+            // 
+            // prod_Id
+            // 
+            this.prod_Id.HeaderText = "Cód.";
+            this.prod_Id.Name = "prod_Id";
+            this.prod_Id.ReadOnly = true;
+            // 
+            // prod_Nome
+            // 
+            this.prod_Nome.HeaderText = "Nome";
+            this.prod_Nome.Name = "prod_Nome";
+            this.prod_Nome.ReadOnly = true;
+            this.prod_Nome.Width = 170;
+            // 
+            // prod_Preco
+            // 
+            this.prod_Preco.HeaderText = "Preço";
+            this.prod_Preco.Name = "prod_Preco";
+            this.prod_Preco.ReadOnly = true;
+            // 
+            // prod_Quantidade
+            // 
+            this.prod_Quantidade.HeaderText = "Estoque";
+            this.prod_Quantidade.Name = "prod_Quantidade";
+            this.prod_Quantidade.ReadOnly = true;
+            // 
+            // prod_Cadastrado_em
+            // 
+            this.prod_Cadastrado_em.HeaderText = "Cadastrado em:";
+            this.prod_Cadastrado_em.Name = "prod_Cadastrado_em";
+            this.prod_Cadastrado_em.ReadOnly = true;
+            this.prod_Cadastrado_em.Width = 200;
             // 
             // pnList_Forn
             // 
@@ -871,14 +1016,14 @@
             this.dgvProdutos.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProdutos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProdutos.ColumnHeadersHeight = 35;
             this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.forn_Id,
@@ -895,125 +1040,6 @@
             this.dgvProdutos.ReadOnly = true;
             this.dgvProdutos.Size = new System.Drawing.Size(849, 662);
             this.dgvProdutos.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(24, 130);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 20);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Nome:";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(85, 127);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(211, 26);
-            this.textBox10.TabIndex = 10;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(343, 130);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 20);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Quantidade:";
-            // 
-            // nudProd_Qtd
-            // 
-            this.nudProd_Qtd.Location = new System.Drawing.Point(445, 127);
-            this.nudProd_Qtd.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudProd_Qtd.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudProd_Qtd.Name = "nudProd_Qtd";
-            this.nudProd_Qtd.Size = new System.Drawing.Size(59, 26);
-            this.nudProd_Qtd.TabIndex = 12;
-            this.nudProd_Qtd.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // txtProd_Valor
-            // 
-            this.txtProd_Valor.Location = new System.Drawing.Point(676, 126);
-            this.txtProd_Valor.Name = "txtProd_Valor";
-            this.txtProd_Valor.Size = new System.Drawing.Size(100, 26);
-            this.txtProd_Valor.TabIndex = 14;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(552, 130);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(118, 20);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Valor de varejo:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(91, 204);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 20);
-            this.label18.TabIndex = 15;
-            this.label18.Text = "Categoria:";
-            // 
-            // cbProd_Cat
-            // 
-            this.cbProd_Cat.FormattingEnabled = true;
-            this.cbProd_Cat.Location = new System.Drawing.Point(179, 201);
-            this.cbProd_Cat.Name = "cbProd_Cat";
-            this.cbProd_Cat.Size = new System.Drawing.Size(182, 28);
-            this.cbProd_Cat.TabIndex = 16;
-            // 
-            // cbProd_Forn
-            // 
-            this.cbProd_Forn.FormattingEnabled = true;
-            this.cbProd_Forn.Location = new System.Drawing.Point(523, 200);
-            this.cbProd_Forn.Name = "cbProd_Forn";
-            this.cbProd_Forn.Size = new System.Drawing.Size(172, 28);
-            this.cbProd_Forn.TabIndex = 18;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(422, 203);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(95, 20);
-            this.label19.TabIndex = 17;
-            this.label19.Text = "Fornecedor:";
-            // 
-            // linkProd_Comp
-            // 
-            this.linkProd_Comp.AutoSize = true;
-            this.linkProd_Comp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.linkProd_Comp.Location = new System.Drawing.Point(200, 44);
-            this.linkProd_Comp.Name = "linkProd_Comp";
-            this.linkProd_Comp.Size = new System.Drawing.Size(203, 20);
-            this.linkProd_Comp.TabIndex = 19;
-            this.linkProd_Comp.TabStop = true;
-            this.linkProd_Comp.Text = "É um produto composição?";
-            // 
-            // linkProd_Var
-            // 
-            this.linkProd_Var.AutoSize = true;
-            this.linkProd_Var.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.linkProd_Var.Location = new System.Drawing.Point(447, 44);
-            this.linkProd_Var.Name = "linkProd_Var";
-            this.linkProd_Var.Size = new System.Drawing.Size(177, 20);
-            this.linkProd_Var.TabIndex = 20;
-            this.linkProd_Var.TabStop = true;
-            this.linkProd_Var.Text = "É um produto variação?";
             // 
             // forn_Id
             // 
@@ -1071,46 +1097,18 @@
             this.forn_Cep.ReadOnly = true;
             this.forn_Cep.Width = 80;
             // 
-            // prod_Id
+            // descricao
             // 
-            this.prod_Id.HeaderText = "Cód.";
-            this.prod_Id.Name = "prod_Id";
-            this.prod_Id.ReadOnly = true;
-            // 
-            // prod_Nome
-            // 
-            this.prod_Nome.HeaderText = "Nome";
-            this.prod_Nome.Name = "prod_Nome";
-            this.prod_Nome.ReadOnly = true;
-            this.prod_Nome.Width = 170;
-            // 
-            // prod_Preco
-            // 
-            this.prod_Preco.HeaderText = "Preço";
-            this.prod_Preco.Name = "prod_Preco";
-            this.prod_Preco.ReadOnly = true;
-            // 
-            // prod_Quantidade
-            // 
-            this.prod_Quantidade.HeaderText = "Estoque";
-            this.prod_Quantidade.Name = "prod_Quantidade";
-            this.prod_Quantidade.ReadOnly = true;
-            // 
-            // prod_Cadastrado_em
-            // 
-            this.prod_Cadastrado_em.HeaderText = "Cadastrado em:";
-            this.prod_Cadastrado_em.Name = "prod_Cadastrado_em";
-            this.prod_Cadastrado_em.ReadOnly = true;
-            this.prod_Cadastrado_em.Width = 200;
+            this.descricao.Width = 150;
             // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.Controls.Add(this.pnCadastro);
             this.Controls.Add(this.pnList_Prod);
             this.Controls.Add(this.pnList_Forn);
-            this.Controls.Add(this.pnCadastro);
             this.Controls.Add(this.pnHome);
             this.Controls.Add(this.pnLeft);
             this.Controls.Add(this.pnTop);
@@ -1140,11 +1138,11 @@
             this.pnGb_Prod.ResumeLayout(false);
             this.txtProd_Nome.ResumeLayout(false);
             this.txtProd_Nome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProd_Qtd)).EndInit();
             this.pnList_Prod.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.pnList_Forn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudProd_Qtd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1209,9 +1207,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader CEP;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ListView lvCategoria;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox9;
@@ -1241,6 +1237,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cep;
+        private System.Windows.Forms.ColumnHeader descricao;
     }
 }
 

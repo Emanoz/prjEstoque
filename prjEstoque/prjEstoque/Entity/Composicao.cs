@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prjEstoque.Model
+namespace prjEstoque.Entity
 {
-    class MODEL_Composicao
+    class Composicao
     {
 
-        public MODEL_Composicao()
+        public Composicao()
         {
 
         }
 
-        public MODEL_Composicao(int codComp, int quantidade_1, int quantidade_2, int quantidade_3, int codProd_, int codProd_1, 
+        public Composicao(int codComp, int quantidade_1, int quantidade_2, int quantidade_3, int codProd_, int codProd_1, 
                                 int codProd_2, int codProd_3)
         {
             CodComp = codComp;

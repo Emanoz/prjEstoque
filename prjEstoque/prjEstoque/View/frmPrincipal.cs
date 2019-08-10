@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prjEstoque.Model;
+using prjEstoque.Entity;
 
 namespace prjEstoque
 {
@@ -92,8 +94,20 @@ namespace prjEstoque
 
         private void btnCat_Slider_Click(object sender, EventArgs e)
         {
+            MODEL_Categoria mCat = new MODEL_Categoria();
+            List<Categoria> listCat = new List<Categoria>();
+
             if (gbCategoria.Height == 28)
             {
+                listCat = mCat.GetAll();
+                lvCategoria.Clear();
+
+                foreach (Categoria item in listCat)
+                {
+                    ListViewItem lv = new ListViewItem(item.Descricao);
+                    lv.SubItems.Add(item.Descricao);
+                    lvCategoria.Items.Add(lv);
+                }
                 util.Slider(gbCategoria, 280, 849);
                 util.Slider(pnGb_Cat, 345, 849);
                 btnCat_Slider.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
