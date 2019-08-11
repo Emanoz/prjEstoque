@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -59,7 +59,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.lvCategoria = new System.Windows.Forms.ListView();
             this.btnCat_Slider = new System.Windows.Forms.Button();
             this.pnGb_Forn = new System.Windows.Forms.Panel();
             this.gbFornecedor = new System.Windows.Forms.GroupBox();
@@ -118,7 +117,7 @@
             this.forn_Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dgvCat = new System.Windows.Forms.DataGridView();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -139,6 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.pnList_Forn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
@@ -443,11 +443,11 @@
             // 
             // gbCategoria
             // 
+            this.gbCategoria.Controls.Add(this.dgvCat);
             this.gbCategoria.Controls.Add(this.button2);
             this.gbCategoria.Controls.Add(this.button1);
             this.gbCategoria.Controls.Add(this.textBox9);
             this.gbCategoria.Controls.Add(this.label14);
-            this.gbCategoria.Controls.Add(this.lvCategoria);
             this.gbCategoria.Controls.Add(this.btnCat_Slider);
             this.gbCategoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -498,17 +498,6 @@
             this.label14.Size = new System.Drawing.Size(149, 20);
             this.label14.TabIndex = 11;
             this.label14.Text = "Adicionar categoria:";
-            // 
-            // lvCategoria
-            // 
-            this.lvCategoria.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.lvCategoria.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.descricao});
-            this.lvCategoria.Location = new System.Drawing.Point(28, 60);
-            this.lvCategoria.Name = "lvCategoria";
-            this.lvCategoria.Size = new System.Drawing.Size(228, 192);
-            this.lvCategoria.TabIndex = 10;
-            this.lvCategoria.UseCompatibleStateImageBehavior = false;
             // 
             // btnCat_Slider
             // 
@@ -944,14 +933,14 @@
             this.dgvFornecedores.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvFornecedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFornecedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFornecedores.ColumnHeadersHeight = 35;
             this.dgvFornecedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.prod_Id,
@@ -1016,14 +1005,14 @@
             this.dgvProdutos.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProdutos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutos.ColumnHeadersHeight = 35;
             this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.forn_Id,
@@ -1097,9 +1086,13 @@
             this.forn_Cep.ReadOnly = true;
             this.forn_Cep.Width = 80;
             // 
-            // descricao
+            // dgvCat
             // 
-            this.descricao.Width = 150;
+            this.dgvCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCat.Location = new System.Drawing.Point(28, 56);
+            this.dgvCat.Name = "dgvCat";
+            this.dgvCat.Size = new System.Drawing.Size(240, 196);
+            this.dgvCat.TabIndex = 15;
             // 
             // frmDashboard
             // 
@@ -1143,6 +1136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.pnList_Forn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1207,7 +1201,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView lvCategoria;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox9;
@@ -1237,7 +1230,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cep;
-        private System.Windows.Forms.ColumnHeader descricao;
+        private System.Windows.Forms.DataGridView dgvCat;
     }
 }
 

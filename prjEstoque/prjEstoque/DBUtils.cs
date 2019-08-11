@@ -11,9 +11,11 @@ namespace prjEstoque
 {
     class DBUtils
     {
+        string connString = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
+
         public DBUtils()
         {
-            
+             
         }
 
         public void OpenConnection(SqlConnection conn)
@@ -28,18 +30,20 @@ namespace prjEstoque
                 conn.Close();
         }
 
-        public void CallExecuteNonQuery(string query)
+        public int CallExecuteNonQuery(string query, params SqlParameter[] parameters)
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Server=PC-NANA\\SQLEXPRESS;Database=bdEstoque;Trusted_Connection=True;"))
+                using (SqlConnection conn = new SqlConnection(connString))
                 {
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddRange(parameters);
                         OpenConnection(conn);
-                        cmd.ExecuteNonQuery();
+                        int rows = cmd.ExecuteNonQuery();
                         CloseConnection(conn);
+                        return rows;
                     }
                 }
             }
@@ -59,7 +63,7 @@ namespace prjEstoque
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Server=PC-NANA\\SQLEXPRESS;Database=bdEstoque;Trusted_Connection=True;");
+                SqlConnection conn = new SqlConnection(connString);
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
