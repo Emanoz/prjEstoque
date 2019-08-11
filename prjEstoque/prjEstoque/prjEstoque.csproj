@@ -71,6 +71,9 @@
     <Compile Include="Entity\Fornecedor.cs" />
     <Compile Include="Entity\Produto.cs" />
     <Compile Include="Model\MODEL_Categoria.cs" />
+    <Compile Include="Model\MODEL_Composicao.cs" />
+    <Compile Include="Model\MODEL_Fornecedor.cs" />
+    <Compile Include="Model\MODEL_Produto.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="View\frmPrincipal.cs">

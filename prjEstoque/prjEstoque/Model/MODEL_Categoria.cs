@@ -49,9 +49,10 @@ namespace prjEstoque.Model
 
         public bool Update(Categoria cat)
         {
-            string query = "UPDATE tbCategoria SET descricao = @descricao";
+            string query = "UPDATE tbCategoria SET descricao = @descricao WHERE id = @id";
 
-            if (db.CallExecuteNonQuery(query, new SqlParameter("@descricao", cat.Descricao)) > 0)
+            if (db.CallExecuteNonQuery(query, new SqlParameter("@descricao", cat.Descricao),
+                                              new SqlParameter("@id", cat.CodCat)) > 0)
                 return true;
             return false;
         }

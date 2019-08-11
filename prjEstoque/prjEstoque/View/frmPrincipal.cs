@@ -109,5 +109,13 @@ namespace prjEstoque
                 btnCat_Slider.Image = prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
             }
         }
+
+        private void btnSlide_Click(object sender, EventArgs e)
+        {
+            if(pnLeft.Width == 251)
+                util.Slider(pnLeft, 662, 59);
+            else
+                util.Slider(pnLeft, 662, 251);
+        }
     }
 }
