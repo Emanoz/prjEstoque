@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -217,7 +217,7 @@
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 38);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(59, 662);
+            this.pnLeft.Size = new System.Drawing.Size(251, 662);
             this.pnLeft.TabIndex = 1;
             // 
             // panel2
@@ -227,7 +227,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 184);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(59, 478);
+            this.panel2.Size = new System.Drawing.Size(251, 478);
             this.panel2.TabIndex = 2;
             // 
             // pnList
@@ -239,7 +239,7 @@
             this.pnList.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnList.Location = new System.Drawing.Point(0, 54);
             this.pnList.Name = "pnList";
-            this.pnList.Size = new System.Drawing.Size(59, 54);
+            this.pnList.Size = new System.Drawing.Size(251, 54);
             this.pnList.TabIndex = 0;
             // 
             // btnList_Arrow
@@ -310,7 +310,7 @@
             this.pnReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnReport.Location = new System.Drawing.Point(0, 0);
             this.pnReport.Name = "pnReport";
-            this.pnReport.Size = new System.Drawing.Size(59, 54);
+            this.pnReport.Size = new System.Drawing.Size(251, 54);
             this.pnReport.TabIndex = 2;
             // 
             // btnRep_Arrow
@@ -397,7 +397,7 @@
             this.btnSlide.Image = global::prjEstoque.Properties.Resources.icons8_no_inventário_40;
             this.btnSlide.Location = new System.Drawing.Point(0, 0);
             this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(59, 81);
+            this.btnSlide.Size = new System.Drawing.Size(251, 81);
             this.btnSlide.TabIndex = 0;
             this.btnSlide.UseVisualStyleBackColor = true;
             this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
@@ -406,9 +406,9 @@
             // 
             this.pnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnHome.Location = new System.Drawing.Point(59, 38);
+            this.pnHome.Location = new System.Drawing.Point(251, 38);
             this.pnHome.Name = "pnHome";
-            this.pnHome.Size = new System.Drawing.Size(1041, 662);
+            this.pnHome.Size = new System.Drawing.Size(849, 662);
             this.pnHome.TabIndex = 2;
             // 
             // pnCadastro
@@ -416,9 +416,9 @@
             this.pnCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnCadastro.Controls.Add(this.pnGroup_Op);
             this.pnCadastro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCadastro.Location = new System.Drawing.Point(59, 38);
+            this.pnCadastro.Location = new System.Drawing.Point(251, 38);
             this.pnCadastro.Name = "pnCadastro";
-            this.pnCadastro.Size = new System.Drawing.Size(1041, 662);
+            this.pnCadastro.Size = new System.Drawing.Size(849, 662);
             this.pnCadastro.TabIndex = 3;
             // 
             // pnGroup_Op
@@ -430,7 +430,7 @@
             this.pnGroup_Op.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnGroup_Op.Location = new System.Drawing.Point(0, 48);
             this.pnGroup_Op.Name = "pnGroup_Op";
-            this.pnGroup_Op.Size = new System.Drawing.Size(1041, 614);
+            this.pnGroup_Op.Size = new System.Drawing.Size(849, 614);
             this.pnGroup_Op.TabIndex = 0;
             // 
             // pnGb_Cat
@@ -439,7 +439,7 @@
             this.pnGb_Cat.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnGb_Cat.Location = new System.Drawing.Point(0, 130);
             this.pnGb_Cat.Name = "pnGb_Cat";
-            this.pnGb_Cat.Size = new System.Drawing.Size(1041, 65);
+            this.pnGb_Cat.Size = new System.Drawing.Size(849, 65);
             this.pnGb_Cat.TabIndex = 3;
             // 
             // gbCategoria
@@ -455,7 +455,7 @@
             this.gbCategoria.ForeColor = System.Drawing.Color.White;
             this.gbCategoria.Location = new System.Drawing.Point(0, 0);
             this.gbCategoria.Name = "gbCategoria";
-            this.gbCategoria.Size = new System.Drawing.Size(1041, 28);
+            this.gbCategoria.Size = new System.Drawing.Size(849, 28);
             this.gbCategoria.TabIndex = 0;
             this.gbCategoria.TabStop = false;
             this.gbCategoria.Text = "Categoria:";
@@ -526,7 +526,7 @@
             this.pnGb_Forn.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnGb_Forn.Location = new System.Drawing.Point(0, 65);
             this.pnGb_Forn.Name = "pnGb_Forn";
-            this.pnGb_Forn.Size = new System.Drawing.Size(1041, 65);
+            this.pnGb_Forn.Size = new System.Drawing.Size(849, 65);
             this.pnGb_Forn.TabIndex = 2;
             // 
             // gbFornecedor
@@ -559,7 +559,7 @@
             this.gbFornecedor.ForeColor = System.Drawing.Color.White;
             this.gbFornecedor.Location = new System.Drawing.Point(0, 0);
             this.gbFornecedor.Name = "gbFornecedor";
-            this.gbFornecedor.Size = new System.Drawing.Size(1041, 28);
+            this.gbFornecedor.Size = new System.Drawing.Size(849, 28);
             this.gbFornecedor.TabIndex = 0;
             this.gbFornecedor.TabStop = false;
             this.gbFornecedor.Text = "Fornecedor:";
@@ -765,7 +765,7 @@
             this.pnGb_Prod.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnGb_Prod.Location = new System.Drawing.Point(0, 0);
             this.pnGb_Prod.Name = "pnGb_Prod";
-            this.pnGb_Prod.Size = new System.Drawing.Size(1041, 65);
+            this.pnGb_Prod.Size = new System.Drawing.Size(849, 65);
             this.pnGb_Prod.TabIndex = 1;
             // 
             // txtProd_Nome
@@ -788,7 +788,7 @@
             this.txtProd_Nome.ForeColor = System.Drawing.Color.White;
             this.txtProd_Nome.Location = new System.Drawing.Point(0, 0);
             this.txtProd_Nome.Name = "txtProd_Nome";
-            this.txtProd_Nome.Size = new System.Drawing.Size(1041, 28);
+            this.txtProd_Nome.Size = new System.Drawing.Size(849, 28);
             this.txtProd_Nome.TabIndex = 0;
             this.txtProd_Nome.TabStop = false;
             this.txtProd_Nome.Text = "Produto:";
@@ -929,9 +929,9 @@
             this.pnList_Prod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnList_Prod.Controls.Add(this.dgvFornecedores);
             this.pnList_Prod.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnList_Prod.Location = new System.Drawing.Point(59, 38);
+            this.pnList_Prod.Location = new System.Drawing.Point(251, 38);
             this.pnList_Prod.Name = "pnList_Prod";
-            this.pnList_Prod.Size = new System.Drawing.Size(1041, 662);
+            this.pnList_Prod.Size = new System.Drawing.Size(849, 662);
             this.pnList_Prod.TabIndex = 3;
             // 
             // dgvFornecedores
@@ -942,14 +942,14 @@
             this.dgvFornecedores.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvFornecedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFornecedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFornecedores.ColumnHeadersHeight = 35;
             this.dgvFornecedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.prod_Id,
@@ -961,7 +961,7 @@
             this.dgvFornecedores.Location = new System.Drawing.Point(0, 0);
             this.dgvFornecedores.Name = "dgvFornecedores";
             this.dgvFornecedores.ReadOnly = true;
-            this.dgvFornecedores.Size = new System.Drawing.Size(1041, 662);
+            this.dgvFornecedores.Size = new System.Drawing.Size(849, 662);
             this.dgvFornecedores.TabIndex = 1;
             // 
             // prod_Id
@@ -1001,9 +1001,9 @@
             this.pnList_Forn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnList_Forn.Controls.Add(this.dgvProdutos);
             this.pnList_Forn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnList_Forn.Location = new System.Drawing.Point(59, 38);
+            this.pnList_Forn.Location = new System.Drawing.Point(251, 38);
             this.pnList_Forn.Name = "pnList_Forn";
-            this.pnList_Forn.Size = new System.Drawing.Size(1041, 662);
+            this.pnList_Forn.Size = new System.Drawing.Size(849, 662);
             this.pnList_Forn.TabIndex = 4;
             // 
             // dgvProdutos
@@ -1014,14 +1014,14 @@
             this.dgvProdutos.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProdutos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutos.ColumnHeadersHeight = 35;
             this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.forn_Id,
@@ -1036,7 +1036,7 @@
             this.dgvProdutos.Location = new System.Drawing.Point(0, 0);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.ReadOnly = true;
-            this.dgvProdutos.Size = new System.Drawing.Size(1041, 662);
+            this.dgvProdutos.Size = new System.Drawing.Size(849, 662);
             this.dgvProdutos.TabIndex = 0;
             // 
             // forn_Id

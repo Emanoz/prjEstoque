@@ -113,9 +113,19 @@ namespace prjEstoque
         private void btnSlide_Click(object sender, EventArgs e)
         {
             if(pnLeft.Width == 251)
+            {
                 util.Slider(pnLeft, 662, 59);
+                btnProd_Slider.Location = new Point(997, btnProd_Slider.Location.Y);
+                btnForn_Slider.Location = new Point(997, btnForn_Slider.Location.Y);
+                btnCat_Slider.Location = new Point(997, btnCat_Slider.Location.Y);
+            }
             else
+            {
                 util.Slider(pnLeft, 662, 251);
+                btnProd_Slider.Location = new Point(805, btnProd_Slider.Location.Y);
+                btnForn_Slider.Location = new Point(805, btnForn_Slider.Location.Y);
+                btnCat_Slider.Location = new Point(805, btnCat_Slider.Location.Y);
+            }
         }
     }
 }
