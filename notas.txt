@@ -1,11 +1,8 @@
-Gerenciador de estoque 3000
+Gerenciador de Estoque do LI 3000
 
--------------- CRUD ------------------
-- Tela de cadastro, atualiza��o e listagem de produto
-- .................... fornecedor
-- .................... categoria (exceto listagem)
-- ....................varia��o do produto
+- O software consiste em gerenciar a entrada e saída de materiais e produtos que os funcionários do laboratório de informática recebem. O objetivo é o cadastro e organização destes produtos para uma fácil e ágil conferência, devido a alta movimentação destes produtos dentro do setor e fora dele. O software tabém se encarregará de gerar os termos de empréstimos de equipamentos do laboratório para terceiros.
 
--------------- Relat�rio ---------------
-- Produto e/ou sua varia��o
-- Fornecedor
+- Toda ação realizada dentro do software será atribuída para o devido técnico que a realizou através da autenticação deste antes do inicio em si do software (semelhante ao funcionamento de atribuição de chamados do GLPI, porém de forma automática e não manual) Exemplo: um equipamento foi descartado e então o software indicará no histórico de ações realizadas qual usuário que o fez.
+
+- A premissa do software é a de que ele tenha um funcionamento genérico, ou seja, se aplique a diversos cenários (relacionados ao laboratório de informática), como por exemplo, gerência do estoque de tonners, de equipamentos que chegam e saem da Huawei e dos demais setores, equipamentos e acessórios guardados na sala de manutenção e do LEC, organização dos notebooks alugados, seus acessórios e para onde foram despachados, etc.
+

@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using prjEstoque.Model;
-using prjEstoque.Entity;
 
 namespace prjEstoque
 {
@@ -76,55 +74,17 @@ namespace prjEstoque
             }
         }
 
-        private void btnForn_Slider_Click(object sender, EventArgs e)
-        {
-            if (gbFornecedor.Height == 28)
-            {
-                util.Slider(gbFornecedor, 280, 849);
-                util.Slider(pnGb_Forn, 345, 849);
-                btnForn_Slider.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
-            }
-            else
-            {
-                util.Slider(gbFornecedor, 28, 849);
-                util.Slider(pnGb_Forn, 65, 849);
-                btnForn_Slider.Image = prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            }
-        }
-
-        private void btnCat_Slider_Click(object sender, EventArgs e)
-        {
-            
-
-            if (gbCategoria.Height == 28)
-            {
-                util.Slider(gbCategoria, 280, 849);
-                util.Slider(pnGb_Cat, 345, 849);
-                btnCat_Slider.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
-            }
-            else
-            {
-                util.Slider(gbCategoria, 28, 849);
-                util.Slider(pnGb_Cat, 65, 849);
-                btnCat_Slider.Image = prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            }
-        }
-
         private void btnSlide_Click(object sender, EventArgs e)
         {
             if(pnLeft.Width == 251)
             {
                 util.Slider(pnLeft, 662, 59);
                 btnProd_Slider.Location = new Point(997, btnProd_Slider.Location.Y);
-                btnForn_Slider.Location = new Point(997, btnForn_Slider.Location.Y);
-                btnCat_Slider.Location = new Point(997, btnCat_Slider.Location.Y);
             }
             else
             {
                 util.Slider(pnLeft, 662, 251);
                 btnProd_Slider.Location = new Point(805, btnProd_Slider.Location.Y);
-                btnForn_Slider.Location = new Point(805, btnForn_Slider.Location.Y);
-                btnCat_Slider.Location = new Point(805, btnCat_Slider.Location.Y);
             }
         }
     }
