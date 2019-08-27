@@ -1,6 +1,6 @@
 ﻿namespace prjEstoque
 {
-    partial class frmDashboard
+    partial class frmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -507,7 +507,7 @@
             this.btnProd_Slider.UseVisualStyleBackColor = true;
             this.btnProd_Slider.Click += new System.EventHandler(this.btnProd_Slider_Click);
             // 
-            // frmDashboard
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -519,7 +519,7 @@
             this.Controls.Add(this.pnLeft);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmDashboard";
+            this.Name = "frmPrincipal";
             this.RightToLeftLayout = true;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

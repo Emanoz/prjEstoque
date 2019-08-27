@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace prjEstoque
 {
-    public partial class frmDashboard : Form
+    public partial class frmPrincipal : Form
     {
         private Util util = null;
 
-        public frmDashboard()
+        public frmPrincipal()
         {
             InitializeComponent();
             util = new Util();

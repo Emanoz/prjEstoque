@@ -346,9 +346,14 @@ C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\pt-BR\Microso
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csprojAssemblyReference.cache
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.exe.config
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.Properties.Resources.resources
-C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.frmDashboard.resources
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csproj.GenerateResource.cache
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csproj.CoreCompileInputs.cache
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csproj.CopyComplete
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.exe
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.pdb
+C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Services.resources.dll
+C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Core.resources.dll
+C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmLogin.resources
+C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.frmPrincipal.resources
