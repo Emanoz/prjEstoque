@@ -1,9 +1,10 @@
-﻿1. 
-Emanuel M.lourençon (180281) e Lorraine Paloschi (180770), ambos estão no turno da noite, exceto pela matéria de PA 4, do curso de Engenharia de Computação. 
+﻿
 
-2. 
+1.
+Emanuel M.lourençon (180281) e Lorraine Paloschi (180770), ambos estão no turno da noite, exceto pela matéria de PA 4, do curso de Engenharia de Computação.
+
+2.
 - O software consiste em gerenciar a entrada e saída de materiais e produtos que os funcionários do laboratório de informática recebem. O objetivo é o cadastro e organização destes produtos para uma fácil e ágil conferência, devido à alta movimentação destes dentro do setor e fora dele. O software também se encarregará de gerar os termos de empréstimos de equipamentos do laboratório para terceiros.
-
 - Toda ação realizada dentro do software será atribuída para o devido técnico que a realizou através da autenticação deste antes do início em si do software (semelhante ao funcionamento de atribuição de chamados do GLPI, porém de forma automática e não manual) Exemplo: um equipamento foi descartado e então o software indicará no histórico de ações realizadas qual usuário o fez (que será o usuário logado).
 
 - A premissa do software é a de que ele tenha um funcionamento genérico, ou seja, se aplique a diversos cenários (relacionados ao laboratório de informática), como por exemplo, gerência do estoque de tonners, de equipamentos que chegam e saem da empresa Huawei e dos demais setores, equipamentos e acessórios guardados na sala de manutenção e do LEC, organização dos notebooks alugados, seus acessórios e para onde foram despachados, etc.
@@ -11,14 +12,17 @@ Emanuel M.lourençon (180281) e Lorraine Paloschi (180770), ambos estão no turn
 - Os dados cadastrados no software serão armazenados num banco de dados que será alocado em um servidor para que os dados estejam disponíveis e sincronizados para qualquer máquina do controle dos funcionários do laboratório de informática.
 
 
-3. 
+3.
 - Sim, algumas telas serão reaproveitadas de projetos anteriores e adaptadas para que façam sentido para este projeto.
 
 4.
 - Conciliar o conteúdo das matérias que estão sendo cursadas para o desenvolvimento de um software sólido que atenda aos requisitos levantados do laboratório de informática.
 
-5. 
+5.
 - Utilizaremos a linguagem de programação C# juntamente com Windows Forms. Para o armazenamento de informações usaremos o SGBD SQL Server.
 
-6. 
+6.
 - Nenhum, uma vez que nosso projeto é o desenvolvimento de um software para desktop.
+
+7.
+- As telas ficarão a cargo do Emanuel, uma vez que ja haviam sido iniciadas por ele, juntamente com a as regras de negócio. A modelagem do modelo físico do banco de dados, por sua vez, ficará a cargo da Lorraine. As demais tarefas minoritárias serão distribuídas conforme a demanda.
