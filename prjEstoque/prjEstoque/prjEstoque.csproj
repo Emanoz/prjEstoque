@@ -75,6 +75,8 @@
     <Compile Include="Model\MODEL_Categoria.cs" />
     <Compile Include="Model\MODEL_Equipamento.cs" />
     <Compile Include="Model\MODEL_Estoque.cs" />
+    <Compile Include="Model\MODEL_Movimentacao.cs" />
+    <Compile Include="Model\MODEL_Termo_Emprestimo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="View\frmLogin.cs">
