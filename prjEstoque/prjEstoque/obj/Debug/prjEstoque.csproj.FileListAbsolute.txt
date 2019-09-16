@@ -184,7 +184,6 @@ C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\pt-BR\Micros
 C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csprojAssemblyReference.cache
 C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.exe.config
 C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.Properties.Resources.resources
-C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.frmDashboard.resources
 C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csproj.GenerateResource.cache
 C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csproj.CoreCompileInputs.cache
 C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csproj.CopyComplete
@@ -357,3 +356,5 @@ C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\pt-BR\Microso
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Core.resources.dll
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmLogin.resources
 C:\Users\180281\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.frmPrincipal.resources
+C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmLogin.resources
+C:\Users\Adriana\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.frmPrincipal.resources

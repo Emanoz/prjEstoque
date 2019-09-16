@@ -89,7 +89,7 @@
             this.txtSenha.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtSenha.Location = new System.Drawing.Point(71, 297);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '$';
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(211, 22);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Text = "Senha:";

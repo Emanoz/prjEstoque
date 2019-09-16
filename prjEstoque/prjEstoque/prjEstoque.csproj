@@ -66,6 +66,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBUtils.cs" />
+    <Compile Include="Entity\Categoria.cs" />
+    <Compile Include="Entity\Equipamento.cs" />
+    <Compile Include="Entity\Estoque.cs" />
+    <Compile Include="Entity\Movimentacao.cs" />
+    <Compile Include="Entity\Termo_Emprestimo.cs" />
+    <Compile Include="Entity\Usuario.cs" />
+    <Compile Include="Model\MODEL_Categoria.cs" />
+    <Compile Include="Model\MODEL_Equipamento.cs" />
+    <Compile Include="Model\MODEL_Estoque.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="View\frmLogin.cs">
@@ -114,8 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Entity\" />
-    <Folder Include="Model\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
