@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prjEstoque.Controller;
+using prjEstoque.Entity;
 
 namespace prjEstoque
 {
@@ -86,6 +88,42 @@ namespace prjEstoque
                 util.Slider(pnLeft, 662, 251);
                 btnProd_Slider.Location = new Point(805, btnProd_Slider.Location.Y);
             }
+        }
+
+        private void opAtualizar_Click(object sender, EventArgs e)
+        {
+            CTRL_Categoria cCat = new CTRL_Categoria();
+            List<Categoria> listCat = new List<Categoria>();
+
+            listCat = cCat.GetAll();
+            dgvCategoria.DataSource = listCat;
+            FormatarDgv.FormatarCategoria(dgvCategoria);
+        }
+        
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            CTRL_Categoria cCat = new CTRL_Categoria();
+            Categoria c = new Categoria(txtCategoria.Text);
+
+            cCat.Insert(c);
+            opAtualizar_Click(null, null);
+        }
+
+        private void opAtualizar_Campo_Click(object sender, EventArgs e)
+        {
+            CTRL_Categoria cCat = new CTRL_Categoria();
+
+            Categoria c = new Categoria(int.Parse(dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value.ToString()), txtCategoria.Text);
+            cCat.Update(c);
+            opAtualizar_Click(null, null);
+        }
+
+        private void opDeletar_Campo_Click(object sender, EventArgs e)
+        {
+            CTRL_Categoria cCat = new CTRL_Categoria();
+;
+            cCat.Delete(int.Parse(dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value.ToString()));
+            opAtualizar_Click(null, null);
         }
     }
 }

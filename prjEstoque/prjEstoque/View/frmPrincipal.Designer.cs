@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -51,6 +52,12 @@
             this.pnGroup_Op = new System.Windows.Forms.Panel();
             this.pnGb_Prod = new System.Windows.Forms.Panel();
             this.txtProd_Nome = new System.Windows.Forms.GroupBox();
+            this.dgvCategoria = new System.Windows.Forms.DataGridView();
+            this.menuCategoria = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnProd_Slider = new System.Windows.Forms.Button();
             this.pnList_Prod = new System.Windows.Forms.Panel();
             this.dgvFornecedores = new System.Windows.Forms.DataGridView();
             this.prod_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +75,9 @@
             this.forn_Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnProd_Slider = new System.Windows.Forms.Button();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opAtualizar_Campo = new System.Windows.Forms.ToolStripMenuItem();
+            this.opDeletar_Campo = new System.Windows.Forms.ToolStripMenuItem();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,6 +89,8 @@
             this.pnGroup_Op.SuspendLayout();
             this.pnGb_Prod.SuspendLayout();
             this.txtProd_Nome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
+            this.menuCategoria.SuspendLayout();
             this.pnList_Prod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.pnList_Forn.SuspendLayout();
@@ -308,21 +319,88 @@
             this.pnGb_Prod.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnGb_Prod.Location = new System.Drawing.Point(0, 0);
             this.pnGb_Prod.Name = "pnGb_Prod";
-            this.pnGb_Prod.Size = new System.Drawing.Size(849, 65);
+            this.pnGb_Prod.Size = new System.Drawing.Size(849, 329);
             this.pnGb_Prod.TabIndex = 1;
             // 
             // txtProd_Nome
             // 
+            this.txtProd_Nome.Controls.Add(this.dgvCategoria);
+            this.txtProd_Nome.Controls.Add(this.btnCadastrar);
+            this.txtProd_Nome.Controls.Add(this.txtCategoria);
+            this.txtProd_Nome.Controls.Add(this.label3);
             this.txtProd_Nome.Controls.Add(this.btnProd_Slider);
             this.txtProd_Nome.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtProd_Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProd_Nome.ForeColor = System.Drawing.Color.White;
             this.txtProd_Nome.Location = new System.Drawing.Point(0, 0);
             this.txtProd_Nome.Name = "txtProd_Nome";
-            this.txtProd_Nome.Size = new System.Drawing.Size(849, 28);
+            this.txtProd_Nome.Size = new System.Drawing.Size(849, 292);
             this.txtProd_Nome.TabIndex = 0;
             this.txtProd_Nome.TabStop = false;
-            this.txtProd_Nome.Text = "(exemplo)";
+            this.txtProd_Nome.Text = "Categoria:";
+            // 
+            // dgvCategoria
+            // 
+            this.dgvCategoria.AllowUserToAddRows = false;
+            this.dgvCategoria.AllowUserToDeleteRows = false;
+            this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategoria.ContextMenuStrip = this.menuCategoria;
+            this.dgvCategoria.Location = new System.Drawing.Point(46, 30);
+            this.dgvCategoria.Name = "dgvCategoria";
+            this.dgvCategoria.ReadOnly = true;
+            this.dgvCategoria.Size = new System.Drawing.Size(247, 245);
+            this.dgvCategoria.TabIndex = 12;
+            // 
+            // menuCategoria
+            // 
+            this.menuCategoria.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem,
+            this.opAtualizar_Campo,
+            this.opDeletar_Campo});
+            this.menuCategoria.Name = "menuCategoria";
+            this.menuCategoria.Size = new System.Drawing.Size(181, 92);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.Lime;
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrar.Location = new System.Drawing.Point(355, 244);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(145, 31);
+            this.btnCadastrar.TabIndex = 11;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Location = new System.Drawing.Point(355, 53);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(145, 26);
+            this.txtCategoria.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(351, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(149, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Adicionar categoria:";
+            // 
+            // btnProd_Slider
+            // 
+            this.btnProd_Slider.FlatAppearance.BorderSize = 0;
+            this.btnProd_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProd_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnProd_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnProd_Slider.Name = "btnProd_Slider";
+            this.btnProd_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnProd_Slider.TabIndex = 8;
+            this.btnProd_Slider.UseVisualStyleBackColor = true;
+            this.btnProd_Slider.Click += new System.EventHandler(this.btnProd_Slider_Click);
             // 
             // pnList_Prod
             // 
@@ -342,14 +420,14 @@
             this.dgvFornecedores.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvFornecedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFornecedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFornecedores.ColumnHeadersHeight = 35;
             this.dgvFornecedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.prod_Id,
@@ -414,14 +492,14 @@
             this.dgvProdutos.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvProdutos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProdutos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProdutos.ColumnHeadersHeight = 35;
             this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.forn_Id,
@@ -495,17 +573,26 @@
             this.forn_Cep.ReadOnly = true;
             this.forn_Cep.Width = 80;
             // 
-            // btnProd_Slider
+            // refreshToolStripMenuItem
             // 
-            this.btnProd_Slider.FlatAppearance.BorderSize = 0;
-            this.btnProd_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProd_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnProd_Slider.Location = new System.Drawing.Point(805, 10);
-            this.btnProd_Slider.Name = "btnProd_Slider";
-            this.btnProd_Slider.Size = new System.Drawing.Size(30, 16);
-            this.btnProd_Slider.TabIndex = 8;
-            this.btnProd_Slider.UseVisualStyleBackColor = true;
-            this.btnProd_Slider.Click += new System.EventHandler(this.btnProd_Slider_Click);
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.opAtualizar_Click);
+            // 
+            // opAtualizar_Campo
+            // 
+            this.opAtualizar_Campo.Name = "opAtualizar_Campo";
+            this.opAtualizar_Campo.Size = new System.Drawing.Size(180, 22);
+            this.opAtualizar_Campo.Text = "Atualizar campo";
+            this.opAtualizar_Campo.Click += new System.EventHandler(this.opAtualizar_Campo_Click);
+            // 
+            // opDeletar_Campo
+            // 
+            this.opDeletar_Campo.Name = "opDeletar_Campo";
+            this.opDeletar_Campo.Size = new System.Drawing.Size(180, 22);
+            this.opDeletar_Campo.Text = "Deletar campo";
+            this.opDeletar_Campo.Click += new System.EventHandler(this.opDeletar_Campo_Click);
             // 
             // frmPrincipal
             // 
@@ -537,6 +624,9 @@
             this.pnGroup_Op.ResumeLayout(false);
             this.pnGb_Prod.ResumeLayout(false);
             this.txtProd_Nome.ResumeLayout(false);
+            this.txtProd_Nome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();
+            this.menuCategoria.ResumeLayout(false);
             this.pnList_Prod.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.pnList_Forn.ResumeLayout(false);
@@ -586,6 +676,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cep;
         private System.Windows.Forms.Button btnProd_Slider;
+        private System.Windows.Forms.DataGridView dgvCategoria;
+        private System.Windows.Forms.ContextMenuStrip menuCategoria;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opAtualizar_Campo;
+        private System.Windows.Forms.ToolStripMenuItem opDeletar_Campo;
     }
 }
 

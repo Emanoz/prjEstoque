@@ -64,11 +64,12 @@ namespace prjEstoque.Model
 
         public void Update(Categoria c)
         {
-            string query = "UPDATE Categoria SET Descricao = @descricao";
+            string query = "UPDATE Categoria SET Descricao = @descricao WHERE CodCategoria = @codCategoria";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@descricao", c.Descricao)) == 0)
+                if (db.CallExecuteNonQuery(query, new SqlParameter("@codCategoria", c.CodCategoria),
+                                                  new SqlParameter("@descricao", c.Descricao)) == 0)
                     throw new Exception("Nenhuma linha foi alterada");
             }
             catch (Exception ex)

@@ -19,6 +19,11 @@ namespace prjEstoque.Entity
             Descricao = descricao;
         }
 
+        public Categoria(string descricao)
+        {
+            Descricao = descricao;
+        }
+
         public int CodCategoria { get; set; }
         public string Descricao { get; set; }
 

@@ -65,6 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CTRL_Categoria.cs" />
+    <Compile Include="Controller\CTRL_Equipamento.cs" />
+    <Compile Include="Controller\CTRL_Estoque.cs" />
+    <Compile Include="Controller\CTRL_Movimentacao.cs" />
+    <Compile Include="Controller\CTRL_Termo_Emprestimo.cs" />
     <Compile Include="DBUtils.cs" />
     <Compile Include="Entity\Categoria.cs" />
     <Compile Include="Entity\Equipamento.cs" />
@@ -72,6 +77,7 @@
     <Compile Include="Entity\Movimentacao.cs" />
     <Compile Include="Entity\Termo_Emprestimo.cs" />
     <Compile Include="Entity\Usuario.cs" />
+    <Compile Include="FormatarDgv.cs" />
     <Compile Include="Model\MODEL_Categoria.cs" />
     <Compile Include="Model\MODEL_Equipamento.cs" />
     <Compile Include="Model\MODEL_Estoque.cs" />
@@ -124,7 +130,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
