@@ -46,6 +46,34 @@ namespace prjEstoque.Model
             return list;
         }
 
+        public List<Categoria> GetCategoria()
+        {
+            string query = "SELECT Descricao FROM Categoria";
+            List<Categoria> list = new List<Categoria>();
+
+            try
+            {
+                SqlDataReader reader = db.CallExecuteReader(query);
+                while (reader.Read())
+                {
+                    Categoria c = new Categoria();
+                    
+                    c.Descricao = reader["Descricao"].ToString();
+
+                    list.Add(c);
+                }
+                reader.Close();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+            return list;
+        }
+
         public void Insert(Categoria c)
         {
             string query = "INSERT INTO Categoria VALUES(@descricao)";

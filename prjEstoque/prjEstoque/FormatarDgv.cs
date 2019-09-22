@@ -13,7 +13,7 @@ namespace prjEstoque
             dgv.Columns["CodCategoria"].Visible = false;
             dgv.Columns["Descricao"].HeaderText = "Descrição";
             dgv.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            dgv.Columns["Descricao"].Width = 190;
+            dgv.Columns["Descricao"].Width = 200;
         }
     }
 }

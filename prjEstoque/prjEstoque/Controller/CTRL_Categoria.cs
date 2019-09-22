@@ -22,6 +22,11 @@ namespace prjEstoque.Controller
             return modelC.GetAll();
         }
 
+        public List<Categoria> GetCategoria()
+        {
+            return modelC.GetCategoria();
+        }
+
         public void Insert(Categoria c)
         {
             modelC.Insert(c);

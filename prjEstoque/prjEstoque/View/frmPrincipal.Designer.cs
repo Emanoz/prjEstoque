@@ -50,14 +50,17 @@
             this.pnHome = new System.Windows.Forms.Panel();
             this.pnCadastro = new System.Windows.Forms.Panel();
             this.pnGroup_Op = new System.Windows.Forms.Panel();
-            this.pnGb_Prod = new System.Windows.Forms.Panel();
-            this.txtProd_Nome = new System.Windows.Forms.GroupBox();
+            this.pnGb_Categoria = new System.Windows.Forms.Panel();
+            this.gbCategoria = new System.Windows.Forms.GroupBox();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
             this.menuCategoria = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opAtualizar_Campo = new System.Windows.Forms.ToolStripMenuItem();
+            this.opDeletar_Campo = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnProd_Slider = new System.Windows.Forms.Button();
+            this.btnCategoria_Slider = new System.Windows.Forms.Button();
             this.pnList_Prod = new System.Windows.Forms.Panel();
             this.dgvFornecedores = new System.Windows.Forms.DataGridView();
             this.prod_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,9 +78,21 @@
             this.forn_Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opAtualizar_Campo = new System.Windows.Forms.ToolStripMenuItem();
-            this.opDeletar_Campo = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnGb_Equipamento = new System.Windows.Forms.Panel();
+            this.gbEquipamento = new System.Windows.Forms.GroupBox();
+            this.btnEquipamento_Slider = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,14 +102,16 @@
             this.pnReport.SuspendLayout();
             this.pnCadastro.SuspendLayout();
             this.pnGroup_Op.SuspendLayout();
-            this.pnGb_Prod.SuspendLayout();
-            this.txtProd_Nome.SuspendLayout();
+            this.pnGb_Categoria.SuspendLayout();
+            this.gbCategoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             this.menuCategoria.SuspendLayout();
             this.pnList_Prod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.pnList_Forn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
+            this.pnGb_Equipamento.SuspendLayout();
+            this.gbEquipamento.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTop
@@ -306,38 +323,39 @@
             // pnGroup_Op
             // 
             this.pnGroup_Op.AutoScroll = true;
-            this.pnGroup_Op.Controls.Add(this.pnGb_Prod);
+            this.pnGroup_Op.Controls.Add(this.pnGb_Equipamento);
+            this.pnGroup_Op.Controls.Add(this.pnGb_Categoria);
             this.pnGroup_Op.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnGroup_Op.Location = new System.Drawing.Point(0, 48);
             this.pnGroup_Op.Name = "pnGroup_Op";
             this.pnGroup_Op.Size = new System.Drawing.Size(849, 614);
             this.pnGroup_Op.TabIndex = 0;
             // 
-            // pnGb_Prod
+            // pnGb_Categoria
             // 
-            this.pnGb_Prod.Controls.Add(this.txtProd_Nome);
-            this.pnGb_Prod.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnGb_Prod.Location = new System.Drawing.Point(0, 0);
-            this.pnGb_Prod.Name = "pnGb_Prod";
-            this.pnGb_Prod.Size = new System.Drawing.Size(849, 329);
-            this.pnGb_Prod.TabIndex = 1;
+            this.pnGb_Categoria.Controls.Add(this.gbCategoria);
+            this.pnGb_Categoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnGb_Categoria.Location = new System.Drawing.Point(0, 0);
+            this.pnGb_Categoria.Name = "pnGb_Categoria";
+            this.pnGb_Categoria.Size = new System.Drawing.Size(849, 65);
+            this.pnGb_Categoria.TabIndex = 1;
             // 
-            // txtProd_Nome
+            // gbCategoria
             // 
-            this.txtProd_Nome.Controls.Add(this.dgvCategoria);
-            this.txtProd_Nome.Controls.Add(this.btnCadastrar);
-            this.txtProd_Nome.Controls.Add(this.txtCategoria);
-            this.txtProd_Nome.Controls.Add(this.label3);
-            this.txtProd_Nome.Controls.Add(this.btnProd_Slider);
-            this.txtProd_Nome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtProd_Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProd_Nome.ForeColor = System.Drawing.Color.White;
-            this.txtProd_Nome.Location = new System.Drawing.Point(0, 0);
-            this.txtProd_Nome.Name = "txtProd_Nome";
-            this.txtProd_Nome.Size = new System.Drawing.Size(849, 292);
-            this.txtProd_Nome.TabIndex = 0;
-            this.txtProd_Nome.TabStop = false;
-            this.txtProd_Nome.Text = "Categoria:";
+            this.gbCategoria.Controls.Add(this.dgvCategoria);
+            this.gbCategoria.Controls.Add(this.btnCadastrar);
+            this.gbCategoria.Controls.Add(this.txtCategoria);
+            this.gbCategoria.Controls.Add(this.label3);
+            this.gbCategoria.Controls.Add(this.btnCategoria_Slider);
+            this.gbCategoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbCategoria.ForeColor = System.Drawing.Color.White;
+            this.gbCategoria.Location = new System.Drawing.Point(0, 0);
+            this.gbCategoria.Name = "gbCategoria";
+            this.gbCategoria.Size = new System.Drawing.Size(849, 28);
+            this.gbCategoria.TabIndex = 0;
+            this.gbCategoria.TabStop = false;
+            this.gbCategoria.Text = "Categoria:";
             // 
             // dgvCategoria
             // 
@@ -358,7 +376,28 @@
             this.opAtualizar_Campo,
             this.opDeletar_Campo});
             this.menuCategoria.Name = "menuCategoria";
-            this.menuCategoria.Size = new System.Drawing.Size(181, 92);
+            this.menuCategoria.Size = new System.Drawing.Size(161, 70);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.opAtualizar_Click);
+            // 
+            // opAtualizar_Campo
+            // 
+            this.opAtualizar_Campo.Name = "opAtualizar_Campo";
+            this.opAtualizar_Campo.Size = new System.Drawing.Size(160, 22);
+            this.opAtualizar_Campo.Text = "Atualizar campo";
+            this.opAtualizar_Campo.Click += new System.EventHandler(this.opAtualizar_Campo_Click);
+            // 
+            // opDeletar_Campo
+            // 
+            this.opDeletar_Campo.Name = "opDeletar_Campo";
+            this.opDeletar_Campo.Size = new System.Drawing.Size(160, 22);
+            this.opDeletar_Campo.Text = "Deletar campo";
+            this.opDeletar_Campo.Click += new System.EventHandler(this.opDeletar_Campo_Click);
             // 
             // btnCadastrar
             // 
@@ -390,17 +429,17 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Adicionar categoria:";
             // 
-            // btnProd_Slider
+            // btnCategoria_Slider
             // 
-            this.btnProd_Slider.FlatAppearance.BorderSize = 0;
-            this.btnProd_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProd_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnProd_Slider.Location = new System.Drawing.Point(805, 10);
-            this.btnProd_Slider.Name = "btnProd_Slider";
-            this.btnProd_Slider.Size = new System.Drawing.Size(30, 16);
-            this.btnProd_Slider.TabIndex = 8;
-            this.btnProd_Slider.UseVisualStyleBackColor = true;
-            this.btnProd_Slider.Click += new System.EventHandler(this.btnProd_Slider_Click);
+            this.btnCategoria_Slider.FlatAppearance.BorderSize = 0;
+            this.btnCategoria_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoria_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnCategoria_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnCategoria_Slider.Name = "btnCategoria_Slider";
+            this.btnCategoria_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnCategoria_Slider.TabIndex = 8;
+            this.btnCategoria_Slider.UseVisualStyleBackColor = true;
+            this.btnCategoria_Slider.Click += new System.EventHandler(this.btnCategoria_Slider_Click);
             // 
             // pnList_Prod
             // 
@@ -573,26 +612,149 @@
             this.forn_Cep.ReadOnly = true;
             this.forn_Cep.Width = 80;
             // 
-            // refreshToolStripMenuItem
+            // pnGb_Equipamento
             // 
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.refreshToolStripMenuItem.Text = "Refresh";
-            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.opAtualizar_Click);
+            this.pnGb_Equipamento.Controls.Add(this.gbEquipamento);
+            this.pnGb_Equipamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnGb_Equipamento.Location = new System.Drawing.Point(0, 65);
+            this.pnGb_Equipamento.Name = "pnGb_Equipamento";
+            this.pnGb_Equipamento.Size = new System.Drawing.Size(849, 65);
+            this.pnGb_Equipamento.TabIndex = 2;
             // 
-            // opAtualizar_Campo
+            // gbEquipamento
             // 
-            this.opAtualizar_Campo.Name = "opAtualizar_Campo";
-            this.opAtualizar_Campo.Size = new System.Drawing.Size(180, 22);
-            this.opAtualizar_Campo.Text = "Atualizar campo";
-            this.opAtualizar_Campo.Click += new System.EventHandler(this.opAtualizar_Campo_Click);
+            this.gbEquipamento.Controls.Add(this.cbCategoria);
+            this.gbEquipamento.Controls.Add(this.textBox4);
+            this.gbEquipamento.Controls.Add(this.label9);
+            this.gbEquipamento.Controls.Add(this.textBox3);
+            this.gbEquipamento.Controls.Add(this.label8);
+            this.gbEquipamento.Controls.Add(this.label7);
+            this.gbEquipamento.Controls.Add(this.textBox2);
+            this.gbEquipamento.Controls.Add(this.label6);
+            this.gbEquipamento.Controls.Add(this.textBox1);
+            this.gbEquipamento.Controls.Add(this.label5);
+            this.gbEquipamento.Controls.Add(this.txtDescricao);
+            this.gbEquipamento.Controls.Add(this.label4);
+            this.gbEquipamento.Controls.Add(this.btnEquipamento_Slider);
+            this.gbEquipamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbEquipamento.ForeColor = System.Drawing.Color.White;
+            this.gbEquipamento.Location = new System.Drawing.Point(0, 0);
+            this.gbEquipamento.Name = "gbEquipamento";
+            this.gbEquipamento.Size = new System.Drawing.Size(849, 28);
+            this.gbEquipamento.TabIndex = 0;
+            this.gbEquipamento.TabStop = false;
+            this.gbEquipamento.Text = "Equipamento:";
             // 
-            // opDeletar_Campo
+            // btnEquipamento_Slider
             // 
-            this.opDeletar_Campo.Name = "opDeletar_Campo";
-            this.opDeletar_Campo.Size = new System.Drawing.Size(180, 22);
-            this.opDeletar_Campo.Text = "Deletar campo";
-            this.opDeletar_Campo.Click += new System.EventHandler(this.opDeletar_Campo_Click);
+            this.btnEquipamento_Slider.FlatAppearance.BorderSize = 0;
+            this.btnEquipamento_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquipamento_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnEquipamento_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnEquipamento_Slider.Name = "btnEquipamento_Slider";
+            this.btnEquipamento_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnEquipamento_Slider.TabIndex = 8;
+            this.btnEquipamento_Slider.UseVisualStyleBackColor = true;
+            this.btnEquipamento_Slider.Click += new System.EventHandler(this.btnEquipamento_Slider_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(66, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Descrição:";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Location = new System.Drawing.Point(156, 40);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(206, 26);
+            this.txtDescricao.TabIndex = 10;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(544, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 26);
+            this.textBox1.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(448, 43);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Nº de série:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(156, 107);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(206, 26);
+            this.textBox2.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(86, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 20);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Estado:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(68, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Categoria:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(544, 110);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(206, 26);
+            this.textBox3.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(438, 113);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 20);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Pertencente:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(544, 179);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(206, 26);
+            this.textBox4.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(450, 182);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 20);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Patrimônio:";
+            // 
+            // cbCategoria
+            // 
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(156, 179);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(206, 28);
+            this.cbCategoria.TabIndex = 20;
+            this.cbCategoria.DropDown += new System.EventHandler(this.cbCategoria_DropDown);
             // 
             // frmPrincipal
             // 
@@ -622,15 +784,18 @@
             this.pnReport.PerformLayout();
             this.pnCadastro.ResumeLayout(false);
             this.pnGroup_Op.ResumeLayout(false);
-            this.pnGb_Prod.ResumeLayout(false);
-            this.txtProd_Nome.ResumeLayout(false);
-            this.txtProd_Nome.PerformLayout();
+            this.pnGb_Categoria.ResumeLayout(false);
+            this.gbCategoria.ResumeLayout(false);
+            this.gbCategoria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();
             this.menuCategoria.ResumeLayout(false);
             this.pnList_Prod.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.pnList_Forn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
+            this.pnGb_Equipamento.ResumeLayout(false);
+            this.gbEquipamento.ResumeLayout(false);
+            this.gbEquipamento.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -653,8 +818,8 @@
         private System.Windows.Forms.Button btnSlide;
         private System.Windows.Forms.Panel pnCadastro;
         private System.Windows.Forms.Panel pnGroup_Op;
-        private System.Windows.Forms.Panel pnGb_Prod;
-        private System.Windows.Forms.GroupBox txtProd_Nome;
+        private System.Windows.Forms.Panel pnGb_Categoria;
+        private System.Windows.Forms.GroupBox gbCategoria;
         private System.Windows.Forms.Panel pnList_Prod;
         private System.Windows.Forms.Panel pnList_Forn;
         private System.Windows.Forms.DataGridView dgvProdutos;
@@ -675,7 +840,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn forn_Cep;
-        private System.Windows.Forms.Button btnProd_Slider;
+        private System.Windows.Forms.Button btnCategoria_Slider;
         private System.Windows.Forms.DataGridView dgvCategoria;
         private System.Windows.Forms.ContextMenuStrip menuCategoria;
         private System.Windows.Forms.Button btnCadastrar;
@@ -684,6 +849,21 @@
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opAtualizar_Campo;
         private System.Windows.Forms.ToolStripMenuItem opDeletar_Campo;
+        private System.Windows.Forms.Panel pnGb_Equipamento;
+        private System.Windows.Forms.GroupBox gbEquipamento;
+        private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnEquipamento_Slider;
     }
 }
 
