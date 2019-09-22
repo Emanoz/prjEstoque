@@ -27,19 +27,19 @@ namespace prjEstoque.Controller
             return modelC.GetCategoria();
         }
 
-        public void Insert(Categoria c)
+        public int Insert(Categoria c)
         {
-            modelC.Insert(c);
+            return modelC.Insert(c);
         }
 
-        public void Update(Categoria c)
+        public int Update(Categoria c)
         {
-            modelC.Update(c);
+            return modelC.Update(c);
         }
 
-        public void Delete(int cod)
+        public int Delete(int cod)
         {
-            modelC.Delete(cod);
+            return modelC.Delete(cod);
         }
     }
 }

@@ -74,14 +74,13 @@ namespace prjEstoque.Model
             return list;
         }
 
-        public void Insert(Categoria c)
+        public int Insert(Categoria c)
         {
             string query = "INSERT INTO Categoria VALUES(@descricao)";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@descricao", c.Descricao)) == 0)
-                    throw new Exception("Nenhuma linha foi cadastrada");
+                return db.CallExecuteNonQuery(query, new SqlParameter("@descricao", c.Descricao));
             }
             catch (Exception ex)
             {
@@ -90,15 +89,14 @@ namespace prjEstoque.Model
             }
         }
 
-        public void Update(Categoria c)
+        public int Update(Categoria c)
         {
             string query = "UPDATE Categoria SET Descricao = @descricao WHERE CodCategoria = @codCategoria";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@codCategoria", c.CodCategoria),
-                                                  new SqlParameter("@descricao", c.Descricao)) == 0)
-                    throw new Exception("Nenhuma linha foi alterada");
+                return db.CallExecuteNonQuery(query, new SqlParameter("@codCategoria", c.CodCategoria),
+                                                  new SqlParameter("@descricao", c.Descricao));
             }
             catch (Exception ex)
             {
@@ -107,13 +105,12 @@ namespace prjEstoque.Model
             }
         }
 
-        public void Delete(int cod)
+        public int Delete(int cod)
         {
             string query = "DELETE FROM Categoria WHERE CodCategoria = @codCategoria";
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@codCategoria", cod)) == 0)
-                    throw new Exception("Nenhuma linha foi excluída");
+                return db.CallExecuteNonQuery(query, new SqlParameter("@codCategoria", cod));
             }
             catch (Exception ex)
             {

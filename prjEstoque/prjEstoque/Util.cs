@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows.Forms;
 
 namespace prjEstoque
 {
@@ -32,6 +28,25 @@ namespace prjEstoque
                 Slider(gb, 28, width);
                 Slider(pn, 65, width);
                 btn.Image = prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            }
+        }
+
+        public static void LimparCampos(Control.ControlCollection control)
+        {
+            foreach(Control item in control)
+            {
+                if (item is TextBox)
+                    ((TextBox)item).Clear();
+                else if (item is ComboBox)
+                    ((ComboBox)item).Items.Clear();
+                else if (item is CheckBox)
+                    ((CheckBox)item).Checked = false;
+                else if (item is MaskedTextBox)
+                    ((MaskedTextBox)item).Clear();
+                else if (item is DateTimePicker)
+                    ((DateTimePicker)item).Value = System.DateTime.Now;
+                else if (item is NumericUpDown)
+                    ((NumericUpDown)item).Value = 0;
             }
         }
     }

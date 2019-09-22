@@ -50,6 +50,21 @@
             this.pnHome = new System.Windows.Forms.Panel();
             this.pnCadastro = new System.Windows.Forms.Panel();
             this.pnGroup_Op = new System.Windows.Forms.Panel();
+            this.pnGb_Equipamento = new System.Windows.Forms.Panel();
+            this.gbEquipamento = new System.Windows.Forms.GroupBox();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.txtPatrimonio = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPertencente = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNSerie = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnEquipamento_Slider = new System.Windows.Forms.Button();
             this.pnGb_Categoria = new System.Windows.Forms.Panel();
             this.gbCategoria = new System.Windows.Forms.GroupBox();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
@@ -57,7 +72,7 @@
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opAtualizar_Campo = new System.Windows.Forms.ToolStripMenuItem();
             this.opDeletar_Campo = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnCadastrar_Cat = new System.Windows.Forms.Button();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCategoria_Slider = new System.Windows.Forms.Button();
@@ -78,21 +93,8 @@
             this.forn_Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forn_Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnGb_Equipamento = new System.Windows.Forms.Panel();
-            this.gbEquipamento = new System.Windows.Forms.GroupBox();
-            this.btnEquipamento_Slider = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.btnCadastrar_Equi = new System.Windows.Forms.Button();
+            this.btnLimpar_Equi = new System.Windows.Forms.Button();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,6 +104,8 @@
             this.pnReport.SuspendLayout();
             this.pnCadastro.SuspendLayout();
             this.pnGroup_Op.SuspendLayout();
+            this.pnGb_Equipamento.SuspendLayout();
+            this.gbEquipamento.SuspendLayout();
             this.pnGb_Categoria.SuspendLayout();
             this.gbCategoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
@@ -110,8 +114,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.pnList_Forn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
-            this.pnGb_Equipamento.SuspendLayout();
-            this.gbEquipamento.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTop
@@ -331,6 +333,152 @@
             this.pnGroup_Op.Size = new System.Drawing.Size(849, 614);
             this.pnGroup_Op.TabIndex = 0;
             // 
+            // pnGb_Equipamento
+            // 
+            this.pnGb_Equipamento.Controls.Add(this.gbEquipamento);
+            this.pnGb_Equipamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnGb_Equipamento.Location = new System.Drawing.Point(0, 65);
+            this.pnGb_Equipamento.Name = "pnGb_Equipamento";
+            this.pnGb_Equipamento.Size = new System.Drawing.Size(849, 286);
+            this.pnGb_Equipamento.TabIndex = 2;
+            // 
+            // gbEquipamento
+            // 
+            this.gbEquipamento.Controls.Add(this.btnLimpar_Equi);
+            this.gbEquipamento.Controls.Add(this.btnCadastrar_Equi);
+            this.gbEquipamento.Controls.Add(this.cbCategoria);
+            this.gbEquipamento.Controls.Add(this.txtPatrimonio);
+            this.gbEquipamento.Controls.Add(this.label9);
+            this.gbEquipamento.Controls.Add(this.txtPertencente);
+            this.gbEquipamento.Controls.Add(this.label8);
+            this.gbEquipamento.Controls.Add(this.label7);
+            this.gbEquipamento.Controls.Add(this.txtEstado);
+            this.gbEquipamento.Controls.Add(this.label6);
+            this.gbEquipamento.Controls.Add(this.txtNSerie);
+            this.gbEquipamento.Controls.Add(this.label5);
+            this.gbEquipamento.Controls.Add(this.txtDescricao);
+            this.gbEquipamento.Controls.Add(this.label4);
+            this.gbEquipamento.Controls.Add(this.btnEquipamento_Slider);
+            this.gbEquipamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbEquipamento.ForeColor = System.Drawing.Color.White;
+            this.gbEquipamento.Location = new System.Drawing.Point(0, 0);
+            this.gbEquipamento.Name = "gbEquipamento";
+            this.gbEquipamento.Size = new System.Drawing.Size(849, 249);
+            this.gbEquipamento.TabIndex = 0;
+            this.gbEquipamento.TabStop = false;
+            this.gbEquipamento.Text = "Equipamento:";
+            // 
+            // cbCategoria
+            // 
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(156, 179);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(206, 28);
+            this.cbCategoria.TabIndex = 20;
+            this.cbCategoria.DropDown += new System.EventHandler(this.cbCategoria_DropDown);
+            // 
+            // txtPatrimonio
+            // 
+            this.txtPatrimonio.Location = new System.Drawing.Point(544, 179);
+            this.txtPatrimonio.Name = "txtPatrimonio";
+            this.txtPatrimonio.Size = new System.Drawing.Size(206, 26);
+            this.txtPatrimonio.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(450, 182);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 20);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Patrimônio:";
+            // 
+            // txtPertencente
+            // 
+            this.txtPertencente.Location = new System.Drawing.Point(544, 110);
+            this.txtPertencente.Name = "txtPertencente";
+            this.txtPertencente.Size = new System.Drawing.Size(206, 26);
+            this.txtPertencente.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(438, 113);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 20);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Pertencente:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(68, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Categoria:";
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(156, 107);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(206, 26);
+            this.txtEstado.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(86, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 20);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Estado:";
+            // 
+            // txtNSerie
+            // 
+            this.txtNSerie.Location = new System.Drawing.Point(544, 40);
+            this.txtNSerie.Name = "txtNSerie";
+            this.txtNSerie.Size = new System.Drawing.Size(206, 26);
+            this.txtNSerie.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(448, 43);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Nº de série:";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Location = new System.Drawing.Point(156, 40);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(206, 26);
+            this.txtDescricao.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(66, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Descrição:";
+            // 
+            // btnEquipamento_Slider
+            // 
+            this.btnEquipamento_Slider.FlatAppearance.BorderSize = 0;
+            this.btnEquipamento_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquipamento_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnEquipamento_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnEquipamento_Slider.Name = "btnEquipamento_Slider";
+            this.btnEquipamento_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnEquipamento_Slider.TabIndex = 8;
+            this.btnEquipamento_Slider.UseVisualStyleBackColor = true;
+            this.btnEquipamento_Slider.Click += new System.EventHandler(this.btnEquipamento_Slider_Click);
+            // 
             // pnGb_Categoria
             // 
             this.pnGb_Categoria.Controls.Add(this.gbCategoria);
@@ -343,7 +491,7 @@
             // gbCategoria
             // 
             this.gbCategoria.Controls.Add(this.dgvCategoria);
-            this.gbCategoria.Controls.Add(this.btnCadastrar);
+            this.gbCategoria.Controls.Add(this.btnCadastrar_Cat);
             this.gbCategoria.Controls.Add(this.txtCategoria);
             this.gbCategoria.Controls.Add(this.label3);
             this.gbCategoria.Controls.Add(this.btnCategoria_Slider);
@@ -399,19 +547,19 @@
             this.opDeletar_Campo.Text = "Deletar campo";
             this.opDeletar_Campo.Click += new System.EventHandler(this.opDeletar_Campo_Click);
             // 
-            // btnCadastrar
+            // btnCadastrar_Cat
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.Lime;
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrar.Location = new System.Drawing.Point(355, 244);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(145, 31);
-            this.btnCadastrar.TabIndex = 11;
-            this.btnCadastrar.Text = "CADASTRAR";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnCadastrar_Cat.BackColor = System.Drawing.Color.Lime;
+            this.btnCadastrar_Cat.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar_Cat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar_Cat.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrar_Cat.Location = new System.Drawing.Point(355, 244);
+            this.btnCadastrar_Cat.Name = "btnCadastrar_Cat";
+            this.btnCadastrar_Cat.Size = new System.Drawing.Size(145, 31);
+            this.btnCadastrar_Cat.TabIndex = 11;
+            this.btnCadastrar_Cat.Text = "CADASTRAR";
+            this.btnCadastrar_Cat.UseVisualStyleBackColor = false;
+            this.btnCadastrar_Cat.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtCategoria
             // 
@@ -612,149 +760,31 @@
             this.forn_Cep.ReadOnly = true;
             this.forn_Cep.Width = 80;
             // 
-            // pnGb_Equipamento
+            // btnCadastrar_Equi
             // 
-            this.pnGb_Equipamento.Controls.Add(this.gbEquipamento);
-            this.pnGb_Equipamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnGb_Equipamento.Location = new System.Drawing.Point(0, 65);
-            this.pnGb_Equipamento.Name = "pnGb_Equipamento";
-            this.pnGb_Equipamento.Size = new System.Drawing.Size(849, 65);
-            this.pnGb_Equipamento.TabIndex = 2;
+            this.btnCadastrar_Equi.BackColor = System.Drawing.Color.Lime;
+            this.btnCadastrar_Equi.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar_Equi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar_Equi.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrar_Equi.Location = new System.Drawing.Point(770, 212);
+            this.btnCadastrar_Equi.Name = "btnCadastrar_Equi";
+            this.btnCadastrar_Equi.Size = new System.Drawing.Size(33, 31);
+            this.btnCadastrar_Equi.TabIndex = 21;
+            this.btnCadastrar_Equi.UseVisualStyleBackColor = false;
+            this.btnCadastrar_Equi.Click += new System.EventHandler(this.btnCadastrar_Equi_Click);
             // 
-            // gbEquipamento
+            // btnLimpar_Equi
             // 
-            this.gbEquipamento.Controls.Add(this.cbCategoria);
-            this.gbEquipamento.Controls.Add(this.textBox4);
-            this.gbEquipamento.Controls.Add(this.label9);
-            this.gbEquipamento.Controls.Add(this.textBox3);
-            this.gbEquipamento.Controls.Add(this.label8);
-            this.gbEquipamento.Controls.Add(this.label7);
-            this.gbEquipamento.Controls.Add(this.textBox2);
-            this.gbEquipamento.Controls.Add(this.label6);
-            this.gbEquipamento.Controls.Add(this.textBox1);
-            this.gbEquipamento.Controls.Add(this.label5);
-            this.gbEquipamento.Controls.Add(this.txtDescricao);
-            this.gbEquipamento.Controls.Add(this.label4);
-            this.gbEquipamento.Controls.Add(this.btnEquipamento_Slider);
-            this.gbEquipamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEquipamento.ForeColor = System.Drawing.Color.White;
-            this.gbEquipamento.Location = new System.Drawing.Point(0, 0);
-            this.gbEquipamento.Name = "gbEquipamento";
-            this.gbEquipamento.Size = new System.Drawing.Size(849, 28);
-            this.gbEquipamento.TabIndex = 0;
-            this.gbEquipamento.TabStop = false;
-            this.gbEquipamento.Text = "Equipamento:";
-            // 
-            // btnEquipamento_Slider
-            // 
-            this.btnEquipamento_Slider.FlatAppearance.BorderSize = 0;
-            this.btnEquipamento_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEquipamento_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnEquipamento_Slider.Location = new System.Drawing.Point(805, 10);
-            this.btnEquipamento_Slider.Name = "btnEquipamento_Slider";
-            this.btnEquipamento_Slider.Size = new System.Drawing.Size(30, 16);
-            this.btnEquipamento_Slider.TabIndex = 8;
-            this.btnEquipamento_Slider.UseVisualStyleBackColor = true;
-            this.btnEquipamento_Slider.Click += new System.EventHandler(this.btnEquipamento_Slider_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Descrição:";
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Location = new System.Drawing.Point(156, 40);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(206, 26);
-            this.txtDescricao.TabIndex = 10;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(544, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 26);
-            this.textBox1.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(448, 43);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Nº de série:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(156, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 26);
-            this.textBox2.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(86, 110);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 20);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Estado:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(68, 182);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Categoria:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(544, 110);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(206, 26);
-            this.textBox3.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(438, 113);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 20);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Pertencente:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(544, 179);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(206, 26);
-            this.textBox4.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(450, 182);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 20);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Patrimônio:";
-            // 
-            // cbCategoria
-            // 
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(156, 179);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(206, 28);
-            this.cbCategoria.TabIndex = 20;
-            this.cbCategoria.DropDown += new System.EventHandler(this.cbCategoria_DropDown);
+            this.btnLimpar_Equi.BackColor = System.Drawing.Color.Red;
+            this.btnLimpar_Equi.FlatAppearance.BorderSize = 0;
+            this.btnLimpar_Equi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar_Equi.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpar_Equi.Location = new System.Drawing.Point(809, 212);
+            this.btnLimpar_Equi.Name = "btnLimpar_Equi";
+            this.btnLimpar_Equi.Size = new System.Drawing.Size(33, 31);
+            this.btnLimpar_Equi.TabIndex = 22;
+            this.btnLimpar_Equi.UseVisualStyleBackColor = false;
+            this.btnLimpar_Equi.Click += new System.EventHandler(this.btnLimpar_Equi_Click);
             // 
             // frmPrincipal
             // 
@@ -784,6 +814,9 @@
             this.pnReport.PerformLayout();
             this.pnCadastro.ResumeLayout(false);
             this.pnGroup_Op.ResumeLayout(false);
+            this.pnGb_Equipamento.ResumeLayout(false);
+            this.gbEquipamento.ResumeLayout(false);
+            this.gbEquipamento.PerformLayout();
             this.pnGb_Categoria.ResumeLayout(false);
             this.gbCategoria.ResumeLayout(false);
             this.gbCategoria.PerformLayout();
@@ -793,9 +826,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.pnList_Forn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
-            this.pnGb_Equipamento.ResumeLayout(false);
-            this.gbEquipamento.ResumeLayout(false);
-            this.gbEquipamento.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -843,7 +873,7 @@
         private System.Windows.Forms.Button btnCategoria_Slider;
         private System.Windows.Forms.DataGridView dgvCategoria;
         private System.Windows.Forms.ContextMenuStrip menuCategoria;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnCadastrar_Cat;
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
@@ -852,18 +882,20 @@
         private System.Windows.Forms.Panel pnGb_Equipamento;
         private System.Windows.Forms.GroupBox gbEquipamento;
         private System.Windows.Forms.ComboBox cbCategoria;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPatrimonio;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPertencente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNSerie;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEquipamento_Slider;
+        private System.Windows.Forms.Button btnLimpar_Equi;
+        private System.Windows.Forms.Button btnCadastrar_Equi;
     }
 }
 

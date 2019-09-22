@@ -24,6 +24,16 @@ namespace prjEstoque.Entity
             Patrimonio = patrimonio;
         }
 
+        public Equipamento(string descricao, string numSerie, string estado, int codCategoria, string pertencente, string patrimonio)
+        {
+            Descricao = descricao;
+            NumSerie = numSerie;
+            Estado = estado;
+            CodCategoria = codCategoria;
+            Pertencente = pertencente;
+            Patrimonio = patrimonio;
+        }
+
         public int CodEquipamento { get; set; }
         public string Descricao { get; set; }
         public string NumSerie { get; set; }

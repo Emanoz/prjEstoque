@@ -51,19 +51,18 @@ namespace prjEstoque.Model
             return list;
         }
 
-        public void Insert(Equipamento e)
+        public int Insert(Equipamento e)
         {
             string query = "INSERT INTO Equipamento VALUES(@descricao, @numSerie, @estado, @codCategoria, @pertencente, @patrimonio)";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@descricao", e.Descricao),
+                return db.CallExecuteNonQuery(query, new SqlParameter("@descricao", e.Descricao),
                                                   new SqlParameter("@numSerie", e.NumSerie),
                                                   new SqlParameter("@estado", e.Estado),
                                                   new SqlParameter("@codCategoria", e.CodCategoria),
                                                   new SqlParameter("@pertencente", e.Pertencente),
-                                                  new SqlParameter("@patrimonio", e.Patrimonio)) == 0)
-                    throw new Exception("Nenhuma linha foi cadastrada");
+                                                  new SqlParameter("@patrimonio", e.Patrimonio));
             }
             catch (Exception ex)
             {

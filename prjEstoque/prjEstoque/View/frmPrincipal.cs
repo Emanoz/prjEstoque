@@ -60,7 +60,11 @@ namespace prjEstoque
 
         private void btnMinimize_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
 
-        private void btnCategoria_Slider_Click(object sender, EventArgs e) => util.Slider(pnGb_Categoria, gbCategoria, btnCategoria_Slider, 297, 832);
+        private void btnCategoria_Slider_Click(object sender, EventArgs e)
+        {
+            util.Slider(pnGb_Categoria, gbCategoria, btnCategoria_Slider, 297, 832);
+            opAtualizar_Click(null, null);
+        }
 
         private void btnSlide_Click(object sender, EventArgs e)
         {
@@ -89,16 +93,22 @@ namespace prjEstoque
             CTRL_Categoria cCat = new CTRL_Categoria();
             Categoria c = new Categoria(txtCategoria.Text);
 
-            cCat.Insert(c);
+            if(cCat.Insert(c) == 0)
+                MessageBox.Show("O registro não foi cadastrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("O registro foi cadastrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             opAtualizar_Click(null, null);
         }
 
         private void opAtualizar_Campo_Click(object sender, EventArgs e)
         {
             CTRL_Categoria cCat = new CTRL_Categoria();
-
             Categoria c = new Categoria(int.Parse(dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value.ToString()), txtCategoria.Text);
-            cCat.Update(c);
+
+            if (cCat.Update(c) == 0)
+                MessageBox.Show("O registro não foi atualizado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("O registro foi atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             opAtualizar_Click(null, null);
         }
 
@@ -106,7 +116,11 @@ namespace prjEstoque
         {
             CTRL_Categoria cCat = new CTRL_Categoria();
 ;
-            cCat.Delete(int.Parse(dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value.ToString()));
+            if(cCat.Delete(int.Parse(dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value.ToString())) == 0)
+                MessageBox.Show("O registro não foi excluído!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("O registro foi excluído!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             opAtualizar_Click(null, null);
         }
 
@@ -114,9 +128,34 @@ namespace prjEstoque
         {
             CTRL_Categoria cCat = new CTRL_Categoria();
 
-            cbCategoria.DataSource = cCat.GetCategoria();
+            cbCategoria.DataSource = cCat.GetAll();
         }
 
         private void btnEquipamento_Slider_Click(object sender, EventArgs e) => util.Slider(pnGb_Equipamento, gbEquipamento, btnEquipamento_Slider, 238, 849);
+
+        private void btnCadastrar_Equi_Click(object sender, EventArgs e)
+        {
+            CTRL_Equipamento eEqui = new CTRL_Equipamento();
+            CTRL_Categoria cCat = new CTRL_Categoria();
+            List<Categoria> list = cCat.GetAll();
+            int index = 0;
+
+            foreach(Categoria c in list)
+            {
+                if (c.Descricao == cbCategoria.Text)
+                    index = c.CodCategoria;
+            }
+            Equipamento equi = new Equipamento(txtDescricao.Text, txtNSerie.Text, txtEstado.Text, index, txtPertencente.Text, txtPatrimonio.Text);
+
+            if (eEqui.Insert(equi) == 0)
+                MessageBox.Show("O registro não foi cadastrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("O registro foi cadastrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnLimpar_Equi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

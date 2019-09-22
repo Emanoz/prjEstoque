@@ -22,9 +22,9 @@ namespace prjEstoque.Controller
             return modelE.GetAll();
         }
 
-        public void Insert(Equipamento c)
+        public int Insert(Equipamento c)
         {
-            modelE.Insert(c);
+            return modelE.Insert(c);
         }
 
         public void Update(Equipamento c)
