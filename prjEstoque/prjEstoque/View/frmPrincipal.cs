@@ -26,9 +26,11 @@ namespace prjEstoque
 
         private void BtnCreate_Click(object sender, EventArgs e) => pnCadastro.BringToFront();
 
-        private void BtnList_Prod_Click(object sender, EventArgs e) => pnList_Prod.BringToFront();
+        private void BtnList_Prod_Click(object sender, EventArgs e)
+        {
+            pnList_Equipamento.BringToFront();
 
-        private void BtnList_Forn_Click(object sender, EventArgs e) => pnList_Forn.BringToFront();
+        }
 
         private void btnRep_Arrow_Click(object sender, EventArgs e)
         {
@@ -95,8 +97,6 @@ namespace prjEstoque
 
             if(cCat.Insert(c) == 0)
                 MessageBox.Show("O registro não foi cadastrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                MessageBox.Show("O registro foi cadastrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             opAtualizar_Click(null, null);
         }
 
@@ -107,21 +107,19 @@ namespace prjEstoque
 
             if (cCat.Update(c) == 0)
                 MessageBox.Show("O registro não foi atualizado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                MessageBox.Show("O registro foi atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             opAtualizar_Click(null, null);
         }
 
         private void opDeletar_Campo_Click(object sender, EventArgs e)
         {
             CTRL_Categoria cCat = new CTRL_Categoria();
-;
-            if(cCat.Delete(int.Parse(dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value.ToString())) == 0)
-                MessageBox.Show("O registro não foi excluído!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                MessageBox.Show("O registro foi excluído!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            opAtualizar_Click(null, null);
+            if (MessageBox.Show("Tem certeza que deseja excluir este registro?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                if (cCat.Delete(int.Parse(dgvCategoria[0, dgvCategoria.CurrentRow.Index].Value.ToString())) == 0)
+                    MessageBox.Show("O registro não foi excluído!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                opAtualizar_Click(null, null);
+            }
         }
 
         private void cbCategoria_DropDown(object sender, EventArgs e)
@@ -149,13 +147,76 @@ namespace prjEstoque
 
             if (eEqui.Insert(equi) == 0)
                 MessageBox.Show("O registro não foi cadastrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                MessageBox.Show("O registro foi cadastrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnLimpar_Equi_Click(object sender, EventArgs e)
         {
+            util.LimparCampos(gbEquipamento.Controls);
+        }
 
+        private void btnLimpar_Cat_Click(object sender, EventArgs e)
+        {
+            util.LimparCampos(gbCategoria.Controls);
+        }
+
+        private void btnLimpar_Est_Click(object sender, EventArgs e)
+        {
+            util.LimparCampos(gbEstoque.Controls);
+        }
+
+        private void opRefresh_Est_Click(object sender, EventArgs e)
+        {
+            CTRL_Estoque cEst = new CTRL_Estoque();
+
+            dgvEstoque.DataSource = cEst.GetAll();
+            FormatarDgv.FormatarEstoque(dgvEstoque);
+        }
+
+        private void btnEstoque_Slider_Click(object sender, EventArgs e)
+        {
+            util.Slider(pnGb_Estoque, gbEstoque, btnEstoque_Slider, 297, 832);
+            opRefresh_Est_Click(null, null);
+        }
+
+        private void btnCadastrar_Est_Click(object sender, EventArgs e)
+        {
+            CTRL_Estoque cEst = new CTRL_Estoque();
+            Estoque est = new Estoque(txtEstoque.Text);
+
+            if(cEst.Insert(est) == 0)
+                MessageBox.Show("O registro não foi cadastrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            opRefresh_Est_Click(null, null);
+        }
+
+        private void opAtualizar_Est_Click(object sender, EventArgs e)
+        {
+            CTRL_Estoque cEst = new CTRL_Estoque();
+            Estoque est = new Estoque(int.Parse(dgvEstoque[0, dgvEstoque.CurrentRow.Index].Value.ToString()), txtEstoque.Text);
+
+            if(cEst.Update(est) == 0)
+                MessageBox.Show("O registro não foi atualizado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            opRefresh_Est_Click(null, null);
+        }
+
+        private void opExcluir_Est_Click(object sender, EventArgs e)
+        {
+            CTRL_Estoque cEst = new CTRL_Estoque();
+            
+            if(MessageBox.Show("Tem certeza que deseja excluir este registro?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                if (cEst.Delete(int.Parse(dgvEstoque[0, dgvEstoque.CurrentRow.Index].Value.ToString())) == 0)
+                    MessageBox.Show("O registro não foi excluído!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                opRefresh_Est_Click(null, null);
+            }
+        }
+
+        private void btnList_Equip_Click(object sender, EventArgs e)
+        {
+            CTRL_Equipamento cEquip = new CTRL_Equipamento();
+
+            pnList_Equipamento.BringToFront();
+            dgvEquipamento.DataSource = cEquip.GetAll();
+            FormatarDgv.FormatarEquipamento(dgvEquipamento);
         }
     }
 }

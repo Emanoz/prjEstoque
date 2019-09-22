@@ -22,19 +22,19 @@ namespace prjEstoque.Controller
             return modelE.GetAll();
         }
 
-        public void Insert(Estoque c)
+        public int Insert(Estoque c)
         {
-            modelE.Insert(c);
+            return modelE.Insert(c);
         }
 
-        public void Update(Estoque c)
+        public int Update(Estoque c)
         {
-            modelE.Update(c);
+            return modelE.Update(c);
         }
 
-        public void Delete(int cod)
+        public int Delete(int cod)
         {
-            modelE.Delete(cod);
+            return modelE.Delete(cod);
         }
     }
 }

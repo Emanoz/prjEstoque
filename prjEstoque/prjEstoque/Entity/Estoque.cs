@@ -13,18 +13,19 @@ namespace prjEstoque.Entity
 
         }
 
-        public Estoque(int codEstoque, int quantidade, string local)
+        public Estoque(int codEstoque, string local)
         {
             CodEstoque = codEstoque;
-            Quantidade = quantidade;
+            Local = local;
+        }
+
+        public Estoque(string local)
+        {
             Local = local;
         }
 
         public int CodEstoque { get; set; }
-
-        public int Quantidade { get; set; }
-
+        
         public string Local { get; set; }
-
     }
 }

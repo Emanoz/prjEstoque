@@ -30,8 +30,7 @@ namespace prjEstoque.Model
                     Estoque e = new Estoque();
 
                     e.CodEstoque = int.Parse(reader["CodEstoque"].ToString());
-                    e.Quantidade = int.Parse(reader["Quantidade"].ToString());
-                    e.Local = reader["[Local]"].ToString();
+                    e.Local = reader["Local"].ToString();
 
                     list.Add(e);
                 }
@@ -47,15 +46,13 @@ namespace prjEstoque.Model
             return list;
         }
 
-        public void Insert(Estoque e)
+        public int Insert(Estoque e)
         {
-            string query = "INSERT INTO Estoque VALUES(@quantidade, @local)";
+            string query = "INSERT INTO Estoque VALUES(@local)";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@quantidade", e.Quantidade),
-                                                  new SqlParameter("@local", e.Local)) == 0)
-                    throw new Exception("Nenhuma linha foi cadastrada");
+                return db.CallExecuteNonQuery(query, new SqlParameter("@local", e.Local));
             }
             catch (Exception ex)
             {
@@ -64,15 +61,14 @@ namespace prjEstoque.Model
             }
         }
 
-        public void Update(Estoque e)
+        public int Update(Estoque e)
         {
-            string query = "UPDATE Estoque SET Quantidade = @quantidade, [Local] = @local";
+            string query = "UPDATE Estoque SET Local = @local WHERE CodEstoque = @codEstoque";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@quantidade", e.Quantidade),
-                                                  new SqlParameter("@local", e.Local)) == 0)
-                    throw new Exception("Nenhuma linha foi alterada");
+                return db.CallExecuteNonQuery(query, new SqlParameter("@local", e.Local),
+                                                     new SqlParameter("@codEstoque", e.CodEstoque));
             }
             catch (Exception ex)
             {
@@ -81,13 +77,12 @@ namespace prjEstoque.Model
             }
         }
 
-        public void Delete(int cod)
+        public int Delete(int cod)
         {
             string query = "DELETE FROM Estoque WHERE CodEstoque = @codEstoque";
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@codEstoque", cod)) == 0)
-                    throw new Exception("Nenhuma linha foi excluída");
+                return db.CallExecuteNonQuery(query, new SqlParameter("@codEstoque", cod));
             }
             catch (Exception ex)
             {

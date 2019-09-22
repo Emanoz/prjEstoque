@@ -31,14 +31,17 @@ namespace prjEstoque
             }
         }
 
-        public static void LimparCampos(Control.ControlCollection control)
+        public void LimparCampos(Control.ControlCollection control)
         {
             foreach(Control item in control)
             {
                 if (item is TextBox)
                     ((TextBox)item).Clear();
                 else if (item is ComboBox)
+                {
+                    ((ComboBox)item).DataSource = null;
                     ((ComboBox)item).Items.Clear();
+                }
                 else if (item is CheckBox)
                     ((CheckBox)item).Checked = false;
                 else if (item is MaskedTextBox)
