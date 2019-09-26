@@ -65,7 +65,7 @@ namespace prjEstoque
         private void btnCategoria_Slider_Click(object sender, EventArgs e)
         {
             util.Slider(pnGb_Categoria, gbCategoria, btnCategoria_Slider, 297, 832);
-            opAtualizar_Click(null, null);
+            //opAtualizar_Click(null, null);
         }
 
         private void btnSlide_Click(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace prjEstoque
         private void btnEstoque_Slider_Click(object sender, EventArgs e)
         {
             util.Slider(pnGb_Estoque, gbEstoque, btnEstoque_Slider, 297, 832);
-            opRefresh_Est_Click(null, null);
+            //opRefresh_Est_Click(null, null);
         }
 
         private void btnCadastrar_Est_Click(object sender, EventArgs e)
