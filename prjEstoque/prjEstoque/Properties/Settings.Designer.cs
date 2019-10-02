@@ -26,7 +26,7 @@ namespace prjEstoque.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=PC-NANA\\SQLEXPRESS;Database=bdEstoque;Trusted_Connection=True;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sol;Initial Catalog=180281;Integrated Security=True")]
         public string connString {
             get {
                 return ((string)(this["connString"]));
