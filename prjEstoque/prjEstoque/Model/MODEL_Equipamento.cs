@@ -71,19 +71,18 @@ namespace prjEstoque.Model
             }
         }
 
-        public void Update(Equipamento e)
+        public int Update(Equipamento e)
         {
             string query = "UPDATE Equipamento SET Descricao = @descricao, NumSerie = @numSerie, Estado = @estado, CodCategoria = @codCategoria, Pertencente = @pertencente, Patrimonio = @patrimonio";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@descricao", e.Descricao),
+                return db.CallExecuteNonQuery(query, new SqlParameter("@descricao", e.Descricao),
                                                   new SqlParameter("@numSerie", e.NumSerie),
                                                   new SqlParameter("@estado", e.Estado),
                                                   new SqlParameter("@codCategoria", e.CodCategoria),
                                                   new SqlParameter("@pertencente", e.Pertencente),
-                                                  new SqlParameter("@patrimonio", e.Patrimonio)) == 0)
-                    throw new Exception("Nenhuma linha foi alterada");
+                                                  new SqlParameter("@patrimonio", e.Patrimonio));
             }
             catch (Exception ex)
             {
@@ -92,13 +91,12 @@ namespace prjEstoque.Model
             }
         }
 
-        public void Delete(int cod)
+        public int Delete(int cod)
         {
             string query = "DELETE FROM Equipamento WHERE CodEquipamento = @codEquipamento";
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@codEquipamento", cod)) == 0)
-                    throw new Exception("Nenhuma linha foi excluída");
+                return db.CallExecuteNonQuery(query, new SqlParameter("@codEquipamento", cod));
             }
             catch (Exception ex)
             {

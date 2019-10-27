@@ -31,7 +31,7 @@ namespace prjEstoque
             }
         }
 
-        public void LimparCampos(Control.ControlCollection control)
+        public static void LimparCampos(Control.ControlCollection control)
         {
             foreach(Control item in control)
             {

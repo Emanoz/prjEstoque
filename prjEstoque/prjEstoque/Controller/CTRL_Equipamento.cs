@@ -27,14 +27,14 @@ namespace prjEstoque.Controller
             return modelE.Insert(c);
         }
 
-        public void Update(Equipamento c)
+        public int Update(Equipamento c)
         {
-            modelE.Update(c);
+            return modelE.Update(c);
         }
 
-        public void Delete(int cod)
+        public int Delete(int cod)
         {
-            modelE.Delete(cod);
+            return modelE.Delete(cod);
         }
     }
 }

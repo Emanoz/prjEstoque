@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prjEstoque.Controller;
 using prjEstoque.Entity;
+using prjEstoque.View;
 
 namespace prjEstoque
 {
@@ -151,17 +152,17 @@ namespace prjEstoque
 
         private void btnLimpar_Equi_Click(object sender, EventArgs e)
         {
-            util.LimparCampos(gbEquipamento.Controls);
+            Util.LimparCampos(gbEquipamento.Controls);
         }
 
         private void btnLimpar_Cat_Click(object sender, EventArgs e)
         {
-            util.LimparCampos(gbCategoria.Controls);
+            Util.LimparCampos(gbCategoria.Controls);
         }
 
         private void btnLimpar_Est_Click(object sender, EventArgs e)
         {
-            util.LimparCampos(gbEstoque.Controls);
+            Util.LimparCampos(gbEstoque.Controls);
         }
 
         private void opRefresh_Est_Click(object sender, EventArgs e)
@@ -217,6 +218,41 @@ namespace prjEstoque
             pnList_Equipamento.BringToFront();
             dgvEquipamento.DataSource = cEquip.GetAll();
             FormatarDgv.FormatarEquipamento(dgvEquipamento);
+        }
+
+        private void opRefresh_Equip_Click(object sender, EventArgs e)
+        {
+            CTRL_Equipamento cEquip = new CTRL_Equipamento();
+
+            dgvEquipamento.DataSource = cEquip.GetAll();
+            FormatarDgv.FormatarEquipamento(dgvEquipamento);
+        }
+
+        private void opAtualizar_Equip_Click(object sender, EventArgs e)
+        {
+            CTRL_Equipamento cEquip = new CTRL_Equipamento();
+            Equipamento equip = new Equipamento(int.Parse(dgvEquipamento[0, dgvEquipamento.CurrentRow.Index].Value.ToString()),
+                                                dgvEquipamento[1, dgvEquipamento.CurrentRow.Index].Value.ToString(),
+                                                dgvEquipamento[2, dgvEquipamento.CurrentRow.Index].Value.ToString(),
+                                                dgvEquipamento[3, dgvEquipamento.CurrentRow.Index].Value.ToString(),
+                                                int.Parse(dgvEquipamento[4, dgvEquipamento.CurrentRow.Index].Value.ToString()),
+                                                dgvEquipamento[5, dgvEquipamento.CurrentRow.Index].Value.ToString(),
+                                                dgvEquipamento[6, dgvEquipamento.CurrentRow.Index].Value.ToString());
+            using(var editar = new frmEditarBase(equip))
+                editar.ShowDialog();
+            opRefresh_Equip_Click(null, null);
+        }
+
+        private void opExcluir_Equip_Click(object sender, EventArgs e)
+        {
+            CTRL_Equipamento cEquip = new CTRL_Equipamento();
+
+            if (MessageBox.Show("Tem certeza que deseja excluir este registro?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                if (cEquip.Delete(int.Parse(dgvEquipamento[0, dgvEquipamento.CurrentRow.Index].Value.ToString())) == 0)
+                    MessageBox.Show("O registro não foi excluído!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                opRefresh_Equip_Click(null, null);
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace prjEstoque.Entity
 {
-    class Equipamento
+    public class Equipamento
     {
         public Equipamento()
         {

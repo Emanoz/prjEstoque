@@ -85,6 +85,12 @@
     <Compile Include="Model\MODEL_Termo_Emprestimo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Util.cs" />
+    <Compile Include="View\frmEditarBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEditarBase.Designer.cs">
+      <DependentUpon>frmEditarBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\frmEditarBase.resx">
+      <DependentUpon>frmEditarBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

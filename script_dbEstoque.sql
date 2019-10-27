@@ -1,3 +1,5 @@
+CREATE DATABASE bdEstoque;
+
 USE bdEstoque;
 
 CREATE TABLE USUARIO
@@ -11,21 +13,20 @@ CREATE TABLE USUARIO
 
 CREATE TABLE ESTOQUE
 (
-	CodEstoque int primary key identity, 
-	Quantidade int not null, 
+	CodEstoque int primary key identity,
 	[Local] varchar (80) not null
 )
 
 CREATE TABLE CATEGORIA
 (
 	CodCategoria int primary key identity,
-	Descrição varchar (500) not null
+	Descricao varchar (500) not null
 )
 
 CREATE TABLE EQUIPAMENTO 
 (
 	CodEquipamento int primary key identity,
-	Descrição varchar (500) not null, 
+	Descricao varchar (500) not null, 
 	NumSerie varchar(30) not null,
 	Estado varchar (10) not null,
 	CodCategoria int references CATEGORIA, 
@@ -39,7 +40,7 @@ CREATE TABLE TERMO_DE_EMPRESTIMO
 	DataRetirada datetime not null, 
 	CaminhoDigitalizado varchar (100) not null,
 	RG varchar(30) not null,
-	DataDevolução datetime,
+	DataDevolucao datetime,
 	CodEquipamento int references EQUIPAMENTO
 )
 
