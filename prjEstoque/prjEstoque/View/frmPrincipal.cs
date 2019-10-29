@@ -254,5 +254,26 @@ namespace prjEstoque
                 opRefresh_Equip_Click(null, null);
             }
         }
+
+        private void btnTermo_Slider_Click(object sender, EventArgs e)
+        {
+            util.Slider(pnGb_Termo, gbTermo, btnTermo_Slider, 297, 832);
+            //opRefresh_Est_Click(null, null);
+        }
+
+        private void btnLimpar_Termo_Click(object sender, EventArgs e)
+        {
+            Util.LimparCampos(gbTermo.Controls);
+        }
+
+        private void btnCadastrar_Termo_Click(object sender, EventArgs e)
+        {
+            CTRL_Termo_Emprestimo cEst = new CTRL_Termo_Emprestimo();
+            Termo_Emprestimo termo = new Termo_Emprestimo(txt);
+
+            if (cEst.Insert(termo) == 0)
+                MessageBox.Show("O registro não foi cadastrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            opRefresh_Est_Click(null, null);
+        }
     }
 }

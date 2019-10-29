@@ -50,18 +50,17 @@ namespace prjEstoque.Model
             return list;
         }
 
-        public void Insert(Termo_Emprestimo t)
+        public int Insert(Termo_Emprestimo t)
         {
             string query = "INSERT INTO Termo_de_Emprestimo VALUES(@DataRetirada, @CaminhoDigitalizado, @Rg, @DataDevolucao, @CodEquipamento)";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@DataRetirada", t.DataRetirada),
+                return db.CallExecuteNonQuery(query, new SqlParameter("@DataRetirada", t.DataRetirada),
                                                   new SqlParameter("@CaminhoDigitalizado", t.CaminhoDigitalizado),
                                                   new SqlParameter("@Rg", t.Rg),
                                                   new SqlParameter("@DataDevolucao", t.DataDevolucao),
-                                                  new SqlParameter("@CodEquipamento", t.CodEquipamento)) == 0)
-                    throw new Exception("Nenhuma linha foi cadastrada");
+                                                  new SqlParameter("@CodEquipamento", t.CodEquipamento));
             }
             catch (Exception ex)
             {
@@ -70,18 +69,17 @@ namespace prjEstoque.Model
             }
         }
 
-        public void Update(Termo_Emprestimo t)
+        public int Update(Termo_Emprestimo t)
         {
             string query = "UPDATE Movimentacao SET DataRetirada = @dataRetirada, CaminhoDigitalizado = @caminhoDigitalizado, Rg = @rg, DataDevolucao = @dataDevolucao, CodEquipamento = @codEquipamento";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@DataRetirada", t.DataRetirada),
+                return db.CallExecuteNonQuery(query, new SqlParameter("@DataRetirada", t.DataRetirada),
                                                   new SqlParameter("@CaminhoDigitalizado", t.CaminhoDigitalizado),
                                                   new SqlParameter("@Rg", t.Rg),
                                                   new SqlParameter("@DataDevolucao", t.DataDevolucao),
-                                                  new SqlParameter("@CodEquipamento", t.CodEquipamento)) == 0)
-                    throw new Exception("Nenhuma linha foi alterada");
+                                                  new SqlParameter("@CodEquipamento", t.CodEquipamento));
             }
             catch (Exception ex)
             {
@@ -90,13 +88,12 @@ namespace prjEstoque.Model
             }
         }
 
-        public void Delete(int cod)
+        public int Delete(int cod)
         {
             string query = "DELETE FROM Termo_de_Emprestimo WHERE CodTermo = @codTermo";
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@codTermo", cod)) == 0)
-                    throw new Exception("Nenhuma linha foi excluída");
+                return db.CallExecuteNonQuery(query, new SqlParameter("@codTermo", cod));
             }
             catch (Exception ex)
             {

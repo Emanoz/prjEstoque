@@ -32,11 +32,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnList = new System.Windows.Forms.Panel();
+            this.btnList_Equip = new System.Windows.Forms.Button();
+            this.btnList_Arrow = new System.Windows.Forms.Button();
             this.pnReport = new System.Windows.Forms.Panel();
+            this.btnRep_Arrow = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnSlide = new System.Windows.Forms.Button();
             this.pnHome = new System.Windows.Forms.Panel();
             this.pnCadastro = new System.Windows.Forms.Panel();
             this.pnGroup_Op = new System.Windows.Forms.Panel();
@@ -51,6 +59,7 @@
             this.btnCadastrar_Est = new System.Windows.Forms.Button();
             this.txtEstoque = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnEstoque_Slider = new System.Windows.Forms.Button();
             this.pnGb_Equipamento = new System.Windows.Forms.Panel();
             this.gbEquipamento = new System.Windows.Forms.GroupBox();
             this.btnLimpar_Equi = new System.Windows.Forms.Button();
@@ -67,6 +76,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnEquipamento_Slider = new System.Windows.Forms.Button();
             this.pnGb_Categoria = new System.Windows.Forms.Panel();
             this.gbCategoria = new System.Windows.Forms.GroupBox();
             this.btnLimpar_Cat = new System.Windows.Forms.Button();
@@ -78,25 +88,37 @@
             this.btnCadastrar_Cat = new System.Windows.Forms.Button();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnCategoria_Slider = new System.Windows.Forms.Button();
             this.pnList_Equipamento = new System.Windows.Forms.Panel();
             this.dgvEquipamento = new System.Windows.Forms.DataGridView();
             this.menuEquipamento = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.opRefresh_Equip = new System.Windows.Forms.ToolStripMenuItem();
             this.opAtualizar_Equip = new System.Windows.Forms.ToolStripMenuItem();
             this.opExcluir_Equip = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnEstoque_Slider = new System.Windows.Forms.Button();
-            this.btnEquipamento_Slider = new System.Windows.Forms.Button();
-            this.btnCategoria_Slider = new System.Windows.Forms.Button();
-            this.btnList_Equip = new System.Windows.Forms.Button();
-            this.btnList_Arrow = new System.Windows.Forms.Button();
-            this.btnRep_Arrow = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.btnSlide = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gbTermo = new System.Windows.Forms.GroupBox();
+            this.btnLimpar_Termo = new System.Windows.Forms.Button();
+            this.btnCadastrar_Termo = new System.Windows.Forms.Button();
+            this.cbEquipamento = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnTermo_Slider = new System.Windows.Forms.Button();
+            this.pnGb_Termo = new System.Windows.Forms.Panel();
+            this.dtpRetirada = new System.Windows.Forms.DateTimePicker();
+            this.txtRg = new System.Windows.Forms.MaskedTextBox();
+            this._txtNSerie = new System.Windows.Forms.TextBox();
+            this._txtPatrimonio = new System.Windows.Forms.TextBox();
+            this._txtCategoria = new System.Windows.Forms.TextBox();
+            this._txtEstado = new System.Windows.Forms.TextBox();
+            this._txtPertencente = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnList.SuspendLayout();
@@ -116,7 +138,8 @@
             this.pnList_Equipamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipamento)).BeginInit();
             this.menuEquipamento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbTermo.SuspendLayout();
+            this.pnGb_Termo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTop
@@ -141,6 +164,32 @@
             this.panel1.Size = new System.Drawing.Size(79, 38);
             this.panel1.TabIndex = 2;
             // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = global::prjEstoque.Properties.Resources.icons8_excluir_42;
+            this.btnClose.Location = new System.Drawing.Point(41, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 38);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Image = global::prjEstoque.Properties.Resources.icons8_minimizar_janela_38;
+            this.btnMinimize.Location = new System.Drawing.Point(0, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(38, 38);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -150,6 +199,15 @@
             this.lblTitle.Size = new System.Drawing.Size(275, 19);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Gerenciador de Estoque 3000";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::prjEstoque.Properties.Resources.icons8_caixa_39;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // pnLeft
             // 
@@ -183,6 +241,38 @@
             this.pnList.Size = new System.Drawing.Size(251, 54);
             this.pnList.TabIndex = 0;
             // 
+            // btnList_Equip
+            // 
+            this.btnList_Equip.FlatAppearance.BorderSize = 0;
+            this.btnList_Equip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList_Equip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList_Equip.ForeColor = System.Drawing.Color.White;
+            this.btnList_Equip.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
+            this.btnList_Equip.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList_Equip.Location = new System.Drawing.Point(1, 52);
+            this.btnList_Equip.Name = "btnList_Equip";
+            this.btnList_Equip.Size = new System.Drawing.Size(248, 31);
+            this.btnList_Equip.TabIndex = 9;
+            this.btnList_Equip.Text = "Equipamentos";
+            this.btnList_Equip.UseVisualStyleBackColor = true;
+            this.btnList_Equip.Click += new System.EventHandler(this.btnList_Equip_Click);
+            // 
+            // btnList_Arrow
+            // 
+            this.btnList_Arrow.FlatAppearance.BorderSize = 0;
+            this.btnList_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList_Arrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList_Arrow.ForeColor = System.Drawing.Color.White;
+            this.btnList_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
+            this.btnList_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList_Arrow.Location = new System.Drawing.Point(3, 2);
+            this.btnList_Arrow.Name = "btnList_Arrow";
+            this.btnList_Arrow.Size = new System.Drawing.Size(248, 51);
+            this.btnList_Arrow.TabIndex = 5;
+            this.btnList_Arrow.Text = "Listagem";
+            this.btnList_Arrow.UseVisualStyleBackColor = true;
+            this.btnList_Arrow.Click += new System.EventHandler(this.btnList_Arrow_Click);
+            // 
             // pnReport
             // 
             this.pnReport.Controls.Add(this.btnRep_Arrow);
@@ -191,6 +281,54 @@
             this.pnReport.Name = "pnReport";
             this.pnReport.Size = new System.Drawing.Size(251, 54);
             this.pnReport.TabIndex = 2;
+            // 
+            // btnRep_Arrow
+            // 
+            this.btnRep_Arrow.FlatAppearance.BorderSize = 0;
+            this.btnRep_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRep_Arrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRep_Arrow.ForeColor = System.Drawing.Color.White;
+            this.btnRep_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
+            this.btnRep_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRep_Arrow.Location = new System.Drawing.Point(3, 1);
+            this.btnRep_Arrow.Name = "btnRep_Arrow";
+            this.btnRep_Arrow.Size = new System.Drawing.Size(248, 51);
+            this.btnRep_Arrow.TabIndex = 7;
+            this.btnRep_Arrow.Text = "Relatórios";
+            this.btnRep_Arrow.UseVisualStyleBackColor = true;
+            this.btnRep_Arrow.Click += new System.EventHandler(this.btnRep_Arrow_Click);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreate.FlatAppearance.BorderSize = 0;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Image = global::prjEstoque.Properties.Resources.icons8_movimento_de_estoque_50;
+            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreate.Location = new System.Drawing.Point(0, 119);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(251, 65);
+            this.btnCreate.TabIndex = 1;
+            this.btnCreate.Text = "Cadastro";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
+            // 
+            // btnSlide
+            // 
+            this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSlide.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSlide.FlatAppearance.BorderSize = 0;
+            this.btnSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSlide.Image = global::prjEstoque.Properties.Resources.icons8_no_inventário_40;
+            this.btnSlide.Location = new System.Drawing.Point(0, 0);
+            this.btnSlide.Name = "btnSlide";
+            this.btnSlide.Size = new System.Drawing.Size(251, 81);
+            this.btnSlide.TabIndex = 0;
+            this.btnSlide.UseVisualStyleBackColor = true;
+            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
             // 
             // pnHome
             // 
@@ -214,6 +352,7 @@
             // pnGroup_Op
             // 
             this.pnGroup_Op.AutoScroll = true;
+            this.pnGroup_Op.Controls.Add(this.pnGb_Termo);
             this.pnGroup_Op.Controls.Add(this.pnGb_Estoque);
             this.pnGroup_Op.Controls.Add(this.pnGb_Equipamento);
             this.pnGroup_Op.Controls.Add(this.pnGb_Categoria);
@@ -335,6 +474,18 @@
             this.label10.Size = new System.Drawing.Size(141, 20);
             this.label10.TabIndex = 9;
             this.label10.Text = "Adicionar estoque:";
+            // 
+            // btnEstoque_Slider
+            // 
+            this.btnEstoque_Slider.FlatAppearance.BorderSize = 0;
+            this.btnEstoque_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnEstoque_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnEstoque_Slider.Name = "btnEstoque_Slider";
+            this.btnEstoque_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnEstoque_Slider.TabIndex = 8;
+            this.btnEstoque_Slider.UseVisualStyleBackColor = true;
+            this.btnEstoque_Slider.Click += new System.EventHandler(this.btnEstoque_Slider_Click);
             // 
             // pnGb_Equipamento
             // 
@@ -496,6 +647,18 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Descrição:";
             // 
+            // btnEquipamento_Slider
+            // 
+            this.btnEquipamento_Slider.FlatAppearance.BorderSize = 0;
+            this.btnEquipamento_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquipamento_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnEquipamento_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnEquipamento_Slider.Name = "btnEquipamento_Slider";
+            this.btnEquipamento_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnEquipamento_Slider.TabIndex = 8;
+            this.btnEquipamento_Slider.UseVisualStyleBackColor = true;
+            this.btnEquipamento_Slider.Click += new System.EventHandler(this.btnEquipamento_Slider_Click);
+            // 
             // pnGb_Categoria
             // 
             this.pnGb_Categoria.Controls.Add(this.gbCategoria);
@@ -609,6 +772,18 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Adicionar categoria:";
             // 
+            // btnCategoria_Slider
+            // 
+            this.btnCategoria_Slider.FlatAppearance.BorderSize = 0;
+            this.btnCategoria_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoria_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnCategoria_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnCategoria_Slider.Name = "btnCategoria_Slider";
+            this.btnCategoria_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnCategoria_Slider.TabIndex = 8;
+            this.btnCategoria_Slider.UseVisualStyleBackColor = true;
+            this.btnCategoria_Slider.Click += new System.EventHandler(this.btnCategoria_Slider_Click);
+            // 
             // pnList_Equipamento
             // 
             this.pnList_Equipamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
@@ -674,164 +849,226 @@
             this.opExcluir_Equip.Text = "Excluir campo";
             this.opExcluir_Equip.Click += new System.EventHandler(this.opExcluir_Equip_Click);
             // 
-            // btnEstoque_Slider
+            // gbTermo
             // 
-            this.btnEstoque_Slider.FlatAppearance.BorderSize = 0;
-            this.btnEstoque_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnEstoque_Slider.Location = new System.Drawing.Point(805, 10);
-            this.btnEstoque_Slider.Name = "btnEstoque_Slider";
-            this.btnEstoque_Slider.Size = new System.Drawing.Size(30, 16);
-            this.btnEstoque_Slider.TabIndex = 8;
-            this.btnEstoque_Slider.UseVisualStyleBackColor = true;
-            this.btnEstoque_Slider.Click += new System.EventHandler(this.btnEstoque_Slider_Click);
+            this.gbTermo.Controls.Add(this.label16);
+            this.gbTermo.Controls.Add(this.label15);
+            this.gbTermo.Controls.Add(this.label13);
+            this.gbTermo.Controls.Add(this.label2);
+            this.gbTermo.Controls.Add(this.label1);
+            this.gbTermo.Controls.Add(this._txtPertencente);
+            this.gbTermo.Controls.Add(this._txtCategoria);
+            this.gbTermo.Controls.Add(this._txtEstado);
+            this.gbTermo.Controls.Add(this._txtPatrimonio);
+            this.gbTermo.Controls.Add(this._txtNSerie);
+            this.gbTermo.Controls.Add(this.txtRg);
+            this.gbTermo.Controls.Add(this.dtpRetirada);
+            this.gbTermo.Controls.Add(this.btnLimpar_Termo);
+            this.gbTermo.Controls.Add(this.btnCadastrar_Termo);
+            this.gbTermo.Controls.Add(this.cbEquipamento);
+            this.gbTermo.Controls.Add(this.label11);
+            this.gbTermo.Controls.Add(this.label12);
+            this.gbTermo.Controls.Add(this.label14);
+            this.gbTermo.Controls.Add(this.btnTermo_Slider);
+            this.gbTermo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbTermo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTermo.ForeColor = System.Drawing.Color.White;
+            this.gbTermo.Location = new System.Drawing.Point(0, 0);
+            this.gbTermo.Name = "gbTermo";
+            this.gbTermo.Size = new System.Drawing.Size(849, 293);
+            this.gbTermo.TabIndex = 0;
+            this.gbTermo.TabStop = false;
+            this.gbTermo.Text = "Termo de empréstimo:";
             // 
-            // btnEquipamento_Slider
+            // btnLimpar_Termo
             // 
-            this.btnEquipamento_Slider.FlatAppearance.BorderSize = 0;
-            this.btnEquipamento_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEquipamento_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnEquipamento_Slider.Location = new System.Drawing.Point(805, 10);
-            this.btnEquipamento_Slider.Name = "btnEquipamento_Slider";
-            this.btnEquipamento_Slider.Size = new System.Drawing.Size(30, 16);
-            this.btnEquipamento_Slider.TabIndex = 8;
-            this.btnEquipamento_Slider.UseVisualStyleBackColor = true;
-            this.btnEquipamento_Slider.Click += new System.EventHandler(this.btnEquipamento_Slider_Click);
+            this.btnLimpar_Termo.BackColor = System.Drawing.Color.Red;
+            this.btnLimpar_Termo.FlatAppearance.BorderSize = 0;
+            this.btnLimpar_Termo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar_Termo.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpar_Termo.Location = new System.Drawing.Point(802, 256);
+            this.btnLimpar_Termo.Name = "btnLimpar_Termo";
+            this.btnLimpar_Termo.Size = new System.Drawing.Size(33, 31);
+            this.btnLimpar_Termo.TabIndex = 22;
+            this.btnLimpar_Termo.UseVisualStyleBackColor = false;
+            this.btnLimpar_Termo.Click += new System.EventHandler(this.btnLimpar_Termo_Click);
             // 
-            // btnCategoria_Slider
+            // btnCadastrar_Termo
             // 
-            this.btnCategoria_Slider.FlatAppearance.BorderSize = 0;
-            this.btnCategoria_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoria_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnCategoria_Slider.Location = new System.Drawing.Point(805, 10);
-            this.btnCategoria_Slider.Name = "btnCategoria_Slider";
-            this.btnCategoria_Slider.Size = new System.Drawing.Size(30, 16);
-            this.btnCategoria_Slider.TabIndex = 8;
-            this.btnCategoria_Slider.UseVisualStyleBackColor = true;
-            this.btnCategoria_Slider.Click += new System.EventHandler(this.btnCategoria_Slider_Click);
+            this.btnCadastrar_Termo.BackColor = System.Drawing.Color.Lime;
+            this.btnCadastrar_Termo.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar_Termo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar_Termo.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrar_Termo.Location = new System.Drawing.Point(763, 256);
+            this.btnCadastrar_Termo.Name = "btnCadastrar_Termo";
+            this.btnCadastrar_Termo.Size = new System.Drawing.Size(33, 31);
+            this.btnCadastrar_Termo.TabIndex = 21;
+            this.btnCadastrar_Termo.UseVisualStyleBackColor = false;
+            this.btnCadastrar_Termo.Click += new System.EventHandler(this.btnCadastrar_Termo_Click);
             // 
-            // btnList_Equip
+            // cbEquipamento
             // 
-            this.btnList_Equip.FlatAppearance.BorderSize = 0;
-            this.btnList_Equip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnList_Equip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList_Equip.ForeColor = System.Drawing.Color.White;
-            this.btnList_Equip.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
-            this.btnList_Equip.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Equip.Location = new System.Drawing.Point(1, 52);
-            this.btnList_Equip.Name = "btnList_Equip";
-            this.btnList_Equip.Size = new System.Drawing.Size(248, 31);
-            this.btnList_Equip.TabIndex = 9;
-            this.btnList_Equip.Text = "Equipamentos";
-            this.btnList_Equip.UseVisualStyleBackColor = true;
-            this.btnList_Equip.Click += new System.EventHandler(this.btnList_Equip_Click);
+            this.cbEquipamento.FormattingEnabled = true;
+            this.cbEquipamento.Location = new System.Drawing.Point(156, 156);
+            this.cbEquipamento.Name = "cbEquipamento";
+            this.cbEquipamento.Size = new System.Drawing.Size(206, 28);
+            this.cbEquipamento.TabIndex = 20;
             // 
-            // btnList_Arrow
+            // label11
             // 
-            this.btnList_Arrow.FlatAppearance.BorderSize = 0;
-            this.btnList_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnList_Arrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList_Arrow.ForeColor = System.Drawing.Color.White;
-            this.btnList_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
-            this.btnList_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Arrow.Location = new System.Drawing.Point(3, 2);
-            this.btnList_Arrow.Name = "btnList_Arrow";
-            this.btnList_Arrow.Size = new System.Drawing.Size(248, 51);
-            this.btnList_Arrow.TabIndex = 5;
-            this.btnList_Arrow.Text = "Listagem";
-            this.btnList_Arrow.UseVisualStyleBackColor = true;
-            this.btnList_Arrow.Click += new System.EventHandler(this.btnList_Arrow_Click);
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(42, 159);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 20);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Equipamento:";
             // 
-            // btnRep_Arrow
+            // label12
             // 
-            this.btnRep_Arrow.FlatAppearance.BorderSize = 0;
-            this.btnRep_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRep_Arrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRep_Arrow.ForeColor = System.Drawing.Color.White;
-            this.btnRep_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
-            this.btnRep_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRep_Arrow.Location = new System.Drawing.Point(3, 1);
-            this.btnRep_Arrow.Name = "btnRep_Arrow";
-            this.btnRep_Arrow.Size = new System.Drawing.Size(248, 51);
-            this.btnRep_Arrow.TabIndex = 7;
-            this.btnRep_Arrow.Text = "Relatórios";
-            this.btnRep_Arrow.UseVisualStyleBackColor = true;
-            this.btnRep_Arrow.Click += new System.EventHandler(this.btnRep_Arrow_Click);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(112, 100);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 20);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "RG:";
             // 
-            // btnCreate
+            // label14
             // 
-            this.btnCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreate.FlatAppearance.BorderSize = 0;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Image = global::prjEstoque.Properties.Resources.icons8_movimento_de_estoque_50;
-            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreate.Location = new System.Drawing.Point(0, 119);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(251, 65);
-            this.btnCreate.TabIndex = 1;
-            this.btnCreate.Text = "Cadastro";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(22, 40);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(128, 20);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Data de retirada:";
             // 
-            // btnSlide
+            // btnTermo_Slider
             // 
-            this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSlide.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSlide.FlatAppearance.BorderSize = 0;
-            this.btnSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSlide.Image = global::prjEstoque.Properties.Resources.icons8_no_inventário_40;
-            this.btnSlide.Location = new System.Drawing.Point(0, 0);
-            this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(251, 81);
-            this.btnSlide.TabIndex = 0;
-            this.btnSlide.UseVisualStyleBackColor = true;
-            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
+            this.btnTermo_Slider.FlatAppearance.BorderSize = 0;
+            this.btnTermo_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTermo_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnTermo_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnTermo_Slider.Name = "btnTermo_Slider";
+            this.btnTermo_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnTermo_Slider.TabIndex = 8;
+            this.btnTermo_Slider.UseVisualStyleBackColor = true;
+            this.btnTermo_Slider.Click += new System.EventHandler(this.btnTermo_Slider_Click);
             // 
-            // btnClose
+            // pnGb_Termo
             // 
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClose.Image = global::prjEstoque.Properties.Resources.icons8_excluir_42;
-            this.btnClose.Location = new System.Drawing.Point(41, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 38);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.pnGb_Termo.Controls.Add(this.gbTermo);
+            this.pnGb_Termo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnGb_Termo.Location = new System.Drawing.Point(0, 195);
+            this.pnGb_Termo.Name = "pnGb_Termo";
+            this.pnGb_Termo.Size = new System.Drawing.Size(849, 330);
+            this.pnGb_Termo.TabIndex = 4;
             // 
-            // btnMinimize
+            // dtpRetirada
             // 
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = global::prjEstoque.Properties.Resources.icons8_minimizar_janela_38;
-            this.btnMinimize.Location = new System.Drawing.Point(0, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(38, 38);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.dtpRetirada.Location = new System.Drawing.Point(156, 38);
+            this.dtpRetirada.Name = "dtpRetirada";
+            this.dtpRetirada.Size = new System.Drawing.Size(206, 26);
+            this.dtpRetirada.TabIndex = 23;
             // 
-            // pictureBox1
+            // txtRg
             // 
-            this.pictureBox1.Image = global::prjEstoque.Properties.Resources.icons8_caixa_39;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.txtRg.Location = new System.Drawing.Point(156, 97);
+            this.txtRg.Mask = "000,000,000-00";
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(206, 26);
+            this.txtRg.TabIndex = 24;
+            // 
+            // _txtNSerie
+            // 
+            this._txtNSerie.Enabled = false;
+            this._txtNSerie.Location = new System.Drawing.Point(156, 217);
+            this._txtNSerie.Name = "_txtNSerie";
+            this._txtNSerie.Size = new System.Drawing.Size(206, 26);
+            this._txtNSerie.TabIndex = 25;
+            // 
+            // _txtPatrimonio
+            // 
+            this._txtPatrimonio.Enabled = false;
+            this._txtPatrimonio.Location = new System.Drawing.Point(579, 215);
+            this._txtPatrimonio.Name = "_txtPatrimonio";
+            this._txtPatrimonio.Size = new System.Drawing.Size(206, 26);
+            this._txtPatrimonio.TabIndex = 26;
+            // 
+            // _txtCategoria
+            // 
+            this._txtCategoria.Enabled = false;
+            this._txtCategoria.Location = new System.Drawing.Point(579, 97);
+            this._txtCategoria.Name = "_txtCategoria";
+            this._txtCategoria.Size = new System.Drawing.Size(206, 26);
+            this._txtCategoria.TabIndex = 28;
+            // 
+            // _txtEstado
+            // 
+            this._txtEstado.Enabled = false;
+            this._txtEstado.Location = new System.Drawing.Point(579, 38);
+            this._txtEstado.Name = "_txtEstado";
+            this._txtEstado.Size = new System.Drawing.Size(206, 26);
+            this._txtEstado.TabIndex = 27;
+            // 
+            // _txtPertencente
+            // 
+            this._txtPertencente.Enabled = false;
+            this._txtPertencente.Location = new System.Drawing.Point(579, 156);
+            this._txtPertencente.Name = "_txtPertencente";
+            this._txtPertencente.Size = new System.Drawing.Size(206, 26);
+            this._txtPertencente.TabIndex = 29;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 20);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Nº de série:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(473, 159);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Pertencente:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(509, 41);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(64, 20);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Estado:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(491, 100);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(82, 20);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "Categoria:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(485, 218);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(88, 20);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Patrimônio:";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 700);
-            this.Controls.Add(this.pnList_Equipamento);
             this.Controls.Add(this.pnCadastro);
+            this.Controls.Add(this.pnList_Equipamento);
             this.Controls.Add(this.pnHome);
             this.Controls.Add(this.pnLeft);
             this.Controls.Add(this.pnTop);
@@ -843,6 +1080,7 @@
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnLeft.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnList.ResumeLayout(false);
@@ -865,7 +1103,9 @@
             this.pnList_Equipamento.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipamento)).EndInit();
             this.menuEquipamento.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbTermo.ResumeLayout(false);
+            this.gbTermo.PerformLayout();
+            this.pnGb_Termo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -937,6 +1177,27 @@
         private System.Windows.Forms.ToolStripMenuItem opRefresh_Equip;
         private System.Windows.Forms.ToolStripMenuItem opAtualizar_Equip;
         private System.Windows.Forms.ToolStripMenuItem opExcluir_Equip;
+        private System.Windows.Forms.Panel pnGb_Termo;
+        private System.Windows.Forms.GroupBox gbTermo;
+        private System.Windows.Forms.Button btnLimpar_Termo;
+        private System.Windows.Forms.Button btnCadastrar_Termo;
+        private System.Windows.Forms.ComboBox cbEquipamento;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnTermo_Slider;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox _txtPertencente;
+        private System.Windows.Forms.TextBox _txtCategoria;
+        private System.Windows.Forms.TextBox _txtEstado;
+        private System.Windows.Forms.TextBox _txtPatrimonio;
+        private System.Windows.Forms.TextBox _txtNSerie;
+        private System.Windows.Forms.MaskedTextBox txtRg;
+        private System.Windows.Forms.DateTimePicker dtpRetirada;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label2;
     }
 }
 
