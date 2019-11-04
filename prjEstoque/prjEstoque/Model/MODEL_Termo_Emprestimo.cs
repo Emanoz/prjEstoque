@@ -29,11 +29,10 @@ namespace prjEstoque.Model
                 {
                     Termo_Emprestimo t = new Termo_Emprestimo();
 
-                    t.CodTermo = int.Parse(reader["CodrTermo"].ToString());
+                    t.CodTermo = int.Parse(reader["CodTermo"].ToString());
                     t.DataRetirada = DateTime.Parse(reader["DataRetirada"].ToString());
-                    t.CaminhoDigitalizado = reader["CaminhoDigitalizado"].ToString();
                     t.Rg = reader["Rg"].ToString(); ;
-                    t.DataDevolucao = DateTime.Parse(reader["DataDevolucao"].ToString());
+                    //t.DataDevolucao = DateTime.Parse(reader["DataDevolucao"].ToString());
                     t.CodEquipamento = int.Parse(reader["CodEquipamento"].ToString());
 
                     list.Add(t);
@@ -52,14 +51,12 @@ namespace prjEstoque.Model
 
         public int Insert(Termo_Emprestimo t)
         {
-            string query = "INSERT INTO Termo_de_Emprestimo VALUES(@DataRetirada, @CaminhoDigitalizado, @Rg, @DataDevolucao, @CodEquipamento)";
+            string query = "INSERT INTO Termo_de_Emprestimo(DataRetirada, Rg, CodEquipamento) VALUES(@DataRetirada,  @Rg,  @CodEquipamento)";
 
             try
             {
                 return db.CallExecuteNonQuery(query, new SqlParameter("@DataRetirada", t.DataRetirada),
-                                                  new SqlParameter("@CaminhoDigitalizado", t.CaminhoDigitalizado),
                                                   new SqlParameter("@Rg", t.Rg),
-                                                  new SqlParameter("@DataDevolucao", t.DataDevolucao),
                                                   new SqlParameter("@CodEquipamento", t.CodEquipamento));
             }
             catch (Exception ex)
@@ -71,14 +68,13 @@ namespace prjEstoque.Model
 
         public int Update(Termo_Emprestimo t)
         {
-            string query = "UPDATE Movimentacao SET DataRetirada = @dataRetirada, CaminhoDigitalizado = @caminhoDigitalizado, Rg = @rg, DataDevolucao = @dataDevolucao, CodEquipamento = @codEquipamento";
+            string query = "UPDATE Movimentacao SET DataRetirada = @dataRetirada, DataDevolucao = @dataDevolucao, Rg = @rg, CodEquipamento = @codEquipamento";
 
             try
             {
                 return db.CallExecuteNonQuery(query, new SqlParameter("@DataRetirada", t.DataRetirada),
-                                                  new SqlParameter("@CaminhoDigitalizado", t.CaminhoDigitalizado),
+                                                  new SqlParameter("@dataDevolucao", t.DataDevolucao),
                                                   new SqlParameter("@Rg", t.Rg),
-                                                  new SqlParameter("@DataDevolucao", t.DataDevolucao),
                                                   new SqlParameter("@CodEquipamento", t.CodEquipamento));
             }
             catch (Exception ex)

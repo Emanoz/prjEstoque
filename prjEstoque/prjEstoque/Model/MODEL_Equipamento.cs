@@ -51,6 +51,32 @@ namespace prjEstoque.Model
             return list;
         }
 
+        public Equipamento GetById(int cod)
+        {
+            string query = "SELECT * FROM Equipamento WHERE CodEquipamento = @codEquipamento";
+            Equipamento e = new Equipamento();
+
+            try
+            {
+                SqlDataReader reader = db.CallExecuteReader(query, new SqlParameter("@codEquipamento", cod));
+                reader.Read();
+
+                e.Descricao = reader["Descricao"].ToString();
+                e.NumSerie = reader["NumSerie"].ToString();
+                e.Estado = reader["Estado"].ToString();
+                e.CodCategoria = int.Parse(reader["CodCategoria"].ToString());
+                e.Pertencente = reader["Pertencente"].ToString();
+                e.Patrimonio = reader["Patrimonio"].ToString();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+            return e;
+        }
+
         public int Insert(Equipamento e)
         {
             string query = "INSERT INTO Equipamento VALUES(@descricao, @numSerie, @estado, @codCategoria, @pertencente, @patrimonio)";

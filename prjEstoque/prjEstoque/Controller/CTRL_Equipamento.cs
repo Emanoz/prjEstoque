@@ -22,6 +22,11 @@ namespace prjEstoque.Controller
             return modelE.GetAll();
         }
 
+        public Equipamento GetById(int cod)
+        {
+            return modelE.GetById(cod);
+        }
+
         public int Insert(Equipamento c)
         {
             return modelE.Insert(c);

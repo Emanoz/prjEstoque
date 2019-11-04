@@ -255,25 +255,26 @@ namespace prjEstoque
             }
         }
 
-        private void btnTermo_Slider_Click(object sender, EventArgs e)
+        private void opRelatorio_Equip_Click(object sender, EventArgs e)
         {
-            util.Slider(pnGb_Termo, gbTermo, btnTermo_Slider, 297, 832);
-            //opRefresh_Est_Click(null, null);
+            using (var r = new frmRelatorio_Equipamento(int.Parse(dgvEquipamento[0, dgvEquipamento.CurrentRow.Index].Value.ToString())))
+                r.ShowDialog();
+
         }
 
-        private void btnLimpar_Termo_Click(object sender, EventArgs e)
+        private void btnList_Termo_Click(object sender, EventArgs e)
         {
-            Util.LimparCampos(gbTermo.Controls);
+            pnList_Termo.BringToFront();
+            opRefresh_Termo_Click(null, null);
+
         }
 
-        private void btnCadastrar_Termo_Click(object sender, EventArgs e)
+        private void opRefresh_Termo_Click(object sender, EventArgs e)
         {
-            CTRL_Termo_Emprestimo cEst = new CTRL_Termo_Emprestimo();
-            Termo_Emprestimo termo = new Termo_Emprestimo(txt);
+            CTRL_Termo_Emprestimo cTermo = new CTRL_Termo_Emprestimo();
 
-            if (cEst.Insert(termo) == 0)
-                MessageBox.Show("O registro não foi cadastrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            opRefresh_Est_Click(null, null);
+            dgvTermo.DataSource = cTermo.GetAll();
+            FormatarDgv.FormatarTermo(dgvTermo);
         }
     }
 }

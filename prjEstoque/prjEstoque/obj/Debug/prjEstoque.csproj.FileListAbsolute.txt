@@ -525,3 +525,4 @@ C:\Users\Adriana\Desktop\MANU\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEsto
 C:\Users\Adriana\Desktop\MANU\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.pdb
 C:\Users\Adriana\Desktop\MANU\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmEditarBase.resources
 C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmEditarBase.resources
+C:\Users\Adriana\Desktop\MANU\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmRelatorio_Equipamento.resources

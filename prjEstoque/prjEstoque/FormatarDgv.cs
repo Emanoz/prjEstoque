@@ -35,5 +35,19 @@ namespace prjEstoque
             dgv.Columns["Patrimonio"].HeaderText = "Patrimônio";
             dgv.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
         }
+
+        public static void FormatarTermo(System.Windows.Forms.DataGridView dgv)
+        {
+            dgv.Columns["CodTermo"].Width = 50;
+            dgv.Columns["CodTermo"].HeaderText = "Código";
+            dgv.Columns["DataRetirada"].Width = 180;
+            dgv.Columns["DataRetirada"].HeaderText = "Data de Retirada";
+            dgv.Columns["Rg"].Width = 120;
+            dgv.Columns["Rg"].HeaderText = "RG";
+            dgv.Columns["DataDevolucao"].Width = 180;
+            dgv.Columns["Datadevolucao"].HeaderText = "Data de Devolução";
+            dgv.Columns["CodEquipamento"].Width = 50;
+            dgv.Columns["CodEquipamento"].HeaderText = "ID Equip";
+        }
     }
 }

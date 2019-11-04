@@ -13,20 +13,16 @@ namespace prjEstoque.Entity
 
         }
 
-        public Termo_Emprestimo(int codtermo, DateTime dataRetirada, string caminhoDigitalizado, string rg, DateTime dataDevolucao, int codEquipamento)
+        public Termo_Emprestimo(DateTime dataRetirada, string rg, int codEquipamento)
         {
-            CodTermo = codtermo;
             DataRetirada = dataRetirada;
-            CaminhoDigitalizado = caminhoDigitalizado;
             Rg = rg;
-            DataDevolucao = dataDevolucao;
             CodEquipamento = codEquipamento;
         }
 
-        public Termo_Emprestimo(DateTime dataRetirada, string caminhoDigitalizado, string rg, DateTime dataDevolucao, int codEquipamento)
+        public Termo_Emprestimo(DateTime dataRetirada, string rg, DateTime dataDevolucao, int codEquipamento)
         {
             DataRetirada = dataRetirada;
-            CaminhoDigitalizado = caminhoDigitalizado;
             Rg = rg;
             DataDevolucao = dataDevolucao;
             CodEquipamento = codEquipamento;
@@ -34,9 +30,9 @@ namespace prjEstoque.Entity
 
         public int CodTermo { get; set; }
         public DateTime DataRetirada { get; set; }
-        public string CaminhoDigitalizado { get; set; }
+        public int CodEquipamento { get; set; }
         public string Rg { get; set; }
         public DateTime DataDevolucao { get; set; }
-        public int CodEquipamento { get; set; }
+        
     }
 }

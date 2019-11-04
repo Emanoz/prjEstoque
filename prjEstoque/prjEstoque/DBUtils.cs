@@ -84,5 +84,32 @@ namespace prjEstoque
                 throw new Exception(ex.Message);
             }
         }
+
+        public SqlDataReader CallExecuteReader(string query, SqlParameter parameter)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(connString);
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(parameter);
+                    OpenConnection(conn);
+                    return cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                }
+
+            }
+            catch (SqlException sqlex)
+            {
+
+                throw new Exception("Erro ao executar o comando!\n'" + sqlex + "'");
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
