@@ -419,7 +419,6 @@ C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\pt\Microsoft
 C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csprojAssemblyReference.cache
 C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.Properties.Resources.resources
 C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmLogin.resources
 C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.frmPrincipal.resources
@@ -526,3 +525,5 @@ C:\Users\Adriana\Desktop\MANU\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEsto
 C:\Users\Adriana\Desktop\MANU\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmEditarBase.resources
 C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmEditarBase.resources
 C:\Users\Adriana\Desktop\MANU\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmRelatorio_Equipamento.resources
+C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmRelatorio_Equipamento.resources
+C:\Users\monitor\Desktop\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.csprojAssemblyReference.cache

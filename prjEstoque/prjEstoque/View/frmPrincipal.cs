@@ -276,5 +276,19 @@ namespace prjEstoque
             dgvTermo.DataSource = cTermo.GetAll();
             FormatarDgv.FormatarTermo(dgvTermo);
         }
+
+        private void opAtualizar_Termo_Click(object sender, EventArgs e)
+        {
+            CTRL_Termo_Emprestimo cTermo = new CTRL_Termo_Emprestimo();
+            Termo_Emprestimo termo = new Termo_Emprestimo(int.Parse(dgvTermo[0, dgvTermo.CurrentRow.Index].Value.ToString()),
+                                                          DateTime.Parse(dgvTermo[1, dgvTermo.CurrentRow.Index].Value.ToString()),
+                                                          dgvTermo[3, dgvTermo.CurrentRow.Index].Value.ToString(),
+                                                          DateTime.Parse(dgvTermo[4, dgvTermo.CurrentRow.Index].Value.ToString()),
+                                                          int.Parse(dgvTermo[2, dgvTermo.CurrentRow.Index].Value.ToString()));
+
+            using (var editar = new frmEditarBase(termo))
+                editar.ShowDialog();
+            opRefresh_Termo_Click(null, null);
+        }
     }
 }

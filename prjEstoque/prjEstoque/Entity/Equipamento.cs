@@ -41,5 +41,10 @@ namespace prjEstoque.Entity
         public int CodCategoria { get; set; }
         public string Pertencente { get; set; }
         public string Patrimonio { get; set; }
+
+        public override string ToString()
+        {
+            return Descricao;
+        }
     }
 }

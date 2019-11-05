@@ -11,7 +11,8 @@ namespace prjEstoque
 {
     class DBUtils
     {
-        string connString = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
+        //private string connString = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
+        private string connString = "Data Source=C-204\\SQLEXPRESS;Initial Catalog=bdEstoque;Integrated Security=True";
 
         public DBUtils()
         {
