@@ -49,11 +49,14 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pnTermo = new System.Windows.Forms.Panel();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtRg = new System.Windows.Forms.TextBox();
+            this.dtpDevolucao = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.gbTermo = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.cbDescricao = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,11 +70,9 @@
             this.dtpRetirada = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpDevolucao = new System.Windows.Forms.DateTimePicker();
-            this.cbDescricao = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtRg = new System.Windows.Forms.TextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.cbDevolvido = new System.Windows.Forms.CheckBox();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -292,6 +293,7 @@
             // pnTermo
             // 
             this.pnTermo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.pnTermo.Controls.Add(this.cbDevolvido);
             this.pnTermo.Controls.Add(this.txtRg);
             this.pnTermo.Controls.Add(this.dtpDevolucao);
             this.pnTermo.Controls.Add(this.label3);
@@ -308,32 +310,32 @@
             this.pnTermo.Size = new System.Drawing.Size(800, 359);
             this.pnTermo.TabIndex = 5;
             // 
-            // btnLimpar
+            // txtRg
             // 
-            this.btnLimpar.BackColor = System.Drawing.Color.Red;
-            this.btnLimpar.FlatAppearance.BorderSize = 0;
-            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpar.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpar.Location = new System.Drawing.Point(650, 316);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(138, 31);
-            this.btnLimpar.TabIndex = 36;
-            this.btnLimpar.Text = "Limpar Campos";
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.txtRg.Location = new System.Drawing.Point(149, 79);
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(206, 26);
+            this.txtRg.TabIndex = 46;
             // 
-            // btnCadastrar
+            // dtpDevolucao
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.Lime;
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrar.Location = new System.Drawing.Point(480, 316);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(138, 31);
-            this.btnCadastrar.TabIndex = 35;
-            this.btnCadastrar.Text = "OK";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.dtpDevolucao.Enabled = false;
+            this.dtpDevolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.dtpDevolucao.Location = new System.Drawing.Point(149, 19);
+            this.dtpDevolucao.Name = "dtpDevolucao";
+            this.dtpDevolucao.Size = new System.Drawing.Size(206, 26);
+            this.dtpDevolucao.TabIndex = 43;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(-3, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 20);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Data de devolução:";
             // 
             // gbTermo
             // 
@@ -362,25 +364,46 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(473, 149);
+            this.label16.Location = new System.Drawing.Point(478, 149);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(88, 20);
             this.label16.TabIndex = 34;
             this.label16.Text = "Patrimônio:";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(59, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 20);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "Descrição:";
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(479, 31);
+            this.label15.Location = new System.Drawing.Point(484, 31);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(82, 20);
             this.label15.TabIndex = 33;
             this.label15.Text = "Categoria:";
             // 
+            // cbDescricao
+            // 
+            this.cbDescricao.FormattingEnabled = true;
+            this.cbDescricao.Location = new System.Drawing.Point(149, 28);
+            this.cbDescricao.Name = "cbDescricao";
+            this.cbDescricao.Size = new System.Drawing.Size(206, 28);
+            this.cbDescricao.TabIndex = 44;
+            this.cbDescricao.DropDown += new System.EventHandler(this.cbDescricao_DropDown);
+            this.cbDescricao.SelectedValueChanged += new System.EventHandler(this.cbDescricao_SelectedValueChanged);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(74, 90);
+            this.label13.Location = new System.Drawing.Point(79, 90);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 20);
             this.label13.TabIndex = 32;
@@ -389,7 +412,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(461, 90);
+            this.label2.Location = new System.Drawing.Point(466, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
             this.label2.TabIndex = 31;
@@ -398,7 +421,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 152);
+            this.label1.Location = new System.Drawing.Point(53, 152);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 30;
@@ -407,7 +430,7 @@
             // _txtPertencente
             // 
             this._txtPertencente.Enabled = false;
-            this._txtPertencente.Location = new System.Drawing.Point(567, 87);
+            this._txtPertencente.Location = new System.Drawing.Point(572, 87);
             this._txtPertencente.Name = "_txtPertencente";
             this._txtPertencente.Size = new System.Drawing.Size(206, 26);
             this._txtPertencente.TabIndex = 29;
@@ -415,7 +438,7 @@
             // _txtCategoria
             // 
             this._txtCategoria.Enabled = false;
-            this._txtCategoria.Location = new System.Drawing.Point(567, 28);
+            this._txtCategoria.Location = new System.Drawing.Point(572, 28);
             this._txtCategoria.Name = "_txtCategoria";
             this._txtCategoria.Size = new System.Drawing.Size(206, 26);
             this._txtCategoria.TabIndex = 28;
@@ -423,7 +446,7 @@
             // _txtEstado
             // 
             this._txtEstado.Enabled = false;
-            this._txtEstado.Location = new System.Drawing.Point(144, 87);
+            this._txtEstado.Location = new System.Drawing.Point(149, 87);
             this._txtEstado.Name = "_txtEstado";
             this._txtEstado.Size = new System.Drawing.Size(206, 26);
             this._txtEstado.TabIndex = 27;
@@ -431,7 +454,7 @@
             // _txtPatrimonio
             // 
             this._txtPatrimonio.Enabled = false;
-            this._txtPatrimonio.Location = new System.Drawing.Point(567, 146);
+            this._txtPatrimonio.Location = new System.Drawing.Point(572, 146);
             this._txtPatrimonio.Name = "_txtPatrimonio";
             this._txtPatrimonio.Size = new System.Drawing.Size(206, 26);
             this._txtPatrimonio.TabIndex = 26;
@@ -439,7 +462,7 @@
             // _txtNSerie
             // 
             this._txtNSerie.Enabled = false;
-            this._txtNSerie.Location = new System.Drawing.Point(144, 148);
+            this._txtNSerie.Location = new System.Drawing.Point(149, 148);
             this._txtNSerie.Name = "_txtNSerie";
             this._txtNSerie.Size = new System.Drawing.Size(206, 26);
             this._txtNSerie.TabIndex = 25;
@@ -470,7 +493,7 @@
             // dtpRetirada
             // 
             this.dtpRetirada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
-            this.dtpRetirada.Location = new System.Drawing.Point(567, 17);
+            this.dtpRetirada.Location = new System.Drawing.Point(572, 77);
             this.dtpRetirada.Name = "dtpRetirada";
             this.dtpRetirada.Size = new System.Drawing.Size(206, 26);
             this.dtpRetirada.TabIndex = 40;
@@ -480,7 +503,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(100, 82);
+            this.label12.Location = new System.Drawing.Point(105, 82);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 20);
             this.label12.TabIndex = 39;
@@ -491,57 +514,51 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(433, 19);
+            this.label14.Location = new System.Drawing.Point(438, 79);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(128, 20);
             this.label14.TabIndex = 38;
             this.label14.Text = "Data de retirada:";
             // 
-            // label3
+            // btnLimpar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(415, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 20);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Data de devolução:";
+            this.btnLimpar.BackColor = System.Drawing.Color.Red;
+            this.btnLimpar.FlatAppearance.BorderSize = 0;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpar.Location = new System.Drawing.Point(650, 316);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(138, 31);
+            this.btnLimpar.TabIndex = 36;
+            this.btnLimpar.Text = "Limpar Campos";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // dtpDevolucao
+            // btnCadastrar
             // 
-            this.dtpDevolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
-            this.dtpDevolucao.Location = new System.Drawing.Point(567, 77);
-            this.dtpDevolucao.Name = "dtpDevolucao";
-            this.dtpDevolucao.Size = new System.Drawing.Size(206, 26);
-            this.dtpDevolucao.TabIndex = 43;
+            this.btnCadastrar.BackColor = System.Drawing.Color.Lime;
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrar.Location = new System.Drawing.Point(480, 316);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(138, 31);
+            this.btnCadastrar.TabIndex = 35;
+            this.btnCadastrar.Text = "OK";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // cbDescricao
+            // cbDevolvido
             // 
-            this.cbDescricao.FormattingEnabled = true;
-            this.cbDescricao.Location = new System.Drawing.Point(144, 28);
-            this.cbDescricao.Name = "cbDescricao";
-            this.cbDescricao.Size = new System.Drawing.Size(206, 28);
-            this.cbDescricao.TabIndex = 44;
-            this.cbDescricao.DropDown += new System.EventHandler(this.cbDescricao_DropDown);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(54, 34);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 20);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "Descrição:";
-            // 
-            // txtRg
-            // 
-            this.txtRg.Location = new System.Drawing.Point(144, 79);
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(206, 26);
-            this.txtRg.TabIndex = 46;
+            this.cbDevolvido.AutoSize = true;
+            this.cbDevolvido.ForeColor = System.Drawing.Color.White;
+            this.cbDevolvido.Location = new System.Drawing.Point(372, 19);
+            this.cbDevolvido.Name = "cbDevolvido";
+            this.cbDevolvido.Size = new System.Drawing.Size(128, 24);
+            this.cbDevolvido.TabIndex = 47;
+            this.cbDevolvido.Text = "Foi devolvido?";
+            this.cbDevolvido.UseVisualStyleBackColor = true;
+            this.cbDevolvido.CheckedChanged += new System.EventHandler(this.cbDevolvido_CheckedChanged);
             // 
             // frmEditarBase
             // 
@@ -616,5 +633,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtRg;
+        private System.Windows.Forms.CheckBox cbDevolvido;
     }
 }

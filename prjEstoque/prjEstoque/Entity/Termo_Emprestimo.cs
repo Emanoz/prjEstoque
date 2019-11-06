@@ -29,6 +29,14 @@ namespace prjEstoque.Entity
             CodEquipamento = codEquipamento;
         }
 
+        public Termo_Emprestimo(int codTermo, DateTime dataRetirada, string rg, int codEquipamento)
+        {
+            CodTermo = codTermo;
+            DataRetirada = dataRetirada;
+            Rg = rg;
+            CodEquipamento = codEquipamento;
+        }
+
         public int CodTermo { get; set; }
         public DateTime DataRetirada { get; set; }
         public int CodEquipamento { get; set; }

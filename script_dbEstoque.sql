@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 CREATE DATABASE bdEstoque;
 
 USE bdEstoque;
 
-=======
->>>>>>> 56ae36281be5d66a96b2b21ecdda1d8b47b88782
 CREATE TABLE USUARIO
 (
 	CodUsuario int primary key identity,
@@ -16,11 +13,8 @@ CREATE TABLE USUARIO
 
 CREATE TABLE ESTOQUE
 (
-<<<<<<< HEAD
 	CodEstoque int primary key identity,
-=======
 	CodEstoque int primary key identity, 
->>>>>>> 56ae36281be5d66a96b2b21ecdda1d8b47b88782
 	[Local] varchar (80) not null
 )
 

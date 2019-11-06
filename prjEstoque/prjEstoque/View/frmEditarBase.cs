@@ -16,6 +16,7 @@ namespace prjEstoque.View
     {
         private int index;
         public object Entity { get; set; }
+        public List<Equipamento> ListEquipamento { get; set; }
         public frmEditarBase(object e)
         {
             InitializeComponent();
@@ -91,15 +92,54 @@ namespace prjEstoque.View
         private void cbDescricao_DropDown(object sender, EventArgs e)
         {
             CTRL_Equipamento cEquip = new CTRL_Equipamento();
-            List<Equipamento> list = new List<Equipamento>();
+            ListEquipamento = new List<Equipamento>();
 
-            list = cEquip.GetAll();
-            cbDescricao.DataSource = list;
+            ListEquipamento = cEquip.GetAll();
+            cbDescricao.DataSource = ListEquipamento;
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             Util.LimparCampos(pnTermo.Controls);
+        }
+
+        private void cbDevolvido_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbDevolvido.Checked)
+                dtpDevolucao.Enabled = true;
+            else
+                dtpDevolucao.Enabled = false;
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            CTRL_Termo_Emprestimo cTermo = new CTRL_Termo_Emprestimo();
+            Termo_Emprestimo termo = null;
+            if (cbDevolvido.Checked)
+            {
+                termo = new Termo_Emprestimo(((Termo_Emprestimo)Entity).CodTermo, dtpRetirada.Value, txtRg.Text,
+                                                            dtpRetirada.Value, int.Parse(cbDescricao.Text));
+            }
+            else
+            {
+                termo = new Termo_Emprestimo(((Termo_Emprestimo)Entity).CodTermo, dtpRetirada.Value, txtRg.Text,
+                                                            int.Parse(cbDescricao.Text));
+            }
+
+
+            if (cTermo.Update(termo) <= 0)
+                MessageBox.Show("O registro não foi atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                Close();
+        }
+
+        private void cbDescricao_SelectedValueChanged(object sender, EventArgs e)
+        {
+            _txtEstado.Text = ListEquipamento[cbDescricao.SelectedIndex].Estado;
+            _txtNSerie.Text = ListEquipamento[cbDescricao.SelectedIndex].NumSerie;
+            _txtCategoria.Text = ListEquipamento[cbDescricao.SelectedIndex].CodCategoria.ToString();
+            _txtPertencente.Text = ListEquipamento[cbDescricao.SelectedIndex].Pertencente;
+            _txtPatrimonio.Text = ListEquipamento[cbDescricao.SelectedIndex].Patrimonio;
         }
     }
 }

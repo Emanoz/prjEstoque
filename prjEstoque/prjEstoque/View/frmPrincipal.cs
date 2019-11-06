@@ -290,5 +290,15 @@ namespace prjEstoque
                 editar.ShowDialog();
             opRefresh_Termo_Click(null, null);
         }
+
+        private void opExcluir_Termo_Click(object sender, EventArgs e)
+        {
+            CTRL_Termo_Emprestimo cTermo = new CTRL_Termo_Emprestimo();
+
+            if (cTermo.Delete(int.Parse(dgvTermo[0, dgvTermo.CurrentRow.Index].Value.ToString())) <= 0)
+                MessageBox.Show("Erro ao excluir o registro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                opExcluir_Termo_Click(null, null);
+        }
     }
 }
