@@ -31,5 +31,10 @@ namespace prjEstoque.View
         {
             txtSenha.Clear();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -5,6 +5,7 @@ USE bdEstoque;
 CREATE TABLE USUARIO
 (
 	CodUsuario int primary key identity,
+	Usuario varchar(30) not null,
 	Nome varchar(80) not null,
 	Cargo varchar(30) not null, 
 	Pin varchar(10) not null, 
@@ -14,7 +15,6 @@ CREATE TABLE USUARIO
 CREATE TABLE ESTOQUE
 (
 	CodEstoque int primary key identity,
-	CodEstoque int primary key identity, 
 	[Local] varchar (80) not null
 )
 
@@ -39,7 +39,6 @@ CREATE TABLE TERMO_DE_EMPRESTIMO
 (
 	CodTermo int primary key identity, 
 	DataRetirada datetime not null, 
-	CaminhoDigitalizado varchar (100) not null,
 	RG varchar(30) not null,
 	DataDevolucao datetime,
 	CodEquipamento int references EQUIPAMENTO

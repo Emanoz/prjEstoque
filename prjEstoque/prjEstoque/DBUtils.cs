@@ -86,7 +86,7 @@ namespace prjEstoque
             }
         }
 
-        public SqlDataReader CallExecuteReader(string query, SqlParameter parameter)
+        public SqlDataReader CallExecuteReader(string query, params SqlParameter[] parameter)
         {
             try
             {

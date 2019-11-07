@@ -83,6 +83,7 @@
     <Compile Include="Model\MODEL_Estoque.cs" />
     <Compile Include="Model\MODEL_Movimentacao.cs" />
     <Compile Include="Model\MODEL_Termo_Emprestimo.cs" />
+    <Compile Include="Model\MODEL_Usuario.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="View\frmEditarBase.cs">

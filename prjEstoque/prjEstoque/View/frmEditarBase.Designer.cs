@@ -49,6 +49,7 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pnTermo = new System.Windows.Forms.Panel();
+            this.cbDevolvido = new System.Windows.Forms.CheckBox();
             this.txtRg = new System.Windows.Forms.TextBox();
             this.dtpDevolucao = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.cbDevolvido = new System.Windows.Forms.CheckBox();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -310,6 +310,18 @@
             this.pnTermo.Size = new System.Drawing.Size(800, 359);
             this.pnTermo.TabIndex = 5;
             // 
+            // cbDevolvido
+            // 
+            this.cbDevolvido.AutoSize = true;
+            this.cbDevolvido.ForeColor = System.Drawing.Color.White;
+            this.cbDevolvido.Location = new System.Drawing.Point(372, 19);
+            this.cbDevolvido.Name = "cbDevolvido";
+            this.cbDevolvido.Size = new System.Drawing.Size(128, 24);
+            this.cbDevolvido.TabIndex = 47;
+            this.cbDevolvido.Text = "Foi devolvido?";
+            this.cbDevolvido.UseVisualStyleBackColor = true;
+            this.cbDevolvido.CheckedChanged += new System.EventHandler(this.cbDevolvido_CheckedChanged);
+            // 
             // txtRg
             // 
             this.txtRg.Location = new System.Drawing.Point(149, 79);
@@ -360,6 +372,7 @@
             this.gbTermo.Size = new System.Drawing.Size(800, 189);
             this.gbTermo.TabIndex = 37;
             this.gbTermo.TabStop = false;
+            this.gbTermo.Text = "Equipamento:";
             // 
             // label16
             // 
@@ -547,18 +560,6 @@
             this.btnCadastrar.Text = "OK";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // cbDevolvido
-            // 
-            this.cbDevolvido.AutoSize = true;
-            this.cbDevolvido.ForeColor = System.Drawing.Color.White;
-            this.cbDevolvido.Location = new System.Drawing.Point(372, 19);
-            this.cbDevolvido.Name = "cbDevolvido";
-            this.cbDevolvido.Size = new System.Drawing.Size(128, 24);
-            this.cbDevolvido.TabIndex = 47;
-            this.cbDevolvido.Text = "Foi devolvido?";
-            this.cbDevolvido.UseVisualStyleBackColor = true;
-            this.cbDevolvido.CheckedChanged += new System.EventHandler(this.cbDevolvido_CheckedChanged);
             // 
             // frmEditarBase
             // 
