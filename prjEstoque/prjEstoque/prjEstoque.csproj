@@ -70,6 +70,7 @@
     <Compile Include="Controller\CTRL_Estoque.cs" />
     <Compile Include="Controller\CTRL_Movimentacao.cs" />
     <Compile Include="Controller\CTRL_Termo_Emprestimo.cs" />
+    <Compile Include="Controller\CTRL_Usuario.cs" />
     <Compile Include="DBUtils.cs" />
     <Compile Include="Entity\Categoria.cs" />
     <Compile Include="Entity\Equipamento.cs" />

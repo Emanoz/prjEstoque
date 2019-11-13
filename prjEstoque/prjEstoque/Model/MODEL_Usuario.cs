@@ -23,8 +23,8 @@ namespace prjEstoque.Model
 
             try
             {
-                SqlDataReader reader = db.CallExecuteReader(query, new SqlParameter("@usuario", usuario),
-                                                                   new SqlParameter("@senha", senha));
+                SqlDataReader reader = db.CallExecuteReader(query, new SqlParameter("@usuario", u._Usuario),
+                                                                   new SqlParameter("@senha", u.Senha));
                 reader.Read();
 
                 u.Nome = reader["Nome"].ToString();
@@ -33,11 +33,9 @@ namespace prjEstoque.Model
             }
             catch (Exception ex)
             {
-
-                throw new Exception(ex.Message);
+                return null;
             }
             return u;
-
         }
     }
 }

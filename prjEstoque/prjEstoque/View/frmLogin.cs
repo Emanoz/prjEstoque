@@ -1,4 +1,6 @@
-﻿using System;
+﻿using prjEstoque.Controller;
+using prjEstoque.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +36,17 @@ namespace prjEstoque.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            CTRL_Usuario cUsu = new CTRL_Usuario();
 
+            Usuario usu = cUsu.Logar(txtUsuario.Text, txtSenha.Text);
+            if (usu != null)
+            {
+                using (var frm = new frmPrincipal(usu))
+                    frm.ShowDialog();
+            }
+            else
+                MessageBox.Show("Usuário ou senha incorretos. Tente novamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
         }
     }
 }

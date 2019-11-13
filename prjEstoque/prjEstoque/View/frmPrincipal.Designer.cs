@@ -106,6 +106,9 @@
             this.opAtualizar_Termo = new System.Windows.Forms.ToolStripMenuItem();
             this.opExcluir_Termo = new System.Windows.Forms.ToolStripMenuItem();
             this.opRelatorio_Termo = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.lblPin = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -203,8 +206,10 @@
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.pnLeft.Controls.Add(this.lblPin);
+            this.pnLeft.Controls.Add(this.lblCargo);
+            this.pnLeft.Controls.Add(this.lblNome);
             this.pnLeft.Controls.Add(this.panel2);
-            this.pnLeft.Controls.Add(this.btnCreate);
             this.pnLeft.Controls.Add(this.btnSlide);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 38);
@@ -216,10 +221,11 @@
             // 
             this.panel2.Controls.Add(this.pnList);
             this.panel2.Controls.Add(this.pnReport);
+            this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 184);
+            this.panel2.Location = new System.Drawing.Point(0, 231);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 478);
+            this.panel2.Size = new System.Drawing.Size(251, 431);
             this.panel2.TabIndex = 2;
             // 
             // pnList
@@ -228,7 +234,7 @@
             this.pnList.Controls.Add(this.btnList_Equip);
             this.pnList.Controls.Add(this.btnList_Arrow);
             this.pnList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnList.Location = new System.Drawing.Point(0, 54);
+            this.pnList.Location = new System.Drawing.Point(0, 119);
             this.pnList.Name = "pnList";
             this.pnList.Size = new System.Drawing.Size(251, 54);
             this.pnList.TabIndex = 0;
@@ -283,7 +289,7 @@
             // 
             this.pnReport.Controls.Add(this.btnRep_Arrow);
             this.pnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnReport.Location = new System.Drawing.Point(0, 0);
+            this.pnReport.Location = new System.Drawing.Point(0, 65);
             this.pnReport.Name = "pnReport";
             this.pnReport.Size = new System.Drawing.Size(251, 54);
             this.pnReport.TabIndex = 2;
@@ -308,13 +314,14 @@
             // 
             this.btnCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCreate.FlatAppearance.BorderSize = 0;
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
             this.btnCreate.Image = global::prjEstoque.Properties.Resources.icons8_movimento_de_estoque_50;
             this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreate.Location = new System.Drawing.Point(0, 119);
+            this.btnCreate.Location = new System.Drawing.Point(0, 0);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(251, 65);
             this.btnCreate.TabIndex = 1;
@@ -914,34 +921,67 @@
             this.opExcluir_Termo,
             this.opRelatorio_Termo});
             this.menuTermo.Name = "menuEstoque";
-            this.menuTermo.Size = new System.Drawing.Size(181, 114);
+            this.menuTermo.Size = new System.Drawing.Size(161, 92);
             // 
             // opRefresh_Termo
             // 
             this.opRefresh_Termo.Name = "opRefresh_Termo";
-            this.opRefresh_Termo.Size = new System.Drawing.Size(180, 22);
+            this.opRefresh_Termo.Size = new System.Drawing.Size(160, 22);
             this.opRefresh_Termo.Text = "Refresh";
             this.opRefresh_Termo.Click += new System.EventHandler(this.opRefresh_Termo_Click);
             // 
             // opAtualizar_Termo
             // 
             this.opAtualizar_Termo.Name = "opAtualizar_Termo";
-            this.opAtualizar_Termo.Size = new System.Drawing.Size(180, 22);
+            this.opAtualizar_Termo.Size = new System.Drawing.Size(160, 22);
             this.opAtualizar_Termo.Text = "Atualizar campo";
             this.opAtualizar_Termo.Click += new System.EventHandler(this.opAtualizar_Termo_Click);
             // 
             // opExcluir_Termo
             // 
             this.opExcluir_Termo.Name = "opExcluir_Termo";
-            this.opExcluir_Termo.Size = new System.Drawing.Size(180, 22);
+            this.opExcluir_Termo.Size = new System.Drawing.Size(160, 22);
             this.opExcluir_Termo.Text = "Excluir campo";
             this.opExcluir_Termo.Click += new System.EventHandler(this.opExcluir_Termo_Click);
             // 
             // opRelatorio_Termo
             // 
             this.opRelatorio_Termo.Name = "opRelatorio_Termo";
-            this.opRelatorio_Termo.Size = new System.Drawing.Size(180, 22);
+            this.opRelatorio_Termo.Size = new System.Drawing.Size(160, 22);
             this.opRelatorio_Termo.Text = "Gerar relatório";
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(3, 119);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(45, 16);
+            this.lblNome.TabIndex = 3;
+            this.lblNome.Text = "label1";
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.White;
+            this.lblCargo.Location = new System.Drawing.Point(3, 154);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(45, 16);
+            this.lblCargo.TabIndex = 4;
+            this.lblCargo.Text = "label1";
+            // 
+            // lblPin
+            // 
+            this.lblPin.AutoSize = true;
+            this.lblPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPin.ForeColor = System.Drawing.Color.White;
+            this.lblPin.Location = new System.Drawing.Point(115, 155);
+            this.lblPin.Name = "lblPin";
+            this.lblPin.Size = new System.Drawing.Size(45, 16);
+            this.lblPin.TabIndex = 5;
+            this.lblPin.Text = "label1";
             // 
             // frmPrincipal
             // 
@@ -964,6 +1004,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnLeft.ResumeLayout(false);
+            this.pnLeft.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.pnList.ResumeLayout(false);
             this.pnReport.ResumeLayout(false);
@@ -1069,6 +1110,9 @@
         private System.Windows.Forms.ToolStripMenuItem opAtualizar_Termo;
         private System.Windows.Forms.ToolStripMenuItem opExcluir_Termo;
         private System.Windows.Forms.ToolStripMenuItem opRelatorio_Termo;
+        private System.Windows.Forms.Label lblPin;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Label lblNome;
     }
 }
 

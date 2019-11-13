@@ -12,7 +12,7 @@ namespace prjEstoque
     class DBUtils
     {
         //private string connString = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
-        private string connString = "Data Source=C-205\\SQLEXPRESS;Initial Catalog=bdEstoque;Integrated Security=True";
+        private string connString = "Data Source=C-204\\SQLEXPRESS;Initial Catalog=bdEstoque;Integrated Security=True";
 
         public DBUtils()
         {
@@ -95,7 +95,7 @@ namespace prjEstoque
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Add(parameter);
+                    cmd.Parameters.AddRange(parameter);
                     OpenConnection(conn);
                     return cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 }

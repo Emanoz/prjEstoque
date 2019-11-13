@@ -22,6 +22,14 @@ namespace prjEstoque
             InitializeComponent();
             util = new Util();
         }
+        public frmPrincipal(Usuario usu)
+        {
+            InitializeComponent();
+            util = new Util();
+            lblNome.Text = usu.Nome.ToUpper();
+            lblPin.Text = usu.Pin.ToUpper();
+            lblCargo.Text = usu.Cargo.ToUpper();
+        }
 
         private void btnClose_Click(object sender, EventArgs e) => Application.Exit();
 
