@@ -22,19 +22,9 @@ namespace prjEstoque.Controller
             return modelM.GetAll();
         }
 
-        public void Insert(Movimentacao c)
+        public int Insert(Movimentacao c)
         {
-            modelM.Insert(c);
-        }
-
-        public void Update(Movimentacao c)
-        {
-            modelM.Update(c);
-        }
-
-        public void Delete(int cod)
-        {
-            modelM.Delete(cod);
+            return modelM.Insert(c);
         }
     }
 }

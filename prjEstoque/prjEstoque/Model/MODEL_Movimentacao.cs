@@ -33,7 +33,7 @@ namespace prjEstoque.Model
                     m.CodUsuario = int.Parse(reader["CodUsuario"].ToString());
                     m.CodEquipamento = int.Parse(reader["CodEquipamento"].ToString());
                     m.CodEstoque = int.Parse(reader["CodEstoque"].ToString());;
-                    m.Estado = reader["Estado"].ToString();
+                    m.TipoMovimentacao = reader["Estado"].ToString();
                     m.DataMovimentacao = DateTime.Parse(reader["DataMovimentacao"].ToString());
 
                     list.Add(m);
@@ -50,53 +50,17 @@ namespace prjEstoque.Model
             return list;
         }
 
-        public void Insert(Movimentacao m)
+        public int Insert(Movimentacao m)
         {
             string query = "INSERT INTO Movimentacao VALUES(@codUsuario, @codEquipamento, @codEstoque, @estado, @dataMovimentacao)";
 
             try
             {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@codUsuario", m.CodUsuario),
+                return db.CallExecuteNonQuery(query, new SqlParameter("@codUsuario", m.CodUsuario),
                                                   new SqlParameter("@codEquipamento", m.CodEquipamento),
                                                   new SqlParameter("@codEstoque", m.CodEstoque),
-                                                  new SqlParameter("@estado", m.Estado),
-                                                  new SqlParameter("@dataMovimentacao", m.DataMovimentacao)) == 0)
-                    throw new Exception("Nenhuma linha foi cadastrada");
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
-        }
-
-        public void Update(Movimentacao m)
-        {
-            string query = "UPDATE Movimentacao SET CodUsuario = @codUsuario, CodEquipamento = @codEquipamento, CodEstoque = @codEstoque, Estado = @estado, DataMovimentacao = @dataMovimentacao";
-
-            try
-            {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@codUsuario", m.CodUsuario),
-                                                  new SqlParameter("@codEquipamento", m.CodEquipamento),
-                                                  new SqlParameter("@codEstoque", m.CodEstoque),
-                                                  new SqlParameter("@estado", m.Estado),
-                                                  new SqlParameter("@dataMovimentacao", m.DataMovimentacao)) == 0)
-                    throw new Exception("Nenhuma linha foi alterada");
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
-        }
-
-        public void Delete(int cod)
-        {
-            string query = "DELETE FROM Movimentacao WHERE CodMovimentacao = @codMovimentacao";
-            try
-            {
-                if (db.CallExecuteNonQuery(query, new SqlParameter("@codMovimentacao", cod)) == 0)
-                    throw new Exception("Nenhuma linha foi excluída");
+                                                  new SqlParameter("@estado", m.TipoMovimentacao),
+                                                  new SqlParameter("@dataMovimentacao", m.DataMovimentacao));
             }
             catch (Exception ex)
             {

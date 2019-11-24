@@ -18,7 +18,7 @@ namespace prjEstoque.Model
 
         public Usuario Logar(string usuario, string senha)
         {
-            string query = "SELECT Nome, Cargo, Pin FROM USUARIO WHERE Usuario = @usuario AND Senha = @senha";
+            string query = "SELECT CodUsuario, Nome, Cargo, Pin FROM USUARIO WHERE Usuario = @usuario AND Senha = @senha";
             Usuario u = new Usuario(usuario, senha);
 
             try
@@ -27,6 +27,7 @@ namespace prjEstoque.Model
                                                                    new SqlParameter("@senha", u.Senha));
                 reader.Read();
 
+                u.CodUsuario = int.Parse(reader["CodUsuario"].ToString());
                 u.Nome = reader["Nome"].ToString();
                 u.Cargo = reader["Cargo"].ToString();
                 u.Pin = reader["Pin"].ToString();

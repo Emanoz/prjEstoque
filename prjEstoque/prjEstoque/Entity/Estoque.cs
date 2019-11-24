@@ -27,5 +27,10 @@ namespace prjEstoque.Entity
         public int CodEstoque { get; set; }
         
         public string Local { get; set; }
+
+        public override string ToString()
+        {
+            return Local;
+        }
     }
 }

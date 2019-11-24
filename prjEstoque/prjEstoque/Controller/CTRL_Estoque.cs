@@ -22,6 +22,11 @@ namespace prjEstoque.Controller
             return modelE.GetAll();
         }
 
+        public Estoque GetByLocal(string local)
+        {
+            return modelE.GetByLocal(local);
+        }
+
         public int Insert(Estoque c)
         {
             return modelE.Insert(c);

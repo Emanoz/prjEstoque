@@ -16,6 +16,7 @@ namespace prjEstoque
     public partial class frmPrincipal : Form
     {
         private Util util = null;
+        private Usuario Usu = null;
 
         public frmPrincipal()
         {
@@ -26,6 +27,7 @@ namespace prjEstoque
         {
             InitializeComponent();
             util = new Util();
+            Usu = usu;
             lblNome.Text = usu.Nome.ToUpper();
             lblPin.Text = usu.Pin.ToUpper();
             lblCargo.Text = usu.Cargo.ToUpper();
@@ -59,7 +61,7 @@ namespace prjEstoque
         {
             if (pnList.Height == 54)
             {
-                util.Slider(pnList, 135, 251);
+                util.Slider(pnList, 189, 251);
                 btnList_Arrow.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
             }
             else
@@ -83,6 +85,8 @@ namespace prjEstoque
             {
                 util.Slider(pnLeft, 662, 59);
                 btnCategoria_Slider.Location = new Point(997, btnCategoria_Slider.Location.Y);
+                btnEquipamento_Slider.Location = new Point(997, btnCategoria_Slider.Location.Y);
+                btnEstoque_Slider.Location = new Point(997, btnCategoria_Slider.Location.Y);
             }
             else
             {
@@ -307,6 +311,32 @@ namespace prjEstoque
                 MessageBox.Show("Erro ao excluir o registro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 opExcluir_Termo_Click(null, null);
+        }
+
+        private void btnList_Historico_Click(object sender, EventArgs e)
+        {
+            pnList_Mov.BringToFront();
+            opRefresh_Mov_Click(null, null);
+        }
+
+        private void opMover_Equip_Click(object sender, EventArgs e)
+        {
+            using (var frm = new frmMoverParaEstoque(new Equipamento(int.Parse(dgvEquipamento[0, dgvEquipamento.CurrentRow.Index].Value.ToString()),
+                                                                     dgvEquipamento[1, dgvEquipamento.CurrentRow.Index].Value.ToString(),
+                                                                     dgvEquipamento[2, dgvEquipamento.CurrentRow.Index].Value.ToString(),
+                                                                     dgvEquipamento[3, dgvEquipamento.CurrentRow.Index].Value.ToString(),
+                                                                     int.Parse(dgvEquipamento[4, dgvEquipamento.CurrentRow.Index].Value.ToString()),
+                                                                     dgvEquipamento[5, dgvEquipamento.CurrentRow.Index].Value.ToString(),
+                                                                     dgvEquipamento[6, dgvEquipamento.CurrentRow.Index].Value.ToString()), Usu))
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void opRefresh_Mov_Click(object sender, EventArgs e)
+        {
+            CTRL_Movimentacao cMov = new CTRL_Movimentacao();
+            dgvMov.DataSource = cMov.GetAll();
         }
     }
 }

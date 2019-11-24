@@ -46,6 +46,30 @@ namespace prjEstoque.Model
             return list;
         }
 
+        public Estoque GetByLocal(string local)
+        {
+            string query = "SELECT * FROM Estoque WHERE local = @local";
+
+            try
+            {
+                SqlDataReader reader = db.CallExecuteReader(query, new SqlParameter("@local", local));
+                reader.Read();
+
+                Estoque e = new Estoque();
+
+                e.CodEstoque = int.Parse(reader["CodEstoque"].ToString());
+                e.Local = reader["Local"].ToString();
+
+                reader.Close();
+                return e;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
         public int Insert(Estoque e)
         {
             string query = "INSERT INTO Estoque VALUES(@local)";
