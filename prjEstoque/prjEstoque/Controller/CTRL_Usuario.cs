@@ -20,5 +20,10 @@ namespace prjEstoque.Controller
         {
             return mUsu.Logar(usuario, senha);
         }
+
+        public Usuario GetById(int cod)
+        {
+            return mUsu.GetById(cod);
+        }
     }
 }

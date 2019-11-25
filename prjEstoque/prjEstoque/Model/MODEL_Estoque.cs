@@ -46,13 +46,13 @@ namespace prjEstoque.Model
             return list;
         }
 
-        public Estoque GetByLocal(string local)
+        public Estoque GetById(int cod)
         {
             string query = "SELECT * FROM Estoque WHERE local = @local";
 
             try
             {
-                SqlDataReader reader = db.CallExecuteReader(query, new SqlParameter("@local", local));
+                SqlDataReader reader = db.CallExecuteReader(query, new SqlParameter("@codEstoque", cod));
                 reader.Read();
 
                 Estoque e = new Estoque();

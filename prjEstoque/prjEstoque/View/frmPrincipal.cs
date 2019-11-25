@@ -61,7 +61,7 @@ namespace prjEstoque
         {
             if (pnList.Height == 54)
             {
-                util.Slider(pnList, 189, 251);
+                util.Slider(pnList, 226, 251);
                 btnList_Arrow.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
             }
             else
@@ -335,8 +335,16 @@ namespace prjEstoque
 
         private void opRefresh_Mov_Click(object sender, EventArgs e)
         {
-            CTRL_Movimentacao cMov = new CTRL_Movimentacao();
+            CTRL_TEMP_Movimentacao cMov = new CTRL_TEMP_Movimentacao();
             dgvMov.DataSource = cMov.GetAll();
+        }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            CTRL_Inventario cMov = new CTRL_Inventario();
+            dgvInventario.DataSource = cMov.GetAll();
+
+            pnInventario.BringToFront();
         }
     }
 }

@@ -38,5 +38,27 @@ namespace prjEstoque.Model
             }
             return u;
         }
+
+        public Usuario GetById(int cod)
+        {
+            string query = "SELECT CodUsuario, Nome, Cargo, Pin FROM USUARIO WHERE CodUsuario = @codUsuario";
+            Usuario u = new Usuario();
+
+            try
+            {
+                SqlDataReader reader = db.CallExecuteReader(query, new SqlParameter("@codUsuario", u.CodUsuario));
+                reader.Read();
+
+                u.CodUsuario = int.Parse(reader["CodUsuario"].ToString());
+                u.Nome = reader["Nome"].ToString();
+                u.Cargo = reader["Cargo"].ToString();
+                u.Pin = reader["Pin"].ToString();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            return u;
+        }
     }
 }

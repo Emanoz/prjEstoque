@@ -29,21 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.lblPin = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnList = new System.Windows.Forms.Panel();
+            this.btnList_Historico = new System.Windows.Forms.Button();
             this.btnList_Termo = new System.Windows.Forms.Button();
             this.btnList_Equip = new System.Windows.Forms.Button();
+            this.btnList_Arrow = new System.Windows.Forms.Button();
             this.pnReport = new System.Windows.Forms.Panel();
+            this.btnRep_Arrow = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnSlide = new System.Windows.Forms.Button();
             this.pnHome = new System.Windows.Forms.Panel();
             this.pnCadastro = new System.Windows.Forms.Panel();
             this.pnGroup_Op = new System.Windows.Forms.Panel();
@@ -59,6 +68,7 @@
             this.btnCadastrar_Est = new System.Windows.Forms.Button();
             this.txtEstoque = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnEstoque_Slider = new System.Windows.Forms.Button();
             this.pnGb_Equipamento = new System.Windows.Forms.Panel();
             this.gbEquipamento = new System.Windows.Forms.GroupBox();
             this.btnLimpar_Equi = new System.Windows.Forms.Button();
@@ -75,6 +85,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnEquipamento_Slider = new System.Windows.Forms.Button();
             this.pnGb_Categoria = new System.Windows.Forms.Panel();
             this.gbCategoria = new System.Windows.Forms.GroupBox();
             this.btnLimpar_Cat = new System.Windows.Forms.Button();
@@ -86,6 +97,7 @@
             this.btnCadastrar_Cat = new System.Windows.Forms.Button();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnCategoria_Slider = new System.Windows.Forms.Button();
             this.pnList_Equipamento = new System.Windows.Forms.Panel();
             this.dgvEquipamento = new System.Windows.Forms.DataGridView();
             this.menuEquipamento = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -93,6 +105,7 @@
             this.opAtualizar_Equip = new System.Windows.Forms.ToolStripMenuItem();
             this.opExcluir_Equip = new System.Windows.Forms.ToolStripMenuItem();
             this.opRelatorio_Equip = new System.Windows.Forms.ToolStripMenuItem();
+            this.opMover_Equip = new System.Windows.Forms.ToolStripMenuItem();
             this.pnList_Termo = new System.Windows.Forms.Panel();
             this.dgvTermo = new System.Windows.Forms.DataGridView();
             this.menuTermo = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -102,22 +115,14 @@
             this.opRelatorio_Termo = new System.Windows.Forms.ToolStripMenuItem();
             this.pnList_Mov = new System.Windows.Forms.Panel();
             this.dgvMov = new System.Windows.Forms.DataGridView();
-            this.btnList_Historico = new System.Windows.Forms.Button();
-            this.opMover_Equip = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnEstoque_Slider = new System.Windows.Forms.Button();
-            this.btnEquipamento_Slider = new System.Windows.Forms.Button();
-            this.btnCategoria_Slider = new System.Windows.Forms.Button();
-            this.btnList_Arrow = new System.Windows.Forms.Button();
-            this.btnRep_Arrow = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.btnSlide = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuMovimentacao = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.opRefresh_Mov = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnInventario = new System.Windows.Forms.Panel();
+            this.dgvInventario = new System.Windows.Forms.DataGridView();
+            this.btnInventario = new System.Windows.Forms.Button();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnList.SuspendLayout();
@@ -142,8 +147,9 @@
             this.menuTermo.SuspendLayout();
             this.pnList_Mov.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMov)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuMovimentacao.SuspendLayout();
+            this.pnInventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
@@ -170,6 +176,34 @@
             this.panel1.Size = new System.Drawing.Size(105, 47);
             this.panel1.TabIndex = 2;
             // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = global::prjEstoque.Properties.Resources.icons8_excluir_42;
+            this.btnClose.Location = new System.Drawing.Point(55, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(51, 47);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Image = global::prjEstoque.Properties.Resources.icons8_minimizar_janela_38;
+            this.btnMinimize.Location = new System.Drawing.Point(0, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(51, 47);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -180,6 +214,16 @@
             this.lblTitle.Size = new System.Drawing.Size(343, 23);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Gerenciador de Estoque 3000";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::prjEstoque.Properties.Resources.icons8_caixa_39;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 48);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // pnLeft
             // 
@@ -246,6 +290,7 @@
             // 
             // pnList
             // 
+            this.pnList.Controls.Add(this.btnInventario);
             this.pnList.Controls.Add(this.btnList_Historico);
             this.pnList.Controls.Add(this.btnList_Termo);
             this.pnList.Controls.Add(this.btnList_Equip);
@@ -254,8 +299,24 @@
             this.pnList.Location = new System.Drawing.Point(0, 146);
             this.pnList.Margin = new System.Windows.Forms.Padding(4);
             this.pnList.Name = "pnList";
-            this.pnList.Size = new System.Drawing.Size(335, 54);
+            this.pnList.Size = new System.Drawing.Size(335, 226);
             this.pnList.TabIndex = 0;
+            // 
+            // btnList_Historico
+            // 
+            this.btnList_Historico.FlatAppearance.BorderSize = 0;
+            this.btnList_Historico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList_Historico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList_Historico.ForeColor = System.Drawing.Color.White;
+            this.btnList_Historico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList_Historico.Location = new System.Drawing.Point(1, 143);
+            this.btnList_Historico.Margin = new System.Windows.Forms.Padding(4);
+            this.btnList_Historico.Name = "btnList_Historico";
+            this.btnList_Historico.Size = new System.Drawing.Size(331, 38);
+            this.btnList_Historico.TabIndex = 11;
+            this.btnList_Historico.Text = "Histórico de ações";
+            this.btnList_Historico.UseVisualStyleBackColor = true;
+            this.btnList_Historico.Click += new System.EventHandler(this.btnList_Historico_Click);
             // 
             // btnList_Termo
             // 
@@ -289,6 +350,23 @@
             this.btnList_Equip.UseVisualStyleBackColor = true;
             this.btnList_Equip.Click += new System.EventHandler(this.btnList_Equip_Click);
             // 
+            // btnList_Arrow
+            // 
+            this.btnList_Arrow.FlatAppearance.BorderSize = 0;
+            this.btnList_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList_Arrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList_Arrow.ForeColor = System.Drawing.Color.White;
+            this.btnList_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
+            this.btnList_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList_Arrow.Location = new System.Drawing.Point(4, 2);
+            this.btnList_Arrow.Margin = new System.Windows.Forms.Padding(4);
+            this.btnList_Arrow.Name = "btnList_Arrow";
+            this.btnList_Arrow.Size = new System.Drawing.Size(331, 54);
+            this.btnList_Arrow.TabIndex = 5;
+            this.btnList_Arrow.Text = "Listagem";
+            this.btnList_Arrow.UseVisualStyleBackColor = true;
+            this.btnList_Arrow.Click += new System.EventHandler(this.btnList_Arrow_Click);
+            // 
             // pnReport
             // 
             this.pnReport.Controls.Add(this.btnRep_Arrow);
@@ -298,6 +376,58 @@
             this.pnReport.Name = "pnReport";
             this.pnReport.Size = new System.Drawing.Size(335, 66);
             this.pnReport.TabIndex = 2;
+            // 
+            // btnRep_Arrow
+            // 
+            this.btnRep_Arrow.FlatAppearance.BorderSize = 0;
+            this.btnRep_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRep_Arrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRep_Arrow.ForeColor = System.Drawing.Color.White;
+            this.btnRep_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
+            this.btnRep_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRep_Arrow.Location = new System.Drawing.Point(4, 1);
+            this.btnRep_Arrow.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRep_Arrow.Name = "btnRep_Arrow";
+            this.btnRep_Arrow.Size = new System.Drawing.Size(331, 63);
+            this.btnRep_Arrow.TabIndex = 7;
+            this.btnRep_Arrow.Text = "Relatórios";
+            this.btnRep_Arrow.UseVisualStyleBackColor = true;
+            this.btnRep_Arrow.Click += new System.EventHandler(this.btnRep_Arrow_Click);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCreate.FlatAppearance.BorderSize = 0;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Image = global::prjEstoque.Properties.Resources.icons8_movimento_de_estoque_50;
+            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreate.Location = new System.Drawing.Point(0, 0);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(335, 80);
+            this.btnCreate.TabIndex = 1;
+            this.btnCreate.Text = "Cadastro";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
+            // 
+            // btnSlide
+            // 
+            this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSlide.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSlide.FlatAppearance.BorderSize = 0;
+            this.btnSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSlide.Image = global::prjEstoque.Properties.Resources.icons8_no_inventário_40;
+            this.btnSlide.Location = new System.Drawing.Point(0, 0);
+            this.btnSlide.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSlide.Name = "btnSlide";
+            this.btnSlide.Size = new System.Drawing.Size(335, 100);
+            this.btnSlide.TabIndex = 0;
+            this.btnSlide.UseVisualStyleBackColor = true;
+            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
             // 
             // pnHome
             // 
@@ -465,6 +595,19 @@
             this.label10.Size = new System.Drawing.Size(175, 25);
             this.label10.TabIndex = 9;
             this.label10.Text = "Adicionar estoque:";
+            // 
+            // btnEstoque_Slider
+            // 
+            this.btnEstoque_Slider.FlatAppearance.BorderSize = 0;
+            this.btnEstoque_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnEstoque_Slider.Location = new System.Drawing.Point(1073, 12);
+            this.btnEstoque_Slider.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEstoque_Slider.Name = "btnEstoque_Slider";
+            this.btnEstoque_Slider.Size = new System.Drawing.Size(40, 20);
+            this.btnEstoque_Slider.TabIndex = 8;
+            this.btnEstoque_Slider.UseVisualStyleBackColor = true;
+            this.btnEstoque_Slider.Click += new System.EventHandler(this.btnEstoque_Slider_Click);
             // 
             // pnGb_Equipamento
             // 
@@ -643,6 +786,19 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Descrição:";
             // 
+            // btnEquipamento_Slider
+            // 
+            this.btnEquipamento_Slider.FlatAppearance.BorderSize = 0;
+            this.btnEquipamento_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquipamento_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnEquipamento_Slider.Location = new System.Drawing.Point(1073, 12);
+            this.btnEquipamento_Slider.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEquipamento_Slider.Name = "btnEquipamento_Slider";
+            this.btnEquipamento_Slider.Size = new System.Drawing.Size(40, 20);
+            this.btnEquipamento_Slider.TabIndex = 8;
+            this.btnEquipamento_Slider.UseVisualStyleBackColor = true;
+            this.btnEquipamento_Slider.Click += new System.EventHandler(this.btnEquipamento_Slider_Click);
+            // 
             // pnGb_Categoria
             // 
             this.pnGb_Categoria.Controls.Add(this.gbCategoria);
@@ -766,6 +922,19 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Adicionar categoria:";
             // 
+            // btnCategoria_Slider
+            // 
+            this.btnCategoria_Slider.FlatAppearance.BorderSize = 0;
+            this.btnCategoria_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoria_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
+            this.btnCategoria_Slider.Location = new System.Drawing.Point(1073, 12);
+            this.btnCategoria_Slider.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCategoria_Slider.Name = "btnCategoria_Slider";
+            this.btnCategoria_Slider.Size = new System.Drawing.Size(40, 20);
+            this.btnCategoria_Slider.TabIndex = 8;
+            this.btnCategoria_Slider.UseVisualStyleBackColor = true;
+            this.btnCategoria_Slider.Click += new System.EventHandler(this.btnCategoria_Slider_Click);
+            // 
             // pnList_Equipamento
             // 
             this.pnList_Equipamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
@@ -785,14 +954,14 @@
             this.dgvEquipamento.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvEquipamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEquipamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEquipamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEquipamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvEquipamento.ColumnHeadersHeight = 35;
             this.dgvEquipamento.ContextMenuStrip = this.menuEquipamento;
             this.dgvEquipamento.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -844,6 +1013,13 @@
             this.opRelatorio_Equip.Text = "Gerar relatório";
             this.opRelatorio_Equip.Click += new System.EventHandler(this.opRelatorio_Equip_Click);
             // 
+            // opMover_Equip
+            // 
+            this.opMover_Equip.Name = "opMover_Equip";
+            this.opMover_Equip.Size = new System.Drawing.Size(211, 24);
+            this.opMover_Equip.Text = "Mover para estoque";
+            this.opMover_Equip.Click += new System.EventHandler(this.opMover_Equip_Click);
+            // 
             // pnList_Termo
             // 
             this.pnList_Termo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
@@ -863,14 +1039,14 @@
             this.dgvTermo.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvTermo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTermo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTermo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTermo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTermo.ColumnHeadersHeight = 35;
             this.dgvTermo.ContextMenuStrip = this.menuTermo;
             this.dgvTermo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -939,14 +1115,14 @@
             this.dgvMov.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvMov.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMov.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMov.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMov.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMov.ColumnHeadersHeight = 35;
             this.dgvMov.ContextMenuStrip = this.menuMovimentacao;
             this.dgvMov.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -958,195 +1134,81 @@
             this.dgvMov.Size = new System.Drawing.Size(1132, 815);
             this.dgvMov.TabIndex = 1;
             // 
-            // btnList_Historico
-            // 
-            this.btnList_Historico.FlatAppearance.BorderSize = 0;
-            this.btnList_Historico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnList_Historico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList_Historico.ForeColor = System.Drawing.Color.White;
-            this.btnList_Historico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Historico.Location = new System.Drawing.Point(1, 142);
-            this.btnList_Historico.Margin = new System.Windows.Forms.Padding(4);
-            this.btnList_Historico.Name = "btnList_Historico";
-            this.btnList_Historico.Size = new System.Drawing.Size(331, 38);
-            this.btnList_Historico.TabIndex = 11;
-            this.btnList_Historico.Text = "Histórico de ações";
-            this.btnList_Historico.UseVisualStyleBackColor = true;
-            this.btnList_Historico.Click += new System.EventHandler(this.btnList_Historico_Click);
-            // 
-            // opMover_Equip
-            // 
-            this.opMover_Equip.Name = "opMover_Equip";
-            this.opMover_Equip.Size = new System.Drawing.Size(211, 24);
-            this.opMover_Equip.Text = "Mover para estoque";
-            this.opMover_Equip.Click += new System.EventHandler(this.opMover_Equip_Click);
-            // 
-            // btnEstoque_Slider
-            // 
-            this.btnEstoque_Slider.FlatAppearance.BorderSize = 0;
-            this.btnEstoque_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnEstoque_Slider.Location = new System.Drawing.Point(1073, 12);
-            this.btnEstoque_Slider.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEstoque_Slider.Name = "btnEstoque_Slider";
-            this.btnEstoque_Slider.Size = new System.Drawing.Size(40, 20);
-            this.btnEstoque_Slider.TabIndex = 8;
-            this.btnEstoque_Slider.UseVisualStyleBackColor = true;
-            this.btnEstoque_Slider.Click += new System.EventHandler(this.btnEstoque_Slider_Click);
-            // 
-            // btnEquipamento_Slider
-            // 
-            this.btnEquipamento_Slider.FlatAppearance.BorderSize = 0;
-            this.btnEquipamento_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEquipamento_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnEquipamento_Slider.Location = new System.Drawing.Point(1073, 12);
-            this.btnEquipamento_Slider.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEquipamento_Slider.Name = "btnEquipamento_Slider";
-            this.btnEquipamento_Slider.Size = new System.Drawing.Size(40, 20);
-            this.btnEquipamento_Slider.TabIndex = 8;
-            this.btnEquipamento_Slider.UseVisualStyleBackColor = true;
-            this.btnEquipamento_Slider.Click += new System.EventHandler(this.btnEquipamento_Slider_Click);
-            // 
-            // btnCategoria_Slider
-            // 
-            this.btnCategoria_Slider.FlatAppearance.BorderSize = 0;
-            this.btnCategoria_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoria_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnCategoria_Slider.Location = new System.Drawing.Point(1073, 12);
-            this.btnCategoria_Slider.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCategoria_Slider.Name = "btnCategoria_Slider";
-            this.btnCategoria_Slider.Size = new System.Drawing.Size(40, 20);
-            this.btnCategoria_Slider.TabIndex = 8;
-            this.btnCategoria_Slider.UseVisualStyleBackColor = true;
-            this.btnCategoria_Slider.Click += new System.EventHandler(this.btnCategoria_Slider_Click);
-            // 
-            // btnList_Arrow
-            // 
-            this.btnList_Arrow.FlatAppearance.BorderSize = 0;
-            this.btnList_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnList_Arrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList_Arrow.ForeColor = System.Drawing.Color.White;
-            this.btnList_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
-            this.btnList_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Arrow.Location = new System.Drawing.Point(4, 2);
-            this.btnList_Arrow.Margin = new System.Windows.Forms.Padding(4);
-            this.btnList_Arrow.Name = "btnList_Arrow";
-            this.btnList_Arrow.Size = new System.Drawing.Size(331, 54);
-            this.btnList_Arrow.TabIndex = 5;
-            this.btnList_Arrow.Text = "Listagem";
-            this.btnList_Arrow.UseVisualStyleBackColor = true;
-            this.btnList_Arrow.Click += new System.EventHandler(this.btnList_Arrow_Click);
-            // 
-            // btnRep_Arrow
-            // 
-            this.btnRep_Arrow.FlatAppearance.BorderSize = 0;
-            this.btnRep_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRep_Arrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRep_Arrow.ForeColor = System.Drawing.Color.White;
-            this.btnRep_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
-            this.btnRep_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRep_Arrow.Location = new System.Drawing.Point(4, 1);
-            this.btnRep_Arrow.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRep_Arrow.Name = "btnRep_Arrow";
-            this.btnRep_Arrow.Size = new System.Drawing.Size(331, 63);
-            this.btnRep_Arrow.TabIndex = 7;
-            this.btnRep_Arrow.Text = "Relatórios";
-            this.btnRep_Arrow.UseVisualStyleBackColor = true;
-            this.btnRep_Arrow.Click += new System.EventHandler(this.btnRep_Arrow_Click);
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCreate.FlatAppearance.BorderSize = 0;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Image = global::prjEstoque.Properties.Resources.icons8_movimento_de_estoque_50;
-            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreate.Location = new System.Drawing.Point(0, 0);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(335, 80);
-            this.btnCreate.TabIndex = 1;
-            this.btnCreate.Text = "Cadastro";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
-            // 
-            // btnSlide
-            // 
-            this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSlide.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSlide.FlatAppearance.BorderSize = 0;
-            this.btnSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSlide.Image = global::prjEstoque.Properties.Resources.icons8_no_inventário_40;
-            this.btnSlide.Location = new System.Drawing.Point(0, 0);
-            this.btnSlide.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(335, 100);
-            this.btnSlide.TabIndex = 0;
-            this.btnSlide.UseVisualStyleBackColor = true;
-            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClose.Image = global::prjEstoque.Properties.Resources.icons8_excluir_42;
-            this.btnClose.Location = new System.Drawing.Point(55, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 47);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = global::prjEstoque.Properties.Resources.icons8_minimizar_janela_38;
-            this.btnMinimize.Location = new System.Drawing.Point(0, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(51, 47);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::prjEstoque.Properties.Resources.icons8_caixa_39;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 48);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // menuMovimentacao
             // 
             this.menuMovimentacao.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuMovimentacao.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opRefresh_Mov});
             this.menuMovimentacao.Name = "menuEstoque";
-            this.menuMovimentacao.Size = new System.Drawing.Size(211, 56);
+            this.menuMovimentacao.Size = new System.Drawing.Size(128, 28);
             // 
             // opRefresh_Mov
             // 
             this.opRefresh_Mov.Name = "opRefresh_Mov";
-            this.opRefresh_Mov.Size = new System.Drawing.Size(210, 24);
+            this.opRefresh_Mov.Size = new System.Drawing.Size(127, 24);
             this.opRefresh_Mov.Text = "Refresh";
             this.opRefresh_Mov.Click += new System.EventHandler(this.opRefresh_Mov_Click);
+            // 
+            // pnInventario
+            // 
+            this.pnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.pnInventario.Controls.Add(this.dgvInventario);
+            this.pnInventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnInventario.Location = new System.Drawing.Point(335, 47);
+            this.pnInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.pnInventario.Name = "pnInventario";
+            this.pnInventario.Size = new System.Drawing.Size(1132, 815);
+            this.pnInventario.TabIndex = 6;
+            // 
+            // dgvInventario
+            // 
+            this.dgvInventario.AllowUserToAddRows = false;
+            this.dgvInventario.AllowUserToDeleteRows = false;
+            this.dgvInventario.AllowUserToResizeRows = false;
+            this.dgvInventario.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInventario.ColumnHeadersHeight = 35;
+            this.dgvInventario.ContextMenuStrip = this.menuMovimentacao;
+            this.dgvInventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInventario.Location = new System.Drawing.Point(0, 0);
+            this.dgvInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvInventario.Name = "dgvInventario";
+            this.dgvInventario.ReadOnly = true;
+            this.dgvInventario.RowHeadersWidth = 51;
+            this.dgvInventario.Size = new System.Drawing.Size(1132, 815);
+            this.dgvInventario.TabIndex = 1;
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.ForeColor = System.Drawing.Color.White;
+            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.Location = new System.Drawing.Point(-4, 183);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(331, 38);
+            this.btnInventario.TabIndex = 12;
+            this.btnInventario.Text = "Inventário";
+            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 862);
+            this.Controls.Add(this.pnInventario);
             this.Controls.Add(this.pnCadastro);
             this.Controls.Add(this.pnList_Mov);
             this.Controls.Add(this.pnList_Termo);
@@ -1163,6 +1225,7 @@
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnLeft.ResumeLayout(false);
             this.pnLeft.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1191,8 +1254,9 @@
             this.menuTermo.ResumeLayout(false);
             this.pnList_Mov.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMov)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuMovimentacao.ResumeLayout(false);
+            this.pnInventario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1283,6 +1347,9 @@
         private System.Windows.Forms.ToolStripMenuItem opMover_Equip;
         private System.Windows.Forms.ContextMenuStrip menuMovimentacao;
         private System.Windows.Forms.ToolStripMenuItem opRefresh_Mov;
+        private System.Windows.Forms.Button btnInventario;
+        private System.Windows.Forms.Panel pnInventario;
+        private System.Windows.Forms.DataGridView dgvInventario;
     }
 }
 

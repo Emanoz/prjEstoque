@@ -22,9 +22,9 @@ namespace prjEstoque.Controller
             return modelE.GetAll();
         }
 
-        public Estoque GetByLocal(string local)
+        public Estoque GetById(int cod)
         {
-            return modelE.GetByLocal(local);
+            return modelE.GetById(cod);
         }
 
         public int Insert(Estoque c)
