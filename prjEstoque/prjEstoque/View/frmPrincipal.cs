@@ -346,5 +346,14 @@ namespace prjEstoque
 
             pnInventario.BringToFront();
         }
+
+        private void opExcluir_Mov_Click(object sender, EventArgs e)
+        {
+            CTRL_Inventario cMov = new CTRL_Inventario();
+
+            if (cMov.Delete(int.Parse(dgvInventario[0, dgvInventario.CurrentRow.Index].Value.ToString())) <= 0)
+                MessageBox.Show("Erro ao excluir o registro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            opRefresh_Mov_Click(null, null);
+        }
     }
 }

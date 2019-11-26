@@ -29,6 +29,7 @@ namespace prjEstoque.Model
                 {
                     Inventario c = new Inventario();
 
+                    c.ID = int.Parse(reader["ID"].ToString());
                     c.Descricao = reader["Descricao"].ToString();
                     c.Estado = reader["Estado"].ToString();
                     c.Pertencente = reader["Pertencente"].ToString();
@@ -46,6 +47,20 @@ namespace prjEstoque.Model
             }
 
             return list;
+        }
+
+        public int Delete(int cod)
+        {
+            string query = "DELETE FROM Movimentacao WHERE CodMovimentacao = @codMovimentacao";
+            try
+            {
+                return db.CallExecuteNonQuery(query, new SqlParameter("@codMovimentacao", cod));
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

@@ -21,5 +21,7 @@ namespace prjEstoque.Controller
         {
             return mMov.GetAll();
         }
+
+        
     }
 }

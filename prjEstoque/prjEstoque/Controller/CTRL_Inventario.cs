@@ -21,5 +21,10 @@ namespace prjEstoque.Controller
         {
             return mInv.GetAll();
         }
+
+        public int Delete(int cod)
+        {
+            return mInv.Delete(cod);
+        }
     }
 }

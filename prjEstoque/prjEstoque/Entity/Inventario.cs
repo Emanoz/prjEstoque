@@ -13,14 +13,16 @@ namespace prjEstoque.Entity
 
         }
 
-        public Inventario(string descricao, string estado, string pertencente, string estoque)
+        public Inventario(int id, string descricao, string estado, string pertencente, string estoque)
         {
+            ID = id;
             Descricao = descricao;
             Estado = estado;
             Pertencente = pertencente;
             Estoque = estoque;
         }
 
+        public int ID { get; set; }
         public string Descricao { get; set; }
         public string Estado { get; set; }
         public string Pertencente { get; set; }
