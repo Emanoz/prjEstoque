@@ -32,7 +32,7 @@ namespace prjEstoque.Model
                     t.CodTermo = int.Parse(reader["CodTermo"].ToString());
                     t.DataRetirada = DateTime.Parse(reader["DataRetirada"].ToString());
                     t.Rg = reader["Rg"].ToString(); ;
-                    //t.DataDevolucao = DateTime.Parse(reader["DataDevolucao"].ToString());
+                    t.DataDevolucao = DateTime.Parse(reader["DataDevolucao"].ToString());
                     t.CodEquipamento = int.Parse(reader["CodEquipamento"].ToString());
 
                     list.Add(t);
@@ -51,12 +51,13 @@ namespace prjEstoque.Model
 
         public int Insert(Termo_Emprestimo t)
         {
-            string query = "INSERT INTO Termo_de_Emprestimo(DataRetirada, Rg, CodEquipamento) VALUES(@DataRetirada,  @Rg,  @CodEquipamento)";
+            string query = "INSERT INTO Termo_de_Emprestimo(DataRetirada, Rg, DataDevolucao, CodEquipamento) VALUES(@DataRetirada,  @Rg, @dataDevolucao, @CodEquipamento)";
 
             try
             {
                 return db.CallExecuteNonQuery(query, new SqlParameter("@DataRetirada", t.DataRetirada),
                                                   new SqlParameter("@Rg", t.Rg),
+                                                  new SqlParameter("@dataDevolucao", t.DataDevolucao),
                                                   new SqlParameter("@CodEquipamento", t.CodEquipamento));
             }
             catch (Exception ex)
@@ -68,11 +69,12 @@ namespace prjEstoque.Model
 
         public int Update(Termo_Emprestimo t)
         {
-            string query = "UPDATE Movimentacao SET DataRetirada = @dataRetirada, DataDevolucao = @dataDevolucao, Rg = @rg, CodEquipamento = @codEquipamento";
+            string query = "UPDATE Termo_de_Emprestimo SET DataRetirada = @dataRetirada, DataDevolucao = @dataDevolucao, Rg = @rg, CodEquipamento = @codEquipamento WHERE CodTermo = @codTermo";
 
             try
             {
-                return db.CallExecuteNonQuery(query, new SqlParameter("@DataRetirada", t.DataRetirada),
+                    return db.CallExecuteNonQuery(query, new SqlParameter("@codTermo", t.CodTermo),
+                                                  new SqlParameter("@DataRetirada", t.DataRetirada),
                                                   new SqlParameter("@dataDevolucao", t.DataDevolucao),
                                                   new SqlParameter("@Rg", t.Rg),
                                                   new SqlParameter("@CodEquipamento", t.CodEquipamento));

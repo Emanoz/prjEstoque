@@ -158,8 +158,12 @@ namespace prjEstoque
             }
             Equipamento equi = new Equipamento(txtDescricao.Text, txtNSerie.Text, txtEstado.Text, index, txtPertencente.Text, txtPatrimonio.Text);
 
-            if (eEqui.Insert(equi) == 0)
+            int rows = eEqui.Insert(equi);
+
+            if (rows == 0)
                 MessageBox.Show("O registro não foi cadastrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if(rows == -1)
+                MessageBox.Show("O registro não foi cadastrado pois já existe um equipamento com este patrimonio e/ou número de série", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnLimpar_Equi_Click(object sender, EventArgs e)
@@ -307,10 +311,13 @@ namespace prjEstoque
         {
             CTRL_Termo_Emprestimo cTermo = new CTRL_Termo_Emprestimo();
 
-            if (cTermo.Delete(int.Parse(dgvTermo[0, dgvTermo.CurrentRow.Index].Value.ToString())) <= 0)
-                MessageBox.Show("Erro ao excluir o registro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                opExcluir_Termo_Click(null, null);
+            if (MessageBox.Show("Tem certeza que deseja excluir este registro?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                if (cTermo.Delete(int.Parse(dgvTermo[0, dgvTermo.CurrentRow.Index].Value.ToString())) <= 0)
+                    MessageBox.Show("Erro ao excluir o registro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    opRefresh_Termo_Click(null, null);
+            }
         }
 
         private void btnList_Historico_Click(object sender, EventArgs e)
@@ -336,6 +343,8 @@ namespace prjEstoque
         private void opRefresh_Mov_Click(object sender, EventArgs e)
         {
             CTRL_TEMP_Movimentacao cMov = new CTRL_TEMP_Movimentacao();
+            CTRL_Inventario cInv = new CTRL_Inventario();
+            dgvInventario.DataSource = cInv.GetAll();
             dgvMov.DataSource = cMov.GetAll();
         }
 
@@ -351,9 +360,17 @@ namespace prjEstoque
         {
             CTRL_Inventario cMov = new CTRL_Inventario();
 
-            if (cMov.Delete(int.Parse(dgvInventario[0, dgvInventario.CurrentRow.Index].Value.ToString())) <= 0)
-                MessageBox.Show("Erro ao excluir o registro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            opRefresh_Mov_Click(null, null);
+            if(MessageBox.Show("Tem certeza que deseja excluir este registro?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                if (cMov.Delete(int.Parse(dgvInventario[0, dgvInventario.CurrentRow.Index].Value.ToString())) <= 0)
+                    MessageBox.Show("Erro ao excluir o registro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                opRefresh_Mov_Click(null, null);
+            }
+        }
+
+        private void opRelatorio_Termo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

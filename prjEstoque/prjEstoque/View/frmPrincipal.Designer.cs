@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -118,9 +118,9 @@
             this.dgvMov = new System.Windows.Forms.DataGridView();
             this.menuMovimentacao = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.opRefresh_Mov = new System.Windows.Forms.ToolStripMenuItem();
+            this.opExcluir_Mov = new System.Windows.Forms.ToolStripMenuItem();
             this.pnInventario = new System.Windows.Forms.Panel();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.opExcluir_Mov = new System.Windows.Forms.ToolStripMenuItem();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -161,8 +161,9 @@
             this.pnTop.Controls.Add(this.pictureBox1);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1095, 38);
+            this.pnTop.Size = new System.Drawing.Size(1460, 47);
             this.pnTop.TabIndex = 0;
             // 
             // panel1
@@ -170,9 +171,10 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1016, 0);
+            this.panel1.Location = new System.Drawing.Point(1355, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(79, 38);
+            this.panel1.Size = new System.Drawing.Size(105, 47);
             this.panel1.TabIndex = 2;
             // 
             // btnClose
@@ -182,9 +184,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
             this.btnClose.Image = global::prjEstoque.Properties.Resources.icons8_excluir_42;
-            this.btnClose.Location = new System.Drawing.Point(41, 0);
+            this.btnClose.Location = new System.Drawing.Point(55, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 38);
+            this.btnClose.Size = new System.Drawing.Size(51, 47);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -195,8 +198,9 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = global::prjEstoque.Properties.Resources.icons8_minimizar_janela_38;
             this.btnMinimize.Location = new System.Drawing.Point(0, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(38, 38);
+            this.btnMinimize.Size = new System.Drawing.Size(51, 47);
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -205,9 +209,10 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(50, 11);
+            this.lblTitle.Location = new System.Drawing.Point(67, 14);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(275, 19);
+            this.lblTitle.Size = new System.Drawing.Size(343, 23);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Gerenciador de Estoque 3000";
             // 
@@ -215,8 +220,9 @@
             // 
             this.pictureBox1.Image = global::prjEstoque.Properties.Resources.icons8_caixa_39;
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 48);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -229,9 +235,10 @@
             this.pnLeft.Controls.Add(this.panel2);
             this.pnLeft.Controls.Add(this.btnSlide);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnLeft.Location = new System.Drawing.Point(0, 38);
+            this.pnLeft.Location = new System.Drawing.Point(0, 47);
+            this.pnLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(251, 662);
+            this.pnLeft.Size = new System.Drawing.Size(335, 815);
             this.pnLeft.TabIndex = 1;
             // 
             // lblPin
@@ -239,9 +246,10 @@
             this.lblPin.AutoSize = true;
             this.lblPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPin.ForeColor = System.Drawing.Color.White;
-            this.lblPin.Location = new System.Drawing.Point(115, 155);
+            this.lblPin.Location = new System.Drawing.Point(153, 191);
+            this.lblPin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPin.Name = "lblPin";
-            this.lblPin.Size = new System.Drawing.Size(45, 16);
+            this.lblPin.Size = new System.Drawing.Size(53, 20);
             this.lblPin.TabIndex = 5;
             this.lblPin.Text = "label1";
             // 
@@ -250,9 +258,10 @@
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.White;
-            this.lblCargo.Location = new System.Drawing.Point(3, 154);
+            this.lblCargo.Location = new System.Drawing.Point(4, 190);
+            this.lblCargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(45, 16);
+            this.lblCargo.Size = new System.Drawing.Size(53, 20);
             this.lblCargo.TabIndex = 4;
             this.lblCargo.Text = "label1";
             // 
@@ -261,9 +270,10 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(3, 119);
+            this.lblNome.Location = new System.Drawing.Point(4, 146);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(45, 16);
+            this.lblNome.Size = new System.Drawing.Size(53, 20);
             this.lblNome.TabIndex = 3;
             this.lblNome.Text = "label1";
             // 
@@ -273,9 +283,10 @@
             this.panel2.Controls.Add(this.pnReport);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 231);
+            this.panel2.Location = new System.Drawing.Point(0, 285);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 431);
+            this.panel2.Size = new System.Drawing.Size(335, 530);
             this.panel2.TabIndex = 2;
             // 
             // pnList
@@ -286,9 +297,10 @@
             this.pnList.Controls.Add(this.btnList_Equip);
             this.pnList.Controls.Add(this.btnList_Arrow);
             this.pnList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnList.Location = new System.Drawing.Point(0, 119);
+            this.pnList.Location = new System.Drawing.Point(0, 146);
+            this.pnList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnList.Name = "pnList";
-            this.pnList.Size = new System.Drawing.Size(251, 184);
+            this.pnList.Size = new System.Drawing.Size(335, 226);
             this.pnList.TabIndex = 0;
             // 
             // btnInventario
@@ -298,9 +310,10 @@
             this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.ForeColor = System.Drawing.Color.White;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(-3, 149);
+            this.btnInventario.Location = new System.Drawing.Point(-4, 183);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(248, 31);
+            this.btnInventario.Size = new System.Drawing.Size(331, 38);
             this.btnInventario.TabIndex = 12;
             this.btnInventario.Text = "Inventário";
             this.btnInventario.UseVisualStyleBackColor = true;
@@ -313,9 +326,10 @@
             this.btnList_Historico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnList_Historico.ForeColor = System.Drawing.Color.White;
             this.btnList_Historico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Historico.Location = new System.Drawing.Point(1, 116);
+            this.btnList_Historico.Location = new System.Drawing.Point(1, 143);
+            this.btnList_Historico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnList_Historico.Name = "btnList_Historico";
-            this.btnList_Historico.Size = new System.Drawing.Size(248, 31);
+            this.btnList_Historico.Size = new System.Drawing.Size(331, 38);
             this.btnList_Historico.TabIndex = 11;
             this.btnList_Historico.Text = "Histórico de ações";
             this.btnList_Historico.UseVisualStyleBackColor = true;
@@ -328,9 +342,10 @@
             this.btnList_Termo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnList_Termo.ForeColor = System.Drawing.Color.White;
             this.btnList_Termo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Termo.Location = new System.Drawing.Point(0, 84);
+            this.btnList_Termo.Location = new System.Drawing.Point(0, 103);
+            this.btnList_Termo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnList_Termo.Name = "btnList_Termo";
-            this.btnList_Termo.Size = new System.Drawing.Size(248, 31);
+            this.btnList_Termo.Size = new System.Drawing.Size(331, 38);
             this.btnList_Termo.TabIndex = 10;
             this.btnList_Termo.Text = "Termos de Empréstimo";
             this.btnList_Termo.UseVisualStyleBackColor = true;
@@ -343,9 +358,10 @@
             this.btnList_Equip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnList_Equip.ForeColor = System.Drawing.Color.White;
             this.btnList_Equip.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Equip.Location = new System.Drawing.Point(1, 52);
+            this.btnList_Equip.Location = new System.Drawing.Point(1, 64);
+            this.btnList_Equip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnList_Equip.Name = "btnList_Equip";
-            this.btnList_Equip.Size = new System.Drawing.Size(248, 31);
+            this.btnList_Equip.Size = new System.Drawing.Size(331, 38);
             this.btnList_Equip.TabIndex = 9;
             this.btnList_Equip.Text = "Equipamentos";
             this.btnList_Equip.UseVisualStyleBackColor = true;
@@ -359,9 +375,10 @@
             this.btnList_Arrow.ForeColor = System.Drawing.Color.White;
             this.btnList_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
             this.btnList_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList_Arrow.Location = new System.Drawing.Point(3, 2);
+            this.btnList_Arrow.Location = new System.Drawing.Point(4, 2);
+            this.btnList_Arrow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnList_Arrow.Name = "btnList_Arrow";
-            this.btnList_Arrow.Size = new System.Drawing.Size(248, 44);
+            this.btnList_Arrow.Size = new System.Drawing.Size(331, 54);
             this.btnList_Arrow.TabIndex = 5;
             this.btnList_Arrow.Text = "Listagem";
             this.btnList_Arrow.UseVisualStyleBackColor = true;
@@ -371,9 +388,10 @@
             // 
             this.pnReport.Controls.Add(this.btnRep_Arrow);
             this.pnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnReport.Location = new System.Drawing.Point(0, 65);
+            this.pnReport.Location = new System.Drawing.Point(0, 80);
+            this.pnReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnReport.Name = "pnReport";
-            this.pnReport.Size = new System.Drawing.Size(251, 54);
+            this.pnReport.Size = new System.Drawing.Size(335, 66);
             this.pnReport.TabIndex = 2;
             // 
             // btnRep_Arrow
@@ -384,9 +402,10 @@
             this.btnRep_Arrow.ForeColor = System.Drawing.Color.White;
             this.btnRep_Arrow.Image = global::prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
             this.btnRep_Arrow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRep_Arrow.Location = new System.Drawing.Point(3, 1);
+            this.btnRep_Arrow.Location = new System.Drawing.Point(4, 1);
+            this.btnRep_Arrow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRep_Arrow.Name = "btnRep_Arrow";
-            this.btnRep_Arrow.Size = new System.Drawing.Size(248, 51);
+            this.btnRep_Arrow.Size = new System.Drawing.Size(331, 63);
             this.btnRep_Arrow.TabIndex = 7;
             this.btnRep_Arrow.Text = "Relatórios";
             this.btnRep_Arrow.UseVisualStyleBackColor = true;
@@ -404,8 +423,9 @@
             this.btnCreate.Image = global::prjEstoque.Properties.Resources.icons8_movimento_de_estoque_50;
             this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCreate.Location = new System.Drawing.Point(0, 0);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(251, 65);
+            this.btnCreate.Size = new System.Drawing.Size(335, 80);
             this.btnCreate.TabIndex = 1;
             this.btnCreate.Text = "Cadastro";
             this.btnCreate.UseVisualStyleBackColor = true;
@@ -419,8 +439,9 @@
             this.btnSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSlide.Image = global::prjEstoque.Properties.Resources.icons8_no_inventário_40;
             this.btnSlide.Location = new System.Drawing.Point(0, 0);
+            this.btnSlide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(251, 81);
+            this.btnSlide.Size = new System.Drawing.Size(335, 100);
             this.btnSlide.TabIndex = 0;
             this.btnSlide.UseVisualStyleBackColor = true;
             this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
@@ -429,9 +450,10 @@
             // 
             this.pnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnHome.Location = new System.Drawing.Point(251, 38);
+            this.pnHome.Location = new System.Drawing.Point(335, 47);
+            this.pnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnHome.Name = "pnHome";
-            this.pnHome.Size = new System.Drawing.Size(844, 662);
+            this.pnHome.Size = new System.Drawing.Size(1125, 815);
             this.pnHome.TabIndex = 2;
             // 
             // pnCadastro
@@ -439,9 +461,10 @@
             this.pnCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnCadastro.Controls.Add(this.pnGroup_Op);
             this.pnCadastro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCadastro.Location = new System.Drawing.Point(251, 38);
+            this.pnCadastro.Location = new System.Drawing.Point(335, 47);
+            this.pnCadastro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnCadastro.Name = "pnCadastro";
-            this.pnCadastro.Size = new System.Drawing.Size(844, 662);
+            this.pnCadastro.Size = new System.Drawing.Size(1125, 815);
             this.pnCadastro.TabIndex = 3;
             // 
             // pnGroup_Op
@@ -452,26 +475,29 @@
             this.pnGroup_Op.Controls.Add(this.pnGb_Equipamento);
             this.pnGroup_Op.Controls.Add(this.pnGb_Categoria);
             this.pnGroup_Op.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnGroup_Op.Location = new System.Drawing.Point(0, 48);
+            this.pnGroup_Op.Location = new System.Drawing.Point(0, 59);
+            this.pnGroup_Op.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnGroup_Op.Name = "pnGroup_Op";
-            this.pnGroup_Op.Size = new System.Drawing.Size(844, 614);
+            this.pnGroup_Op.Size = new System.Drawing.Size(1125, 756);
             this.pnGroup_Op.TabIndex = 0;
             // 
             // pnGb_Termo
             // 
             this.pnGb_Termo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnGb_Termo.Location = new System.Drawing.Point(0, 195);
+            this.pnGb_Termo.Location = new System.Drawing.Point(0, 240);
+            this.pnGb_Termo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnGb_Termo.Name = "pnGb_Termo";
-            this.pnGb_Termo.Size = new System.Drawing.Size(844, 330);
+            this.pnGb_Termo.Size = new System.Drawing.Size(1125, 406);
             this.pnGb_Termo.TabIndex = 4;
             // 
             // pnGb_Estoque
             // 
             this.pnGb_Estoque.Controls.Add(this.gbEstoque);
             this.pnGb_Estoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnGb_Estoque.Location = new System.Drawing.Point(0, 130);
+            this.pnGb_Estoque.Location = new System.Drawing.Point(0, 160);
+            this.pnGb_Estoque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnGb_Estoque.Name = "pnGb_Estoque";
-            this.pnGb_Estoque.Size = new System.Drawing.Size(844, 65);
+            this.pnGb_Estoque.Size = new System.Drawing.Size(1125, 80);
             this.pnGb_Estoque.TabIndex = 3;
             // 
             // gbEstoque
@@ -486,8 +512,10 @@
             this.gbEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbEstoque.ForeColor = System.Drawing.Color.White;
             this.gbEstoque.Location = new System.Drawing.Point(0, 0);
+            this.gbEstoque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbEstoque.Name = "gbEstoque";
-            this.gbEstoque.Size = new System.Drawing.Size(844, 28);
+            this.gbEstoque.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbEstoque.Size = new System.Drawing.Size(1125, 34);
             this.gbEstoque.TabIndex = 0;
             this.gbEstoque.TabStop = false;
             this.gbEstoque.Text = "Estoque:";
@@ -498,9 +526,10 @@
             this.btnLimpar_Est.FlatAppearance.BorderSize = 0;
             this.btnLimpar_Est.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar_Est.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpar_Est.Location = new System.Drawing.Point(355, 248);
+            this.btnLimpar_Est.Location = new System.Drawing.Point(473, 305);
+            this.btnLimpar_Est.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpar_Est.Name = "btnLimpar_Est";
-            this.btnLimpar_Est.Size = new System.Drawing.Size(183, 27);
+            this.btnLimpar_Est.Size = new System.Drawing.Size(244, 33);
             this.btnLimpar_Est.TabIndex = 13;
             this.btnLimpar_Est.Text = "LIMPAR";
             this.btnLimpar_Est.UseVisualStyleBackColor = false;
@@ -512,11 +541,12 @@
             this.dgvEstoque.AllowUserToDeleteRows = false;
             this.dgvEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstoque.ContextMenuStrip = this.menuEstoque;
-            this.dgvEstoque.Location = new System.Drawing.Point(46, 30);
+            this.dgvEstoque.Location = new System.Drawing.Point(61, 37);
+            this.dgvEstoque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
             this.dgvEstoque.RowHeadersWidth = 51;
-            this.dgvEstoque.Size = new System.Drawing.Size(247, 245);
+            this.dgvEstoque.Size = new System.Drawing.Size(329, 302);
             this.dgvEstoque.TabIndex = 12;
             // 
             // menuEstoque
@@ -527,26 +557,26 @@
             this.opAtualizar_Est,
             this.opExcluir_Est});
             this.menuEstoque.Name = "menuEstoque";
-            this.menuEstoque.Size = new System.Drawing.Size(161, 70);
+            this.menuEstoque.Size = new System.Drawing.Size(211, 104);
             // 
             // opRefresh_Est
             // 
             this.opRefresh_Est.Name = "opRefresh_Est";
-            this.opRefresh_Est.Size = new System.Drawing.Size(160, 22);
+            this.opRefresh_Est.Size = new System.Drawing.Size(187, 24);
             this.opRefresh_Est.Text = "Refresh";
             this.opRefresh_Est.Click += new System.EventHandler(this.opRefresh_Est_Click);
             // 
             // opAtualizar_Est
             // 
             this.opAtualizar_Est.Name = "opAtualizar_Est";
-            this.opAtualizar_Est.Size = new System.Drawing.Size(160, 22);
+            this.opAtualizar_Est.Size = new System.Drawing.Size(187, 24);
             this.opAtualizar_Est.Text = "Atualizar campo";
             this.opAtualizar_Est.Click += new System.EventHandler(this.opAtualizar_Est_Click);
             // 
             // opExcluir_Est
             // 
             this.opExcluir_Est.Name = "opExcluir_Est";
-            this.opExcluir_Est.Size = new System.Drawing.Size(160, 22);
+            this.opExcluir_Est.Size = new System.Drawing.Size(187, 24);
             this.opExcluir_Est.Text = "Excluir campo";
             this.opExcluir_Est.Click += new System.EventHandler(this.opExcluir_Est_Click);
             // 
@@ -556,9 +586,10 @@
             this.btnCadastrar_Est.FlatAppearance.BorderSize = 0;
             this.btnCadastrar_Est.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar_Est.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrar_Est.Location = new System.Drawing.Point(355, 215);
+            this.btnCadastrar_Est.Location = new System.Drawing.Point(473, 265);
+            this.btnCadastrar_Est.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrar_Est.Name = "btnCadastrar_Est";
-            this.btnCadastrar_Est.Size = new System.Drawing.Size(183, 27);
+            this.btnCadastrar_Est.Size = new System.Drawing.Size(244, 33);
             this.btnCadastrar_Est.TabIndex = 11;
             this.btnCadastrar_Est.Text = "CADASTRAR";
             this.btnCadastrar_Est.UseVisualStyleBackColor = false;
@@ -566,17 +597,19 @@
             // 
             // txtEstoque
             // 
-            this.txtEstoque.Location = new System.Drawing.Point(355, 53);
+            this.txtEstoque.Location = new System.Drawing.Point(473, 65);
+            this.txtEstoque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstoque.Name = "txtEstoque";
-            this.txtEstoque.Size = new System.Drawing.Size(183, 26);
+            this.txtEstoque.Size = new System.Drawing.Size(243, 30);
             this.txtEstoque.TabIndex = 10;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(369, 30);
+            this.label10.Location = new System.Drawing.Point(492, 37);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 20);
+            this.label10.Size = new System.Drawing.Size(175, 25);
             this.label10.TabIndex = 9;
             this.label10.Text = "Adicionar estoque:";
             // 
@@ -585,9 +618,10 @@
             this.btnEstoque_Slider.FlatAppearance.BorderSize = 0;
             this.btnEstoque_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstoque_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnEstoque_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnEstoque_Slider.Location = new System.Drawing.Point(1073, 12);
+            this.btnEstoque_Slider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEstoque_Slider.Name = "btnEstoque_Slider";
-            this.btnEstoque_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnEstoque_Slider.Size = new System.Drawing.Size(40, 20);
             this.btnEstoque_Slider.TabIndex = 8;
             this.btnEstoque_Slider.UseVisualStyleBackColor = true;
             this.btnEstoque_Slider.Click += new System.EventHandler(this.btnEstoque_Slider_Click);
@@ -596,9 +630,10 @@
             // 
             this.pnGb_Equipamento.Controls.Add(this.gbEquipamento);
             this.pnGb_Equipamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnGb_Equipamento.Location = new System.Drawing.Point(0, 65);
+            this.pnGb_Equipamento.Location = new System.Drawing.Point(0, 80);
+            this.pnGb_Equipamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnGb_Equipamento.Name = "pnGb_Equipamento";
-            this.pnGb_Equipamento.Size = new System.Drawing.Size(844, 65);
+            this.pnGb_Equipamento.Size = new System.Drawing.Size(1125, 80);
             this.pnGb_Equipamento.TabIndex = 2;
             // 
             // gbEquipamento
@@ -622,8 +657,10 @@
             this.gbEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbEquipamento.ForeColor = System.Drawing.Color.White;
             this.gbEquipamento.Location = new System.Drawing.Point(0, 0);
+            this.gbEquipamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbEquipamento.Name = "gbEquipamento";
-            this.gbEquipamento.Size = new System.Drawing.Size(844, 28);
+            this.gbEquipamento.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbEquipamento.Size = new System.Drawing.Size(1125, 34);
             this.gbEquipamento.TabIndex = 0;
             this.gbEquipamento.TabStop = false;
             this.gbEquipamento.Text = "Equipamento:";
@@ -634,9 +671,10 @@
             this.btnLimpar_Equi.FlatAppearance.BorderSize = 0;
             this.btnLimpar_Equi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar_Equi.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpar_Equi.Location = new System.Drawing.Point(809, 212);
+            this.btnLimpar_Equi.Location = new System.Drawing.Point(1079, 261);
+            this.btnLimpar_Equi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpar_Equi.Name = "btnLimpar_Equi";
-            this.btnLimpar_Equi.Size = new System.Drawing.Size(33, 31);
+            this.btnLimpar_Equi.Size = new System.Drawing.Size(44, 38);
             this.btnLimpar_Equi.TabIndex = 22;
             this.btnLimpar_Equi.UseVisualStyleBackColor = false;
             this.btnLimpar_Equi.Click += new System.EventHandler(this.btnLimpar_Equi_Click);
@@ -647,9 +685,10 @@
             this.btnCadastrar_Equi.FlatAppearance.BorderSize = 0;
             this.btnCadastrar_Equi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar_Equi.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrar_Equi.Location = new System.Drawing.Point(770, 212);
+            this.btnCadastrar_Equi.Location = new System.Drawing.Point(1027, 261);
+            this.btnCadastrar_Equi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrar_Equi.Name = "btnCadastrar_Equi";
-            this.btnCadastrar_Equi.Size = new System.Drawing.Size(33, 31);
+            this.btnCadastrar_Equi.Size = new System.Drawing.Size(44, 38);
             this.btnCadastrar_Equi.TabIndex = 21;
             this.btnCadastrar_Equi.UseVisualStyleBackColor = false;
             this.btnCadastrar_Equi.Click += new System.EventHandler(this.btnCadastrar_Equi_Click);
@@ -657,98 +696,110 @@
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(156, 179);
+            this.cbCategoria.Location = new System.Drawing.Point(208, 220);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(206, 28);
+            this.cbCategoria.Size = new System.Drawing.Size(273, 33);
             this.cbCategoria.TabIndex = 20;
             this.cbCategoria.DropDown += new System.EventHandler(this.cbCategoria_DropDown);
             // 
             // txtPatrimonio
             // 
-            this.txtPatrimonio.Location = new System.Drawing.Point(544, 179);
+            this.txtPatrimonio.Location = new System.Drawing.Point(725, 220);
+            this.txtPatrimonio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPatrimonio.Name = "txtPatrimonio";
-            this.txtPatrimonio.Size = new System.Drawing.Size(206, 26);
+            this.txtPatrimonio.Size = new System.Drawing.Size(273, 30);
             this.txtPatrimonio.TabIndex = 19;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(450, 182);
+            this.label9.Location = new System.Drawing.Point(600, 224);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 20);
+            this.label9.Size = new System.Drawing.Size(110, 25);
             this.label9.TabIndex = 18;
             this.label9.Text = "Patrimônio:";
             // 
             // txtPertencente
             // 
-            this.txtPertencente.Location = new System.Drawing.Point(544, 110);
+            this.txtPertencente.Location = new System.Drawing.Point(725, 135);
+            this.txtPertencente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPertencente.Name = "txtPertencente";
-            this.txtPertencente.Size = new System.Drawing.Size(206, 26);
+            this.txtPertencente.Size = new System.Drawing.Size(273, 30);
             this.txtPertencente.TabIndex = 17;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(438, 113);
+            this.label8.Location = new System.Drawing.Point(584, 139);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 20);
+            this.label8.Size = new System.Drawing.Size(123, 25);
             this.label8.TabIndex = 16;
             this.label8.Text = "Pertencente:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(68, 182);
+            this.label7.Location = new System.Drawing.Point(91, 224);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 20);
+            this.label7.Size = new System.Drawing.Size(103, 25);
             this.label7.TabIndex = 15;
             this.label7.Text = "Categoria:";
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(156, 107);
+            this.txtEstado.Location = new System.Drawing.Point(208, 132);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(206, 26);
+            this.txtEstado.Size = new System.Drawing.Size(273, 30);
             this.txtEstado.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(86, 110);
+            this.label6.Location = new System.Drawing.Point(115, 135);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 20);
+            this.label6.Size = new System.Drawing.Size(79, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "Estado:";
             // 
             // txtNSerie
             // 
-            this.txtNSerie.Location = new System.Drawing.Point(544, 40);
+            this.txtNSerie.Location = new System.Drawing.Point(725, 49);
+            this.txtNSerie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNSerie.Name = "txtNSerie";
-            this.txtNSerie.Size = new System.Drawing.Size(206, 26);
+            this.txtNSerie.Size = new System.Drawing.Size(273, 30);
             this.txtNSerie.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(448, 43);
+            this.label5.Location = new System.Drawing.Point(597, 53);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 20);
+            this.label5.Size = new System.Drawing.Size(113, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "Nº de série:";
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(156, 40);
+            this.txtDescricao.Location = new System.Drawing.Point(208, 49);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(206, 26);
+            this.txtDescricao.Size = new System.Drawing.Size(273, 30);
             this.txtDescricao.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 43);
+            this.label4.Location = new System.Drawing.Point(88, 53);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 20);
+            this.label4.Size = new System.Drawing.Size(105, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Descrição:";
             // 
@@ -757,9 +808,10 @@
             this.btnEquipamento_Slider.FlatAppearance.BorderSize = 0;
             this.btnEquipamento_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEquipamento_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnEquipamento_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnEquipamento_Slider.Location = new System.Drawing.Point(1073, 12);
+            this.btnEquipamento_Slider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEquipamento_Slider.Name = "btnEquipamento_Slider";
-            this.btnEquipamento_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnEquipamento_Slider.Size = new System.Drawing.Size(40, 20);
             this.btnEquipamento_Slider.TabIndex = 8;
             this.btnEquipamento_Slider.UseVisualStyleBackColor = true;
             this.btnEquipamento_Slider.Click += new System.EventHandler(this.btnEquipamento_Slider_Click);
@@ -769,8 +821,9 @@
             this.pnGb_Categoria.Controls.Add(this.gbCategoria);
             this.pnGb_Categoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnGb_Categoria.Location = new System.Drawing.Point(0, 0);
+            this.pnGb_Categoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnGb_Categoria.Name = "pnGb_Categoria";
-            this.pnGb_Categoria.Size = new System.Drawing.Size(844, 65);
+            this.pnGb_Categoria.Size = new System.Drawing.Size(1125, 80);
             this.pnGb_Categoria.TabIndex = 1;
             // 
             // gbCategoria
@@ -785,8 +838,10 @@
             this.gbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCategoria.ForeColor = System.Drawing.Color.White;
             this.gbCategoria.Location = new System.Drawing.Point(0, 0);
+            this.gbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbCategoria.Name = "gbCategoria";
-            this.gbCategoria.Size = new System.Drawing.Size(844, 28);
+            this.gbCategoria.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbCategoria.Size = new System.Drawing.Size(1125, 34);
             this.gbCategoria.TabIndex = 0;
             this.gbCategoria.TabStop = false;
             this.gbCategoria.Text = "Categoria:";
@@ -797,9 +852,10 @@
             this.btnLimpar_Cat.FlatAppearance.BorderSize = 0;
             this.btnLimpar_Cat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar_Cat.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpar_Cat.Location = new System.Drawing.Point(355, 248);
+            this.btnLimpar_Cat.Location = new System.Drawing.Point(473, 305);
+            this.btnLimpar_Cat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpar_Cat.Name = "btnLimpar_Cat";
-            this.btnLimpar_Cat.Size = new System.Drawing.Size(183, 27);
+            this.btnLimpar_Cat.Size = new System.Drawing.Size(244, 33);
             this.btnLimpar_Cat.TabIndex = 13;
             this.btnLimpar_Cat.Text = "LIMPAR";
             this.btnLimpar_Cat.UseVisualStyleBackColor = false;
@@ -811,11 +867,12 @@
             this.dgvCategoria.AllowUserToDeleteRows = false;
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategoria.ContextMenuStrip = this.menuCategoria;
-            this.dgvCategoria.Location = new System.Drawing.Point(46, 30);
+            this.dgvCategoria.Location = new System.Drawing.Point(61, 37);
+            this.dgvCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.ReadOnly = true;
             this.dgvCategoria.RowHeadersWidth = 51;
-            this.dgvCategoria.Size = new System.Drawing.Size(247, 245);
+            this.dgvCategoria.Size = new System.Drawing.Size(329, 302);
             this.dgvCategoria.TabIndex = 12;
             // 
             // menuCategoria
@@ -826,26 +883,26 @@
             this.opAtualizar_Campo,
             this.opDeletar_Campo});
             this.menuCategoria.Name = "menuCategoria";
-            this.menuCategoria.Size = new System.Drawing.Size(161, 70);
+            this.menuCategoria.Size = new System.Drawing.Size(188, 76);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.opAtualizar_Click);
             // 
             // opAtualizar_Campo
             // 
             this.opAtualizar_Campo.Name = "opAtualizar_Campo";
-            this.opAtualizar_Campo.Size = new System.Drawing.Size(160, 22);
+            this.opAtualizar_Campo.Size = new System.Drawing.Size(187, 24);
             this.opAtualizar_Campo.Text = "Atualizar campo";
             this.opAtualizar_Campo.Click += new System.EventHandler(this.opAtualizar_Campo_Click);
             // 
             // opDeletar_Campo
             // 
             this.opDeletar_Campo.Name = "opDeletar_Campo";
-            this.opDeletar_Campo.Size = new System.Drawing.Size(160, 22);
+            this.opDeletar_Campo.Size = new System.Drawing.Size(187, 24);
             this.opDeletar_Campo.Text = "Excluir campo";
             this.opDeletar_Campo.Click += new System.EventHandler(this.opDeletar_Campo_Click);
             // 
@@ -855,9 +912,10 @@
             this.btnCadastrar_Cat.FlatAppearance.BorderSize = 0;
             this.btnCadastrar_Cat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar_Cat.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrar_Cat.Location = new System.Drawing.Point(355, 215);
+            this.btnCadastrar_Cat.Location = new System.Drawing.Point(473, 265);
+            this.btnCadastrar_Cat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrar_Cat.Name = "btnCadastrar_Cat";
-            this.btnCadastrar_Cat.Size = new System.Drawing.Size(183, 27);
+            this.btnCadastrar_Cat.Size = new System.Drawing.Size(244, 33);
             this.btnCadastrar_Cat.TabIndex = 11;
             this.btnCadastrar_Cat.Text = "CADASTRAR";
             this.btnCadastrar_Cat.UseVisualStyleBackColor = false;
@@ -865,17 +923,19 @@
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(355, 53);
+            this.txtCategoria.Location = new System.Drawing.Point(473, 65);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(183, 26);
+            this.txtCategoria.Size = new System.Drawing.Size(243, 30);
             this.txtCategoria.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(369, 30);
+            this.label3.Location = new System.Drawing.Point(492, 37);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 20);
+            this.label3.Size = new System.Drawing.Size(185, 25);
             this.label3.TabIndex = 9;
             this.label3.Text = "Adicionar categoria:";
             // 
@@ -884,9 +944,10 @@
             this.btnCategoria_Slider.FlatAppearance.BorderSize = 0;
             this.btnCategoria_Slider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoria_Slider.Image = global::prjEstoque.Properties.Resources.icons8_chevron_esquerda_16;
-            this.btnCategoria_Slider.Location = new System.Drawing.Point(805, 10);
+            this.btnCategoria_Slider.Location = new System.Drawing.Point(1073, 12);
+            this.btnCategoria_Slider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCategoria_Slider.Name = "btnCategoria_Slider";
-            this.btnCategoria_Slider.Size = new System.Drawing.Size(30, 16);
+            this.btnCategoria_Slider.Size = new System.Drawing.Size(40, 20);
             this.btnCategoria_Slider.TabIndex = 8;
             this.btnCategoria_Slider.UseVisualStyleBackColor = true;
             this.btnCategoria_Slider.Click += new System.EventHandler(this.btnCategoria_Slider_Click);
@@ -896,9 +957,10 @@
             this.pnList_Equipamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnList_Equipamento.Controls.Add(this.dgvEquipamento);
             this.pnList_Equipamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnList_Equipamento.Location = new System.Drawing.Point(251, 38);
+            this.pnList_Equipamento.Location = new System.Drawing.Point(335, 47);
+            this.pnList_Equipamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnList_Equipamento.Name = "pnList_Equipamento";
-            this.pnList_Equipamento.Size = new System.Drawing.Size(844, 662);
+            this.pnList_Equipamento.Size = new System.Drawing.Size(1125, 815);
             this.pnList_Equipamento.TabIndex = 3;
             // 
             // dgvEquipamento
@@ -909,22 +971,23 @@
             this.dgvEquipamento.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvEquipamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEquipamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEquipamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEquipamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEquipamento.ColumnHeadersHeight = 35;
             this.dgvEquipamento.ContextMenuStrip = this.menuEquipamento;
             this.dgvEquipamento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEquipamento.Location = new System.Drawing.Point(0, 0);
+            this.dgvEquipamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvEquipamento.Name = "dgvEquipamento";
             this.dgvEquipamento.ReadOnly = true;
             this.dgvEquipamento.RowHeadersWidth = 51;
-            this.dgvEquipamento.Size = new System.Drawing.Size(844, 662);
+            this.dgvEquipamento.Size = new System.Drawing.Size(1125, 815);
             this.dgvEquipamento.TabIndex = 1;
             // 
             // menuEquipamento
@@ -937,40 +1000,40 @@
             this.opRelatorio_Equip,
             this.opMover_Equip});
             this.menuEquipamento.Name = "menuEstoque";
-            this.menuEquipamento.Size = new System.Drawing.Size(180, 114);
+            this.menuEquipamento.Size = new System.Drawing.Size(212, 124);
             // 
             // opRefresh_Equip
             // 
             this.opRefresh_Equip.Name = "opRefresh_Equip";
-            this.opRefresh_Equip.Size = new System.Drawing.Size(179, 22);
+            this.opRefresh_Equip.Size = new System.Drawing.Size(211, 24);
             this.opRefresh_Equip.Text = "Refresh";
             this.opRefresh_Equip.Click += new System.EventHandler(this.opRefresh_Equip_Click);
             // 
             // opAtualizar_Equip
             // 
             this.opAtualizar_Equip.Name = "opAtualizar_Equip";
-            this.opAtualizar_Equip.Size = new System.Drawing.Size(179, 22);
+            this.opAtualizar_Equip.Size = new System.Drawing.Size(211, 24);
             this.opAtualizar_Equip.Text = "Atualizar campo";
             this.opAtualizar_Equip.Click += new System.EventHandler(this.opAtualizar_Equip_Click);
             // 
             // opExcluir_Equip
             // 
             this.opExcluir_Equip.Name = "opExcluir_Equip";
-            this.opExcluir_Equip.Size = new System.Drawing.Size(179, 22);
+            this.opExcluir_Equip.Size = new System.Drawing.Size(211, 24);
             this.opExcluir_Equip.Text = "Excluir campo";
             this.opExcluir_Equip.Click += new System.EventHandler(this.opExcluir_Equip_Click);
             // 
             // opRelatorio_Equip
             // 
             this.opRelatorio_Equip.Name = "opRelatorio_Equip";
-            this.opRelatorio_Equip.Size = new System.Drawing.Size(179, 22);
+            this.opRelatorio_Equip.Size = new System.Drawing.Size(211, 24);
             this.opRelatorio_Equip.Text = "Gerar relatório";
             this.opRelatorio_Equip.Click += new System.EventHandler(this.opRelatorio_Equip_Click);
             // 
             // opMover_Equip
             // 
             this.opMover_Equip.Name = "opMover_Equip";
-            this.opMover_Equip.Size = new System.Drawing.Size(179, 22);
+            this.opMover_Equip.Size = new System.Drawing.Size(211, 24);
             this.opMover_Equip.Text = "Mover para estoque";
             this.opMover_Equip.Click += new System.EventHandler(this.opMover_Equip_Click);
             // 
@@ -979,9 +1042,10 @@
             this.pnList_Termo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnList_Termo.Controls.Add(this.dgvTermo);
             this.pnList_Termo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnList_Termo.Location = new System.Drawing.Point(251, 38);
+            this.pnList_Termo.Location = new System.Drawing.Point(335, 47);
+            this.pnList_Termo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnList_Termo.Name = "pnList_Termo";
-            this.pnList_Termo.Size = new System.Drawing.Size(844, 662);
+            this.pnList_Termo.Size = new System.Drawing.Size(1125, 815);
             this.pnList_Termo.TabIndex = 4;
             // 
             // dgvTermo
@@ -992,22 +1056,23 @@
             this.dgvTermo.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvTermo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTermo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTermo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTermo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTermo.ColumnHeadersHeight = 35;
             this.dgvTermo.ContextMenuStrip = this.menuTermo;
             this.dgvTermo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTermo.Location = new System.Drawing.Point(0, 0);
+            this.dgvTermo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTermo.Name = "dgvTermo";
             this.dgvTermo.ReadOnly = true;
             this.dgvTermo.RowHeadersWidth = 51;
-            this.dgvTermo.Size = new System.Drawing.Size(844, 662);
+            this.dgvTermo.Size = new System.Drawing.Size(1125, 815);
             this.dgvTermo.TabIndex = 1;
             // 
             // menuTermo
@@ -1019,43 +1084,45 @@
             this.opExcluir_Termo,
             this.opRelatorio_Termo});
             this.menuTermo.Name = "menuEstoque";
-            this.menuTermo.Size = new System.Drawing.Size(161, 92);
+            this.menuTermo.Size = new System.Drawing.Size(188, 100);
             // 
             // opRefresh_Termo
             // 
             this.opRefresh_Termo.Name = "opRefresh_Termo";
-            this.opRefresh_Termo.Size = new System.Drawing.Size(160, 22);
+            this.opRefresh_Termo.Size = new System.Drawing.Size(187, 24);
             this.opRefresh_Termo.Text = "Refresh";
             this.opRefresh_Termo.Click += new System.EventHandler(this.opRefresh_Termo_Click);
             // 
             // opAtualizar_Termo
             // 
             this.opAtualizar_Termo.Name = "opAtualizar_Termo";
-            this.opAtualizar_Termo.Size = new System.Drawing.Size(160, 22);
+            this.opAtualizar_Termo.Size = new System.Drawing.Size(187, 24);
             this.opAtualizar_Termo.Text = "Atualizar campo";
             this.opAtualizar_Termo.Click += new System.EventHandler(this.opAtualizar_Termo_Click);
             // 
             // opExcluir_Termo
             // 
             this.opExcluir_Termo.Name = "opExcluir_Termo";
-            this.opExcluir_Termo.Size = new System.Drawing.Size(160, 22);
+            this.opExcluir_Termo.Size = new System.Drawing.Size(187, 24);
             this.opExcluir_Termo.Text = "Excluir campo";
             this.opExcluir_Termo.Click += new System.EventHandler(this.opExcluir_Termo_Click);
             // 
             // opRelatorio_Termo
             // 
             this.opRelatorio_Termo.Name = "opRelatorio_Termo";
-            this.opRelatorio_Termo.Size = new System.Drawing.Size(160, 22);
+            this.opRelatorio_Termo.Size = new System.Drawing.Size(187, 24);
             this.opRelatorio_Termo.Text = "Gerar relatório";
+            this.opRelatorio_Termo.Click += new System.EventHandler(this.opRelatorio_Termo_Click);
             // 
             // pnList_Mov
             // 
             this.pnList_Mov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnList_Mov.Controls.Add(this.dgvMov);
             this.pnList_Mov.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnList_Mov.Location = new System.Drawing.Point(251, 38);
+            this.pnList_Mov.Location = new System.Drawing.Point(335, 47);
+            this.pnList_Mov.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnList_Mov.Name = "pnList_Mov";
-            this.pnList_Mov.Size = new System.Drawing.Size(844, 662);
+            this.pnList_Mov.Size = new System.Drawing.Size(1125, 815);
             this.pnList_Mov.TabIndex = 5;
             // 
             // dgvMov
@@ -1066,22 +1133,23 @@
             this.dgvMov.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvMov.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMov.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMov.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMov.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMov.ColumnHeadersHeight = 35;
             this.dgvMov.ContextMenuStrip = this.menuMovimentacao;
             this.dgvMov.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMov.Location = new System.Drawing.Point(0, 0);
+            this.dgvMov.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvMov.Name = "dgvMov";
             this.dgvMov.ReadOnly = true;
             this.dgvMov.RowHeadersWidth = 51;
-            this.dgvMov.Size = new System.Drawing.Size(844, 662);
+            this.dgvMov.Size = new System.Drawing.Size(1125, 815);
             this.dgvMov.TabIndex = 1;
             // 
             // menuMovimentacao
@@ -1091,23 +1159,31 @@
             this.opRefresh_Mov,
             this.opExcluir_Mov});
             this.menuMovimentacao.Name = "menuEstoque";
-            this.menuMovimentacao.Size = new System.Drawing.Size(181, 70);
+            this.menuMovimentacao.Size = new System.Drawing.Size(128, 52);
             // 
             // opRefresh_Mov
             // 
             this.opRefresh_Mov.Name = "opRefresh_Mov";
-            this.opRefresh_Mov.Size = new System.Drawing.Size(180, 22);
+            this.opRefresh_Mov.Size = new System.Drawing.Size(127, 24);
             this.opRefresh_Mov.Text = "Refresh";
             this.opRefresh_Mov.Click += new System.EventHandler(this.opRefresh_Mov_Click);
+            // 
+            // opExcluir_Mov
+            // 
+            this.opExcluir_Mov.Name = "opExcluir_Mov";
+            this.opExcluir_Mov.Size = new System.Drawing.Size(127, 24);
+            this.opExcluir_Mov.Text = "Excluir";
+            this.opExcluir_Mov.Click += new System.EventHandler(this.opExcluir_Mov_Click);
             // 
             // pnInventario
             // 
             this.pnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnInventario.Controls.Add(this.dgvInventario);
             this.pnInventario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnInventario.Location = new System.Drawing.Point(251, 38);
+            this.pnInventario.Location = new System.Drawing.Point(335, 47);
+            this.pnInventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnInventario.Name = "pnInventario";
-            this.pnInventario.Size = new System.Drawing.Size(844, 662);
+            this.pnInventario.Size = new System.Drawing.Size(1125, 815);
             this.pnInventario.TabIndex = 6;
             // 
             // dgvInventario
@@ -1118,36 +1194,30 @@
             this.dgvInventario.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInventario.ColumnHeadersHeight = 35;
             this.dgvInventario.ContextMenuStrip = this.menuMovimentacao;
             this.dgvInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInventario.Location = new System.Drawing.Point(0, 0);
+            this.dgvInventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.ReadOnly = true;
             this.dgvInventario.RowHeadersWidth = 51;
-            this.dgvInventario.Size = new System.Drawing.Size(844, 662);
+            this.dgvInventario.Size = new System.Drawing.Size(1125, 815);
             this.dgvInventario.TabIndex = 1;
-            // 
-            // opExcluir_Mov
-            // 
-            this.opExcluir_Mov.Name = "opExcluir_Mov";
-            this.opExcluir_Mov.Size = new System.Drawing.Size(180, 22);
-            this.opExcluir_Mov.Text = "Excluir";
-            this.opExcluir_Mov.Click += new System.EventHandler(this.opExcluir_Mov_Click);
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 700);
+            this.ClientSize = new System.Drawing.Size(1460, 862);
             this.Controls.Add(this.pnInventario);
             this.Controls.Add(this.pnCadastro);
             this.Controls.Add(this.pnList_Mov);
@@ -1157,6 +1227,7 @@
             this.Controls.Add(this.pnLeft);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPrincipal";
             this.RightToLeftLayout = true;
             this.ShowIcon = false;

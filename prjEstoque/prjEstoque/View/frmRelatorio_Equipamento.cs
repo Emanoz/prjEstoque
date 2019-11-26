@@ -49,7 +49,7 @@ namespace prjEstoque.View
         private void btnCadastrar_Termo_Click(object sender, EventArgs e)
         {
             CTRL_Termo_Emprestimo cTermo = new CTRL_Termo_Emprestimo();
-            Termo_Emprestimo termo = new Termo_Emprestimo(dtpRetirada.Value, txtRg.Text, Index);
+            Termo_Emprestimo termo = new Termo_Emprestimo(dtpRetirada.Value, txtRg.Text, DateTime.Today, Index);
 
             if (cTermo.Insert(termo) <= 0)
                 MessageBox.Show("Erro ao gerar relatorio!");

@@ -14,9 +14,10 @@ namespace prjEstoque.View
 {
     public partial class frmEditarBase : Form
     {
-        private int index;
+        private int index, _indexCat;
         public object Entity { get; set; }
         public List<Equipamento> ListEquipamento { get; set; }
+        public List<Categoria> ListCategoria { get; set; }
         public frmEditarBase(object e)
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace prjEstoque.View
                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 CTRL_Equipamento cEquip = new CTRL_Equipamento();
-                if (cEquip.Update(new Equipamento(index, txtDescricao.Text, txtNSerie.Text, txtEstado.Text, int.Parse(cbCategoria.Text),
+                if (cEquip.Update(new Equipamento(index, txtDescricao.Text, txtNSerie.Text, txtEstado.Text, _indexCat,
                                               txtPertencente.Text, txtPatrimonio.Text)) == 0)
                     MessageBox.Show("Erro ao atualizar campos. Tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
@@ -71,13 +72,13 @@ namespace prjEstoque.View
             {
                 txtRg.Text = ((Termo_Emprestimo)Entity).Rg;
                 dtpRetirada.Value = ((Termo_Emprestimo)Entity).DataRetirada;
-                if(((Termo_Emprestimo)Entity).DataDevolucao != DateTime.MinValue)
-                    dtpDevolucao.Value = ((Termo_Emprestimo)Entity).DataDevolucao;
+                dtpDevolucao.Value = ((Termo_Emprestimo)Entity).DataDevolucao;
 
                 CTRL_Equipamento cEquip = new CTRL_Equipamento();
                 Equipamento equip = new Equipamento();
 
                 equip = cEquip.GetById(((Termo_Emprestimo)Entity).CodEquipamento);
+                _indexCat = equip.CodCategoria;
                 cbDescricao.Text = equip.Descricao;
                 _txtEstado.Text = equip.Estado;
                 _txtNSerie.Text = equip.NumSerie;
@@ -118,23 +119,37 @@ namespace prjEstoque.View
             if (cbDevolvido.Checked)
             {
                 termo = new Termo_Emprestimo(((Termo_Emprestimo)Entity).CodTermo, dtpRetirada.Value, txtRg.Text,
-                                                            dtpRetirada.Value, int.Parse(cbDescricao.Text));
+                                                            dtpDevolucao.Value, _indexCat);
             }
             else
             {
-                termo = new Termo_Emprestimo(((Termo_Emprestimo)Entity).CodTermo, dtpRetirada.Value, txtRg.Text,
-                                                            int.Parse(cbDescricao.Text));
+                termo = new Termo_Emprestimo(((Termo_Emprestimo)Entity).CodTermo, dtpRetirada.Value, txtRg.Text, DateTime.Today, _indexCat);
             }
 
 
             if (cTermo.Update(termo) <= 0)
-                MessageBox.Show("O registro não foi atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("O registro não foi atualizado com sucesso!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 Close();
         }
 
+        private void cbCategoria_DropDown(object sender, EventArgs e)
+        {
+            CTRL_Categoria cCat = new CTRL_Categoria();
+            ListCategoria = new List<Categoria>();
+
+            ListCategoria = cCat.GetAll();
+            cbCategoria.DataSource = ListCategoria;
+        }
+
+        private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _indexCat = ListCategoria[cbCategoria.SelectedIndex].CodCategoria;
+        }
+
         private void cbDescricao_SelectedValueChanged(object sender, EventArgs e)
         {
+            _indexCat = ListEquipamento[cbDescricao.SelectedIndex].CodCategoria;
             _txtEstado.Text = ListEquipamento[cbDescricao.SelectedIndex].Estado;
             _txtNSerie.Text = ListEquipamento[cbDescricao.SelectedIndex].NumSerie;
             _txtCategoria.Text = ListEquipamento[cbDescricao.SelectedIndex].CodCategoria.ToString();

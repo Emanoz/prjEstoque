@@ -79,11 +79,17 @@ namespace prjEstoque.Model
 
         public int Insert(Equipamento e)
         {
-            string query = "INSERT INTO Equipamento VALUES(@descricao, @numSerie, @estado, @codCategoria, @pertencente, @patrimonio)";
+            string querySelect = "SELECT * FROM Equipamento WHERE NumSerie = @numSerie OR Patrimonio = @patrimonio";
+            string queryInsert = "INSERT INTO Equipamento VALUES(@descricao, @numSerie, @estado, @codCategoria, @pertencente, @patrimonio)";
 
             try
             {
-                return db.CallExecuteNonQuery(query, new SqlParameter("@descricao", e.Descricao),
+                SqlDataReader reader = db.CallExecuteReader(querySelect, new SqlParameter("@numSerie", e.NumSerie),
+                                                            new SqlParameter("@patrimonio", e.Patrimonio));
+                if (reader.Read())
+                    return -1;
+                else
+                    return db.CallExecuteNonQuery(queryInsert, new SqlParameter("@descricao", e.Descricao),
                                                   new SqlParameter("@numSerie", e.NumSerie),
                                                   new SqlParameter("@estado", e.Estado),
                                                   new SqlParameter("@codCategoria", e.CodCategoria),
@@ -99,7 +105,7 @@ namespace prjEstoque.Model
 
         public int Update(Equipamento e)
         {
-            string query = "UPDATE Equipamento SET Descricao = @descricao, NumSerie = @numSerie, Estado = @estado, CodCategoria = @codCategoria, Pertencente = @pertencente, Patrimonio = @patrimonio";
+            string query = "UPDATE Equipamento SET Descricao = @descricao, NumSerie = @numSerie, Estado = @estado, CodCategoria = @codCategoria, Pertencente = @pertencente, Patrimonio = @patrimonio WHERE CodEquipamento = @codEquip";
 
             try
             {
@@ -108,7 +114,8 @@ namespace prjEstoque.Model
                                                   new SqlParameter("@estado", e.Estado),
                                                   new SqlParameter("@codCategoria", e.CodCategoria),
                                                   new SqlParameter("@pertencente", e.Pertencente),
-                                                  new SqlParameter("@patrimonio", e.Patrimonio));
+                                                  new SqlParameter("@patrimonio", e.Patrimonio),
+                                                  new SqlParameter("@codEquip", e.CodEquipamento));
             }
             catch (Exception ex)
             {
