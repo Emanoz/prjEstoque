@@ -816,3 +816,4 @@ C:\Users\emanu\Desktop\Tralha\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEsto
 C:\Users\emanu\Desktop\Tralha\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmRelatorio.resources
 C:\Users\emanu\Desktop\Tralha\prjEstoque\prjEstoque\prjEstoque\obj\Debug\RdlCompile.cache
 C:\Users\emanu\Desktop\Tralha\prjEstoque\prjEstoque\prjEstoque\obj\Debug\RdlCompile.compiled
+C:\Users\monitor\Desktop\Emanos\prjEstoque\prjEstoque\prjEstoque\obj\Debug\prjEstoque.View.frmRelatorio.resources

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace prjEstoque
 {
@@ -48,6 +49,11 @@ namespace prjEstoque
             dgv.Columns["Datadevolucao"].HeaderText = "Data de Devolução";
             dgv.Columns["CodEquipamento"].Width = 50;
             dgv.Columns["CodEquipamento"].HeaderText = "ID Equip";
+        }
+
+        public static void FormatarInventario(DataGridView dgv)
+        {
+            dgv.Columns["Estado"].Visible = false;
         }
     }
 }

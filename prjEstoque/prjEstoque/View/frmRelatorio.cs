@@ -16,7 +16,7 @@ namespace prjEstoque.View
         public frmRelatorio(TermoEquipamento t)
         {
             InitializeComponent();
-            this.rptReport.LocalReport.ReportPath = @"C:\Users\emanu\Desktop\Tralha\prjEstoque\prjEstoque\prjEstoque\Report\rptTermo.rdlc";
+            this.rptReport.LocalReport.ReportPath = @"C:\Users\monitor\Desktop\Emanos\prjEstoque\prjEstoque\prjEstoque\Report\rptTermo.rdlc";
             this.rptReport.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("txtRg", t.Rg));
             this.rptReport.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("txtDataRetirada", t.DtpRetirada.ToString()));
             this.rptReport.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("txtDescricao", t.Descricao));

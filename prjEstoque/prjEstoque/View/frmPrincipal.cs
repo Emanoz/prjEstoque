@@ -335,6 +335,7 @@ namespace prjEstoque
             CTRL_TEMP_Movimentacao cMov = new CTRL_TEMP_Movimentacao();
             CTRL_Inventario cInv = new CTRL_Inventario();
             dgvInventario.DataSource = cInv.GetAll();
+            FormatarDgv.FormatarInventario(dgvInventario);
             dgvMov.DataSource = cMov.GetAll();
         }
 
@@ -342,6 +343,7 @@ namespace prjEstoque
         {
             CTRL_Inventario cMov = new CTRL_Inventario();
             dgvInventario.DataSource = cMov.GetAll();
+            FormatarDgv.FormatarInventario(dgvInventario);
 
             pnInventario.BringToFront();
         }
