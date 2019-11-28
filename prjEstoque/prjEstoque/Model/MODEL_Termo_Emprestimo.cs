@@ -49,6 +49,37 @@ namespace prjEstoque.Model
             return list;
         }
 
+        public TermoEquipamento GetTermo(int cod)
+        {
+            string query = "select t.Rg RG, t.DataRetirada Retirada, e.Descricao Descricao, e.Patrimonio Patrimonio, e.NumSerie SN, t.DataDevolucao Devolucao " +
+                            "from TERMO_DE_EMPRESTIMO t inner join EQUIPAMENTO e " +
+                            "on t.CodEquipamento = e.CodEquipamento where t.CodTermo = @codTermo";
+
+            try
+            {
+                SqlDataReader reader = db.CallExecuteReader(query, new SqlParameter("@codTermo", cod));
+                reader.Read();
+
+                TermoEquipamento t = new TermoEquipamento();
+
+                t.DtpRetirada = DateTime.Parse(reader["Retirada"].ToString());
+                t.Rg = reader["Rg"].ToString(); ;
+                t.DtpDevolucao = DateTime.Parse(reader["Devolucao"].ToString());
+                t.Descricao = reader["Descricao"].ToString();
+                t.Patrimonio = reader["Patrimonio"].ToString();
+                t.NSerie = reader["SN"].ToString();
+
+                reader.Close();
+                return t;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
         public int Insert(Termo_Emprestimo t)
         {
             string query = "INSERT INTO Termo_de_Emprestimo(DataRetirada, Rg, DataDevolucao, CodEquipamento) VALUES(@DataRetirada,  @Rg, @dataDevolucao, @CodEquipamento)";

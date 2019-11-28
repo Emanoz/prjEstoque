@@ -45,16 +45,6 @@ namespace prjEstoque
 
         private void btnRep_Arrow_Click(object sender, EventArgs e)
         {
-            if(pnReport.Height == 54)
-            {
-                util.Slider(pnReport, 135, 251);
-                btnRep_Arrow.Image = prjEstoque.Properties.Resources.icons8_triangle_arrow_14;
-            }
-            else
-            {
-                util.Slider(pnReport, 54, 251);
-                btnRep_Arrow.Image = prjEstoque.Properties.Resources.icons8_chevron_right_16_1_;
-            }
         }
 
         private void btnList_Arrow_Click(object sender, EventArgs e)
@@ -370,7 +360,17 @@ namespace prjEstoque
 
         private void opRelatorio_Termo_Click(object sender, EventArgs e)
         {
+            CTRL_Termo_Emprestimo cTermo = new CTRL_Termo_Emprestimo();
+            TermoEquipamento t = cTermo.GetTermo(int.Parse(dgvTermo[0, dgvTermo.CurrentRow.Index].Value.ToString()));
 
+            using (var frm = new frmRelatorio(t))
+                frm.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+            //this.reportViewer1.RefreshReport();
         }
     }
 }

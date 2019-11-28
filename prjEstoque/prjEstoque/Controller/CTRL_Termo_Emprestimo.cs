@@ -22,6 +22,11 @@ namespace prjEstoque.Controller
             return modelTE.GetAll();
         }
 
+        public TermoEquipamento GetTermo(int cod)
+        {
+            return modelTE.GetTermo(cod);
+        }
+
         public int Insert(Termo_Emprestimo c)
         {
             return modelTE.Insert(c);
